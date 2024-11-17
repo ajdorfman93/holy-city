@@ -228,8 +228,8 @@ img {
 }
 #aa-menu-area .main-navbar .navbar-header .aa-logo-img {
   border: none;
-  height: 50px;
-  width: 235px;
+  height: auto;
+  width: 180px;
 }
 #aa-menu-area .main-navbar .navbar-header .aa-logo-img img {
   width: 100%;
