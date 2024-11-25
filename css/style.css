@@ -44,6 +44,17 @@ body {
   overflow-x: hidden;
 }
 
+.fadein {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translate(0, 100px);
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .no-padding {
   padding: 0;
 }
