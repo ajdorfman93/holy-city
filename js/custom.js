@@ -51,14 +51,6 @@ jQuery(function($){
     ]
   });
 
-  jQuery('.aa-top-slider').slick({
-    dots: false,
-    infinite: true,
-    arrows: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-  });
 
   jQuery('.aa-properties-details-img').slick({
     dots: false,

@@ -36,6 +36,7 @@
 
   <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
 
+  <!-- Header -->
   <header id="aa-header">  
     <div class="container">
       <div class="row">
@@ -59,7 +60,9 @@
       </div>
     </div>
   </header>
+  <!-- / Header -->
 
+  <!-- Menu -->
   <section id="aa-menu-area">
     <nav class="navbar navbar-default main-navbar" role="navigation">  
       <div class="container">
@@ -83,7 +86,9 @@
       </div>          
     </nav> 
   </section>
+  <!-- / Menu -->
 
+  <!-- Property header -->
   <section id="aa-property-header">
     <div class="container">
       <div class="row">
@@ -99,25 +104,27 @@
       </div>
     </div>
   </section> 
+  <!-- / Property header -->
 
+  <!-- Property details section -->
   <section id="aa-properties">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
           <div class="aa-properties-content">            
             <div class="aa-properties-details">
+              <!-- Image Gallery -->
               <div class="aa-properties-details-img" id="property-images-container">
-                <!-- Images will be injected here by JS -->
+                <!-- Gallery images inserted by JS -->
               </div>
+              
               <div class="aa-properties-info">
                 <h2 id="property-name"></h2>
                 <span class="aa-price" id="property-price">$0</span>
                 <p id="property-description"></p>
                 
                 <h4>Property Video</h4>
-                <div id="property-video-container">
-                  <!-- If there's a video URL, show an iframe -->
-                </div>        
+                <div id="property-video-container"></div>        
               </div>
 
               <div class="aa-properties-social">
@@ -130,33 +137,28 @@
                 </ul>
               </div>
 
-              <div class="aa-nearby-properties">
-                <div class="aa-title">
-                  <h2>Other Properties</h2>
-                  <span></span>
-                </div>
-                <div class="aa-nearby-properties-area">
-                  <div class="row" id="nearby-properties-container">
-                    <!-- Nearby properties if any -->
-                  </div>
-                </div>
-              </div>
+              
             </div>           
           </div>
         </div>
-
+        
         <div class="col-md-4">
           <aside class="aa-properties-sidebar">
             <div class="aa-properties-single-sidebar">
-              <h4>Propery Features</h4>
+              <h4>Property Features</h4>
               <ul id="property-features">
-                <!-- Features will be listed here -->
+                <!-- Features inserted by JS -->
               </ul>
             </div> 
+          </aside>
+                    </div> 
+
+                  <div class="col-md-4"></div>
+          <aside class="aa-properties-sidebar">
             <div class="aa-properties-single-sidebar">
               <h3>Popular Properties</h3>
               <div id="popular-properties-sidebar">
-                <!-- Populated by JS -->
+                <!-- Popular properties inserted by JS -->
               </div>
             </div>
           </aside>
@@ -164,7 +166,9 @@
       </div>
     </div>
   </section>
+  <!-- / Property details section -->
 
+  <!-- Footer -->
   <footer id="aa-footer">
     <div class="container">
       <div class="row">
@@ -199,7 +203,9 @@
       </div>
     </div>
   </footer>
+  <!-- / Footer -->
 
+  <!-- Scripts -->
   <script src="js/jquery.min.js"></script>   
   <script src="js/bootstrap.js"></script>   
   <script type="text/javascript" src="js/slick.js"></script>
