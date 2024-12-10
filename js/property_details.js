@@ -51,19 +51,13 @@ $(document).ready(function() {
         });
       }
   
-      // Video (assuming f.VideoUrl is a YouTube embed link)
+      // Video 
       const videoContainer = $('#property-video-container');
       videoContainer.empty();
       if (f.VideoUrl) {
         videoContainer.html(`<iframe width="100%" height="480" src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>`);
       }
-  
-      // Map (assuming f.MapUrl is a Google Maps embed URL)
-      const mapContainer = $('#property-map-container');
-      mapContainer.empty();
-      if (f.MapUrl) {
-        mapContainer.html(`<iframe src="${f.MapUrl}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>`);
-      }
+
   
       // Popular Properties and Nearby properties could be implemented similarly if needed
       // For now, you can replicate logic from your main data.js or hardcode
