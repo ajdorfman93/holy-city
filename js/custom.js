@@ -1,30 +1,3 @@
-/** 
-  * Template Name: Home Property
-  * Version: 1.0  
-  * Template Scripts
-  * Author: MarkUps
-  * Author URI: http://www.markups.io/
-
-  Custom JS
-  
-
-  1. FIXED NAVBAR 
-  2. AGENTS SLIDER
-  3. TESTIMONIAL SLIDER  
-  4. CLIENT BRAND SLIDER (SLICK SLIDER)
-  5. TOP SLIDER (SLICK SLIDER)
-  6. LATEST PRODUCT SLIDER (SLICK SLIDER)
-  7. HOVER DROPDOWN MENU
-  8. ADVANCE SEARCH FILTER  (noUiSlider SLIDER)
-  9. MIXIT FILTER ( FOR GALLERY ) 
-  10. FANCYBOX ( FOR PORTFOLIO POPUP VIEW )
-  11. SCROLL TOP BUTTON
-  12. PRELOADER
-  13. GRID AND LIST LAYOUT CHANGER 
-  14.RELATED ITEM SLIDER (SLICK SLIDER)
-
-  
-**/
 
 jQuery(function($){
 

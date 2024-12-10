@@ -76,34 +76,34 @@ $(document).ready(function() {
         tagClass = 'sold-out';
       }
 
-      const propertyHTML = `
-      <li>
-        <article class="aa-properties-item">
-          <a class="aa-properties-item-img" href="#">
-            <img src="${f.Img_Urls || 'img/default.jpg'}" alt="${f.Name || 'Property'}">
-          </a>
-          <div class="aa-tag ${tagClass}">
-            ${f.Property_Status || ''}
-          </div>
-          <div class="aa-properties-item-content">
-            <div class="aa-properties-info">
-              <span>${f.Bedrooms || 'N/A'} Beds</span>
-            </div>
-            <div class="aa-properties-about">
-              <h3><a href="#">${f.Name || 'Untitled Property'}</a></h3>
-              <p>${f.Street1 || ''}, ${f.City || ''}, ${f.State || ''}</p>                     
-            </div>
-            <div class="aa-properties-detial">
-              <span class="aa-price">
-                ₪${(f.Price ? f.Price.toLocaleString() : 'N/A')}
-              </span>
-              <a class="aa-secondary-btn" href="#">View Details</a>
-            </div>
-          </div>
-        </article>
-      </li>
-    `;
-    
+const propertyHTML = `
+  <li>
+    <article class="aa-properties-item">
+      <a class="aa-properties-item-img" href="#">
+        <img src="${f.Img_Urls || 'img/default.jpg'}" alt="${f.Name || 'Property'}">
+      </a>
+      <div class="aa-tag ${tagClass}">
+        ${f.Property_Status || ''}
+      </div>
+      <div class="aa-properties-item-content">
+        <div class="aa-properties-info">
+          <span>${f.Bedrooms || 'N/A'} Beds</span>
+        </div>
+        <div class="aa-properties-about">
+          <h3><a href="#">${f.Name || 'Untitled Property'}</a></h3>
+          <p>${f.Street1 || ''}, ${f.City || ''}, ${f.State || ''}</p>                     
+        </div>
+        <div class="aa-properties-detial">
+          <span class="aa-price">
+            ₪${(f.Price ? f.Price.toLocaleString() : 'N/A')}
+          </span>
+          <a class="aa-secondary-btn" href="#">View Details</a>
+        </div>
+      </div>
+    </article>
+  </li>
+`;
+
       $propertiesList.append(propertyHTML);
     });
   }
