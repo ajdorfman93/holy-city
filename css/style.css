@@ -555,7 +555,7 @@ img {
 
 #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
   color: #555;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -3009,11 +3009,11 @@ img {
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
-    font-size: 30px;
+    font-size: 18px;
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-price {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   #aa-about-us .aa-about-us-area .aa-about-us-right {
@@ -3056,7 +3056,7 @@ img {
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
-    font-size: 20px;
+    font-size: 10px;
     line-height: 25px;
   }
 
@@ -3065,7 +3065,7 @@ img {
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-price {
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 0px;
   }
 
@@ -3074,8 +3074,8 @@ img {
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .slick-arrow {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .slick-prev::before, #aa-slider .aa-slider-area .aa-top-slider .slick-next::before {

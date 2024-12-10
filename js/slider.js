@@ -29,7 +29,7 @@ $(document).ready(function () {
       // Initialize Slick Slider
       $slider.slick({
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         dots: true,
         infinite: true,
         slidesToShow: 1,
