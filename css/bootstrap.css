@@ -108,6 +108,22 @@ samp {
   font-family: "Barlow";
   font-size: 1em;
 }
+        /* Thumbnail styling */
+        .thumb {
+          width: 25%; /* Adjust thumbnail width within the thumbnail carousel */
+          float: left;
+          cursor: pointer;
+          padding: 2px;
+      }
+
+      .thumb img {
+          width: 100%;
+          height: 100px; /* Fixed height for square thumbnails */
+          object-fit: cover; /* Ensures the thumbnail fills the square */
+          aspect-ratio: 1 / 1; /* Makes the thumbnails square */
+      }
+
+
 button,
 input,
 optgroup,
@@ -5003,21 +5019,6 @@ a.badge:focus {
   .jumbotron .h1 {
     font-size: 63px;
   }
-
-        /* Thumbnail styling */
-        .thumb {
-          width: 25%; /* Adjust thumbnail width within the thumbnail carousel */
-          float: left;
-          cursor: pointer;
-          padding: 2px;
-      }
-
-      .thumb img {
-          width: 100%;
-          height: 100px; /* Fixed height for square thumbnails */
-          object-fit: cover; /* Ensures the thumbnail fills the square */
-          aspect-ratio: 1 / 1; /* Makes the thumbnails square */
-      }
 
 
 }
