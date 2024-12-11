@@ -2751,12 +2751,13 @@ img {
   transition: all 0.5s;
 }
 .property-video-container{
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
+  margin: 0px !important;
 }
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;  
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (height = width * 9/16) */
   overflow: hidden;
 }
 
@@ -2766,10 +2767,20 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Ensure the video scales to fill the container */
+  max-width: none;
+  max-height: none;
 }
+
 /*==================
  RESPONSIVE DESIGN
 ====================*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .video-wrapper iframe {
+      -webkit-appearance: none !important;
+      -webkit-transform: scale(1) !important; /* Ensures proper scaling */
+  }
+}
 
 @media (max-width: 1199px) {
   #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents .aa-agetns-info .aa-agent-social a {

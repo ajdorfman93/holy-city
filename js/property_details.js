@@ -77,14 +77,31 @@ if (f.Neighborhood_Names) {
   // Video
   const videoContainer = $('#property-video-container');
   videoContainer.empty();
+  
   if (f.VideoUrl) {
-    videoContainer.html(`
-      <h4>Property Video</h4>
-      <div class="video-wrapper">
-        <iframe src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>
-      </div>
-    `);
+      videoContainer.html(`
+          <h4>Property Video</h4>
+          <div class="video-wrapper">
+              <iframe 
+                  src="${f.VideoUrl}" 
+                  frameborder="0" 
+                  allowfullscreen
+                  style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      max-width: none;
+                      max-height: none;
+                      object-fit: cover;
+                      display: block;
+                  "
+              ></iframe>
+          </div>
+      `);
   }
+  
 
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);
