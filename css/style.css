@@ -247,7 +247,7 @@ img {
   height: 100%;
 }
 #aa-menu-area .main-navbar .navbar-nav li a {
-  color: #fff;
+  color: #4b4b4b;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -821,7 +821,7 @@ img {
 }
 .aa-properties-item .aa-properties-item-img img {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 .aa-properties-item .aa-tag {
@@ -868,6 +868,13 @@ img {
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-about p {
   font-size: 14px;
+}
+
+.aa-properties-item .aa-properties-item-content .aa-properties-about h3 {
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow if text is too long */
+  text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
+  font-size: clamp(12px, 2vw, 24px); /* Dynamically adjust font size */
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-detial {
   border-top: 1px solid #ddd;
@@ -2850,11 +2857,7 @@ img {
   #aa-properties .aa-properties-content .aa-properties-content-body .aa-properties-nav li {
     width: 45.9%;
   }
-  .aa-properties-item .aa-properties-item-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+
   #aa-properties .aa-properties-content .aa-properties-content-body .aa-list-view li {
     width: 100%;
   }
@@ -2896,7 +2899,15 @@ img {
 @media (max-width: 767px) {
   .navbar-collapse.in {
     overflow-x: hidden;
-    background-color: #ddd;
+    background-color: #ddd !important;
+    color: #000;
+    transition: none;
+  }
+
+  .navbar-collapse.collapsing {
+    overflow-x: hidden;
+    background-color: #ddd !important;
+    color: #000;
   }
 
   .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
@@ -2905,12 +2916,6 @@ img {
 
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #fff;
-  }
-
-  .aa-properties-item .aa-properties-item-img img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
   }
 
   .aa-properties-item {
