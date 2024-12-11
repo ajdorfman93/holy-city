@@ -37,7 +37,7 @@ $(document).ready(function() {
           // Wrap each image in an anchor tag for Fancybox gallery
           imagesContainer.append(`
             <a href="${url}" data-fancybox="gallery">
-              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px; margin:5px;" />
+              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px;    object-fit: cover; margin:5px" />
             </a>
           `);
         }
@@ -56,12 +56,26 @@ $(document).ready(function() {
     }
     
   
-    // Video 
-    const videoContainer = $('#property-video-container');
-    videoContainer.empty();
-    if (f.VideoUrl) {
-      videoContainer.html(`<iframe width="100%" height="480" src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>`);
+    // About
+    const aboutList = $('#property-about');
+    aboutList.empty();
+    if (f.About) {
+      const htmlContent = f.About.replace();
+      // Now wrap it however you like, for example as one `<li>`:
+      aboutList.append(`${htmlContent}`);
     }
+    
+  
+ // Video
+const videoContainer = $('#property-video-container');
+videoContainer.empty();
+
+if (f.VideoUrl) {
+  videoContainer.html(`
+    <h4>Property Video</h4>
+    <iframe width="100%" height="480" src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>
+  `);
+}
 
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);

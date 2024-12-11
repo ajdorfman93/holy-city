@@ -65,8 +65,7 @@ $(document).ready(function () {
               <div class="aa-properties-item-content">
                 <div class="aa-properties-info">
                   <span>${f.Bedrooms || 'N/A'} Beds</span>
-                  <span>${f.Bathrooms || 'N/A'} Baths</span>
-                  <span>${f.Square_Feet || 'N/A'} SQ FT</span>
+                 
                 </div>
                 <div class="aa-properties-about">
                   <h3><a href="property_details.html?id=${property.id}">${f.Name || 'Untitled Property'}</a></h3>
