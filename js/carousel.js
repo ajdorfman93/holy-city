@@ -19,9 +19,18 @@ $(document).ready(function () {
         }
 
         // Parse Image_Gallery field
-        const urls = property.fields['Image_Gallery']
-            .split(',')
+        let urls = property.fields['Image_Gallery']
+            .split(' ')
             .map(url => url.trim()); // Split and trim the URLs
+
+        // Ensure there are a multiple of 4 images
+        const remainder = urls.length % 4;
+        if (remainder !== 0) {
+            const extraImagesNeeded = 4 - remainder;
+            for (let i = 0; i < extraImagesNeeded; i++) {
+                urls.push(urls[i % urls.length]); // Repeat images as needed
+            }
+        }
 
         // Populate main carousel
         const mainCarousel = $('#carousel .carousel-inner');
@@ -50,7 +59,7 @@ $(document).ready(function () {
                 thumbCarousel.append(`
                     <div class="item ${activeClass}">${thumbGroup}</div>
                 `);
-                thumbGroup = '';
+                thumbGroup = ''; // Reset for the next group
             }
         });
 
