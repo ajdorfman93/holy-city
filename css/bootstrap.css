@@ -113,7 +113,8 @@ samp {
           width: 25%; /* Adjust thumbnail width within the thumbnail carousel */
           float: left;
           cursor: pointer;
-          padding: 2px;
+          padding: 0px 0px;
+          margin: 0;
       }
 
       .thumb img {

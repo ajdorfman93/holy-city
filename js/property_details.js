@@ -26,6 +26,14 @@ $(document).ready(function() {
     $('#property-price').text('₪' + (f.Price ? parseInt(f.Price).toLocaleString() : 'N/A'));
     $('#property-description').text(f.Description || '');
   
+// Display Neighborhood Names with Icon
+const neighborhoodContainer = $('#property-neighborhood');
+neighborhoodContainer.empty();
+if (f.Neighborhood_Names) {
+  neighborhoodContainer.html(`
+    <i class="fa fa-map-marker"></i> ${f.Neighborhood_Names}
+  `);
+}
     // Image Gallery with Fancybox
     const imagesContainer = $('#property-images-container');
     imagesContainer.empty();
@@ -37,7 +45,7 @@ $(document).ready(function() {
           // Wrap each image in an anchor tag for Fancybox gallery
           imagesContainer.append(`
             <a href="${url}" data-fancybox="gallery">
-              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px;    object-fit: cover; margin:5px" />
+              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px;    object-fit: cover;" />
             </a>
           `);
         }
@@ -66,16 +74,17 @@ $(document).ready(function() {
     }
     
   
- // Video
-const videoContainer = $('#property-video-container');
-videoContainer.empty();
-
-if (f.VideoUrl) {
-  videoContainer.html(`
-    <h4>Property Video</h4>
-    <iframe width="100%" height="480" src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>
-  `);
-}
+  // Video
+  const videoContainer = $('#property-video-container');
+  videoContainer.empty();
+  if (f.VideoUrl) {
+    videoContainer.html(`
+      <h4>Property Video</h4>
+      <div class="video-wrapper">
+        <iframe src="${f.VideoUrl}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    `);
+  }
 
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);

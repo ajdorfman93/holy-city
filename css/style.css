@@ -247,7 +247,7 @@ img {
   height: 100%;
 }
 #aa-menu-area .main-navbar .navbar-nav li a {
-  color: #4b4b4b;
+  color: #fff;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -570,7 +570,7 @@ img {
 }
 .item .thumb img {
   width: 100%;
-  margin: 2px;
+  margin: 0px;
 }
 .item img {
   width: 100%;	
@@ -1417,14 +1417,20 @@ img {
 #aa-property-header .aa-property-header-inner {
   display: inline;
   float: left;
-  padding: 150px 0 50px;
+  padding: 200px 0 50px;
   text-align: center;
   width: 100%;
 }
 #aa-property-header .aa-property-header-inner h2 {
   color: #fff;
   letter-spacing: 0.5px;
-  margin-top: 65px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+#aa-property-header .aa-property-header-inner h3 {
+  color: #59abe3;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
   text-transform: uppercase;
 }
 #aa-property-header .aa-property-header-inner .breadcrumb {
@@ -2744,7 +2750,23 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+.property-video-container{
+  aspect-ratio: 4 / 3;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;  
+  overflow: hidden;
+}
 
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /*==================
  RESPONSIVE DESIGN
 ====================*/
@@ -2897,6 +2919,10 @@ img {
 
 }
 @media (max-width: 767px) {
+  #aa-menu-area .main-navbar .navbar-nav li a {
+
+    color: #000;
+  }
   .navbar-collapse.in {
     overflow-x: hidden;
     background-color: #ddd !important;
@@ -3054,6 +3080,12 @@ img {
   }
   #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-left iframe {
     height: 350px;
+  }
+
+  #aa-menu-area .main-navbar .navbar-header .aa-logo-img {
+    border: none;
+    height: auto;
+    width: 120px;
   }
 
   #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right {
@@ -3270,12 +3302,6 @@ img {
 
   #aa-signin .aa-signin-area .aa-signin-form .aa-signin-form-title h4 {
     margin-bottom: 20px;
-  }
-
-  #aa-menu-area .main-navbar .navbar-header .aa-logo-img {
-    border: none;
-    height: auto;
-    width: 120px;
   }
 
   .pulse {
