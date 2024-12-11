@@ -126,7 +126,6 @@ $(document).ready(function() {
         return dateA - dateB; 
       });
     }
-    // Default means no re-sorting
     return records;
   }
 
@@ -150,30 +149,16 @@ $(document).ready(function() {
       <li>
         <article class="aa-properties-item">
           <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
-            <img src="${f.Img_Urls || 'img/default.jpg'}" alt="${f.Name || 'Property'}">
+            <img src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" alt="${f.Name || 'Property'}">
           </a>
-          <div class="aa-tag ${tagClass}">
-            ${f.Property_Status || ''}
-          </div>
+          <div class="aa-tag ${tagClass}">${f.Property_Status || ''}</div>
           <div class="aa-properties-item-content">
-            <div class="aa-properties-info">
-              <span>${f.Bedrooms || 'N/A'} Beds</span>
-            </div>
-            <div class="aa-properties-about">
-              <h3><a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a></h3>
-              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>                     
-            </div>
-            <div class="aa-properties-detial">
-              <span class="aa-price">
-                ₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}
-              </span>
-              <a class="aa-secondary-btn" href="property_details.html?id=${record.id}">View Details</a>
-            </div>
+            <h3><a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a></h3>
+            <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
+            <span class="aa-price">₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
           </div>
         </article>
-      </li>
-    `;
-    
+      </li>`;
       $propertiesList.append(propertyHTML);
     });
   }
@@ -188,17 +173,18 @@ $(document).ready(function() {
         const sidebarItemHTML = `
           <div class="media">
             <div class="media-left">
-              <a href="#">
-                <img class="media-object" src="${f.Img_Urls || 'img/default.jpg'}" alt="${f.Name || 'Property'}">
+              <a href="property_details.html?id=${record.id}">
+                <img class="media-object" src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" alt="${f.Name || 'Property'}">
               </a>
             </div>
             <div class="media-body">
-              <h4 class="media-heading"><a href="#">${f.Name || 'Untitled Property'}</a></h4>
-              <p>${f.Street1 || ''}, ${f.Neighborhood || ''}</p>                
+              <h4 class="media-heading">
+                <a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a>
+              </h4>
+              <p>${f.Street1 || ''}, ${f.Neighborhood || ''}</p>
               <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
-          </div>
-        `;
+          </div>`;
         $popularPropertiesSidebar.append(sidebarItemHTML);
       }
     });
@@ -208,33 +194,17 @@ $(document).ready(function() {
     const $pagination = $('.pagination');
     $pagination.empty();
 
-    if (totalPages <= 1) return; // No pagination needed
+    if (totalPages <= 1) return;
 
     const prevDisabled = currentPage === 1 ? 'disabled' : '';
-    $pagination.append(`
-      <li class="${prevDisabled}">
-        <a href="#" aria-label="Previous" data-page="${currentPage - 1}">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-    `);
+    $pagination.append(`<li class="${prevDisabled}"><a href="#" data-page="${currentPage - 1}">&laquo;</a></li>`);
 
     for (let i = 1; i <= totalPages; i++) {
       const activeClass = i === currentPage ? 'active' : '';
-      $pagination.append(`
-        <li class="${activeClass}">
-          <a href="#" data-page="${i}">${i}</a>
-        </li>
-      `);
+      $pagination.append(`<li class="${activeClass}"><a href="#" data-page="${i}">${i}</a></li>`);
     }
 
     const nextDisabled = currentPage === totalPages ? 'disabled' : '';
-    $pagination.append(`
-      <li class="${nextDisabled}">
-        <a href="#" aria-label="Next" data-page="${currentPage + 1}">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    `);
+    $pagination.append(`<li class="${nextDisabled}"><a href="#" data-page="${currentPage + 1}">&raquo;</a></li>`);
   }
 });
