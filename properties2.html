@@ -1,283 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Holy City | Property Details</title>
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    
-    <!-- Font awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">   
-    <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
-    <!-- Fancybox slider -->
-    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
-    <!-- Theme color -->
-    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
-    <!-- Main style sheet -->
-    <link href="css/style.css" rel="stylesheet">    
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css">
-
-  </head>
-  <body class="aa-price-range">   
-  <!-- Pre Loader -->
-  <div id="aa-preloader-area">
-    <div class="pulse"></div>
-  </div>
-
-  <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
-
-  <!-- Header -->
-  <header id="aa-header">  
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-                  <div class="aa-telephone-no">
-                    <span class="fa fa-phone"></span>
-                    052-678-3539
-                  </div>
-                  <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> info@markups.com
-                  </div>
-                </div>              
-              </div>
-            </div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Column Layout</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="list-group">
+        <div class="list-group-item">
+            <span class="header">Header 1</span>
+            <span class="data">Data 1</span>
         </div>
-      </div>
+        <div class="list-group-item">
+            <span class="header">Header 2</span>
+            <span class="data">Data 2</span>
+        </div>
+        <div class="list-group-item">
+            <span class="header">Header 3</span>
+            <span class="data">Data 3</span>
+        </div>
+        <div class="list-group-item">
+            <span class="header">Header 4</span>
+            <span class="data">Data 4</span>
+        </div>
+        <div class="list-group-item">
+            <span class="header">Header 5</span>
+            <span class="data">Data 5</span>
+        </div>
     </div>
-  </header>
-  <!-- / Header -->
-
-  <!-- Menu -->
-  <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-      <div class="container">
-        <div class="navbar-header">                                          
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>  
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/aryeh logo no background with BOX.png" alt="logo"></a>                    
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="properties.html">PROPERTIES</a></li>
-            <li><a href="about.html">ABOUT US</a></li>                                       
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>                           
-        </div>
-      </div>          
-    </nav> 
-  </section>
-  <!-- / Menu -->
-
-  <!-- Property header -->
-  <section id="aa-property-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-property-header-inner">
-            <h2 id="property-title">Property Details</h2>
-            <ol class="breadcrumb">
-              <li><a href="index.html">HOME</a></li>            
-              <li class="active" id="property-breadcrumb-title">Property Title</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> 
-  <!-- / Property header -->
-
-  <!-- Property details section -->
-  <section id="aa-properties">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="aa-properties-content">            
-            <div class="aa-properties-details">
-              <!-- Image Gallery -->
-              <div class="aa-properties-details-img" id="property-images-container">
-                <!-- Gallery images inserted by JS -->
-              </div>
-             
-              <div class="col-md-4">
-                <aside class="aa-properties-sidebar">
-                    <h4>Property Features</h4>
-                    <ul id="property-features">
-                      <!-- Features inserted by JS -->
-                    </ul>
-                </aside>
-                          </div> 
-                          </div> 
-                          </div> 
-                        </div> 
-
-              <div class="aa-properties-info">
-                <h2 id="property-name"></h2>
-                <span class="aa-price" id="property-price">$0</span>
-                <p id="property-description"></p>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-8">
-                        <div id="carousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="http://placehold.it/350x250/e8117f/fff&amp;text=Product+Main">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/00ffff/000&amp;text=Product+Image+2">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/ff00ff/fff&amp;text=Product+Image+3">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/ffff00/000&amp;text=Product+Image+4">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/612b65/fff&amp;text=Product+Image+5">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/00ffff/000&amp;text=Product+Image+6">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/db371b/fff&amp;text=Product+Image+7">
-                                </div>
-                                <div class="item">
-                                    <img src="http://placehold.it/350x250/feb8aa/000&amp;text=Product+Image+8">
-                                </div>
-                            </div>
-                        </div> 
-                    <div class="clearfix">
-                        <div id="thumbcarousel" class="carousel slide" data-interval="false">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="http://placehold.it/100/e8117f/fff&amp;text=Product+Main"></div>
-                                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="http://placehold.it/100/00ffff/000&amp;text=Product+Image+2"></div>
-                                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="http://placehold.it/100/ff00ff/fff&amp;text=Product+Image+3"></div>
-                                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="http://placehold.it/100/ffff00/000&amp;text=Product+Image+4"></div>
-                                </div><!-- /item -->
-                                <div class="item">
-                                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="http://placehold.it/100/612b65/fff&amp;text=Product+Image+5"></div>
-                                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="http://placehold.it/100/00ffcc/000&amp;text=Product+Image+6"></div>
-                                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="http://placehold.it/100/db371b/fff&amp;text=Product+Image+7"></div>
-                                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="http://placehold.it/100/feb8aa/000&amp;text=Product+Image+8"></div>
-                                </div><!-- /item -->
-                            </div><!-- /carousel-inner -->
-                            <a class="slick-prev" href="#thumbcarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="slick-next" href="#thumbcarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div> <!-- /thumbcarousel -->
-                    </div><!-- /clearfix -->
-                    </div> <!-- /col-sm-6 -->
-                    <div class="col-sm-4">
-                        <h2>About the property</h2>
-                        <ul id="property-about">
-                          <!-- About inserted by JS -->
-                        </ul>
-                
-                    </div> <!-- /col-sm-6 -->
-                  </div> <!-- /row -->
-                </div> <!-- /container -->
-                <div id="property-video-container"></div>        
-              </div>
-
-              <div class="aa-properties-social">
-                <ul>
-                  <li>Share</li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-              </div>
-
-              
-            </div>           
-          </div>
-        </div>
-        
-
-
-                  <div class="col-md-4"></div>
-          <aside class="aa-properties-sidebar">
-            <div class="aa-properties-single-sidebar">
-              <h3>Popular Properties</h3>
-              <div id="popular-properties-sidebar">
-                <!-- Popular properties inserted by JS -->
-              </div>
-            </div>
-          </aside>
- 
-  <!-- / Property details section -->
-
-  <!-- Footer -->
-  <footer id="aa-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-footer-area">
-            <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="aa-footer-left">
-                 <p>Designed by <a rel="nofollow" href="http://www.markups.io/">MarkUps.io</a></p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="aa-footer-middle">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-google-plus"></i></a>
-                  <a href="#"><i class="fa fa-youtube"></i></a>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="aa-footer-right">
-                  <a href="#">Home</a>
-                  <a href="#">Support</a>
-                  <a href="#">License</a>
-                  <a href="#">FAQ</a>
-                  <a href="#">Privacy & Term</a>
-                </div>
-              </div>            
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- / Footer -->
-
-  <!-- Scripts -->
-  <script src="js/jquery.min.js"></script>   
-  <script src="js/bootstrap.js"></script>   
-  <script type="text/javascript" src="js/slick.js"></script>
-  <script type="text/javascript" src="js/nouislider.js"></script>
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <script src="js/custom.js"></script> 
-  <script src="js/property_details.js"></script> 
-  <script src="js/c"></script> 
-
 </body>
 </html>

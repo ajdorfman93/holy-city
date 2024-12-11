@@ -54,15 +54,30 @@ if (f.Neighborhood_Names) {
     // Initialize fancybox on the gallery links
     $("[data-fancybox='gallery']").fancybox();
 
-    // Features
-    const featuresList = $('#property-features');
-    featuresList.empty();
-    if (f.Features) {
-      const htmlContent = f.Features.replace(/\n/g, '<br>');
-      // Now wrap it however you like, for example as one `<li>`:
-      featuresList.append(`<li>${htmlContent}</li>`);
-    }
-    
+// Property Details Columns
+const detailsContainer = $('#property-features'); // Target container
+detailsContainer.empty(); // Clear existing content
+
+const propertyDetails = [
+  { header: 'Size', data: (f.Property_Size ? `${f.Property_Size} SQM` : 'N/A') },
+    { header: 'Bedrooms', data: f.Bedrooms || 'N/A' },
+    { header: 'Neighborhood', data: f.Neighborhood_Names || 'N/A' },
+    { header: 'Address', data: f.Street1 || 'N/A' },
+    { header: 'Floor', data: f.Floor || 'N/A' },
+    { header: 'Type', data: f.Property_Type || 'N/A' },
+    { header: 'Property Status', data: f.Property_Status || 'N/A' },
+];
+
+// Render each property detail in the list-group layout
+propertyDetails.forEach(detail => {
+    detailsContainer.append(`
+        <div class="list-group-item">
+            <span class="header">${detail.header}</span>
+            <span class="data">${detail.data}</span>
+        </div>
+    `);
+});
+
   
     // About
     const aboutList = $('#property-about');
@@ -102,6 +117,44 @@ if (f.Neighborhood_Names) {
       `);
   }
   
+// Features Section
+const featuresContainer = $('#property-features-list'); // Target container for features
+featuresContainer.empty(); // Clear existing content
+
+if (f.StrFeatures) {
+    // Parse the tuple-like string into an array
+    const featuresArray = f.StrFeatures
+        .replace(/^\(|\)$/g, '') // Remove parentheses at the start and end
+        .split(',') // Split by commas
+        .map(feature => feature.trim().replace(/^'(.*)'$/, '$1')); // Remove extra quotes and whitespace
+
+    // Render each feature
+    featuresArray.forEach(feature => {
+        let wheelchairIcon = ''; // Default: No wheelchair icon
+
+        // Add wheelchair icon for Accessible
+        if (feature.toLowerCase().includes('accessible')) {
+            wheelchairIcon = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-wheelchair" viewBox="0 0 16 16">
+  <path d="M12 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.663 2.146a1.5 1.5 0 0 0-.47-2.115l-2.5-1.508a1.5 1.5 0 0 0-1.676.086l-2.329 1.75a.866.866 0 0 0 1.051 1.375L7.361 3.37l.922.71-2.038 2.445A4.73 4.73 0 0 0 2.628 7.67l1.064 1.065a3.25 3.25 0 0 1 4.574 4.574l1.064 1.063a4.73 4.73 0 0 0 1.09-3.998l1.043-.292-.187 2.991a.872.872 0 1 0 1.741.098l.206-4.121A1 1 0 0 0 12.224 8h-2.79zM3.023 9.48a3.25 3.25 0 0 0 4.496 4.496l1.077 1.077a4.75 4.75 0 0 1-6.65-6.65z"/>
+</svg>`;
+        }
+
+        // Append the feature to the container
+        featuresContainer.append(`
+          <div class="list-checks-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+              </svg>
+              ${wheelchairIcon}
+              <span class="data">${feature}</span>
+          </div>
+      `);
+  });
+}
+
+
 
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);
