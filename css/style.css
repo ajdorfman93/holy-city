@@ -870,11 +870,11 @@ img {
   font-size: 14px;
 }
 
-.aa-properties-item .aa-properties-item-content .aa-properties-about h3 {
+.aa-properties-item .aa-properties-item-content h3 {
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflow if text is too long */
   text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
-  font-size: clamp(12px, 2vw, 24px); /* Dynamically adjust font size */
+  font-size: clamp(16px, 2vw, 24px); /* Dynamically adjust font size */
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-detial {
   border-top: 1px solid #ddd;
@@ -2782,7 +2782,7 @@ img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 992px) {
   #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents .aa-agetns-info .aa-agent-social a {
     margin: 10px 2px;
   }
