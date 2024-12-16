@@ -298,17 +298,6 @@ th {
 }
 
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 html {
   font-size: 10px;
 
@@ -5474,9 +5463,9 @@ button.close {
   opacity: .9;
 }
 .carousel-control .icon-prev,
-.carousel-control .icon-next:,
-.carousel-control .glyphicon-chevron-left::after,
-.carousel-control::after .glyphicon-chevron-right::after {
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
   z-index: 5;
@@ -5501,11 +5490,13 @@ button.close {
 .carousel-control .glyphicon-chevron-left {
   left: 50%;
   margin-left: -10px;
+  text-shadow:2px 2px 4px #000000;
 }
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
   right: 50%;
   margin-right: -10px;
+  text-shadow:2px 2px 4px #000000;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
@@ -5573,14 +5564,17 @@ button.close {
     height: 30px;
     margin-top: -10px;
     font-size: 30px;
+    text-shadow:2px 2px 4px #000000;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
     margin-left: -10px;
+    text-shadow:2px 2px 4px #000000;
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
     margin-right: -10px;
+    text-shadow:2px 2px 4px #000000;
   }
   .carousel-caption {
     right: 20%;
