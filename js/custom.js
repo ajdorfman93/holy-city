@@ -66,6 +66,8 @@ jQuery(function($){
   }, function() {
     jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
   });
+
+  // Price range slider
   jQuery(function() {
     if (jQuery('body').is('.aa-price-range')) {
       var originalRange = {
@@ -81,7 +83,7 @@ jQuery(function($){
         '90%': 40000000,
         'max': 50000000
       };
-  
+
       var rentRange = {
         'min': 0,
         '10%': 5000,
@@ -95,30 +97,26 @@ jQuery(function($){
         '90%': 45000,
         'max': 50000
       };
-  
+
       var skipSlider = document.getElementById('aa-sqrfeet-range');
       var sliderConfig = {
         range: originalRange,
         snap: true,
         connect: true,
-        start: [0, 20000000]
+        start: [0, 5000000]
       };
       noUiSlider.create(skipSlider, sliderConfig);
-  
+
       var skipValues = [
         document.getElementById('skip-value-lower'),
         document.getElementById('skip-value-upper')
       ];
-  
-      // Initialize priceMin and priceMax to match the slider start values
-      priceMin = sliderConfig.start[0];
-      priceMax = sliderConfig.start[1];
-  
-      // Display initial slider values
-      skipValues[0].innerHTML = '₪' + parseInt(priceMin).toLocaleString();
-      skipValues[1].innerHTML = '₪' + parseInt(priceMax).toLocaleString();
-  
-      // Call applyFilters on slider change
+
+      skipSlider.noUiSlider.on('update', function(values, handle) {
+        skipValues[handle].innerHTML = '₪' + parseInt(values[handle]).toLocaleString();
+      });
+
+      // On slider change, update global priceMin/priceMax and re-apply filters
       skipSlider.noUiSlider.on('change', function(values) {
         priceMin = parseInt(values[0], 10);
         priceMax = parseInt(values[1], 10);
@@ -126,36 +124,26 @@ jQuery(function($){
           applyFilters();
         }
       });
-  
-      // Change slider range based on property status
+
       document.getElementById('property-status').addEventListener('change', function() {
         var selectedValue = this.value;
         var newRange = selectedValue === "2" ? rentRange : originalRange;
         skipSlider.noUiSlider.updateOptions({ range: newRange });
-  
         // Reset the slider positions when status changes
         if (selectedValue === "2") {
           skipSlider.noUiSlider.set([0, 5000]);
-          priceMin = 0;
           priceMax = 5000;
         } else {
           skipSlider.noUiSlider.set([0, 5000000]);
-          priceMin = 0;
           priceMax = 5000000;
         }
-  
         if (typeof applyFilters === 'function') {
           applyFilters();
         }
       });
-  
-      // Trigger filters immediately after slider initialization
-      if (typeof applyFilters === 'function') {
-        applyFilters();
-      }
     }
   });
-  
+
   jQuery('#mixit-container').mixItUp();
 
   jQuery(document).ready(function() {

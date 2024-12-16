@@ -60,7 +60,7 @@ detailsContainer.empty(); // Clear existing content
 
 const propertyDetails = [
   { header: 'Size', data: (f.Property_Size ? `${f.Property_Size} SQM` : 'N/A') },
-    { header: 'Bedrooms', data: f.Bedrooms || 'N/A' },
+    { header: 'Bedrooms', data: f.StrBedrooms || 'N/A' },
     { header: 'Neighborhood', data: f.Neighborhood_Names || 'N/A' },
     { header: 'Address', data: f.Street1 || 'N/A' },
     { header: 'Floor', data: f.Floor || 'N/A' },
@@ -204,7 +204,7 @@ if (f.StrFeatures) {
             </div>
             <div class="aa-properties-item-content">
               <div class="aa-properties-info">
-                <span>${nf.Bedrooms || 'N/A'} Beds</span>
+                <span>${nf.StrBedrooms || 'N/A'} Beds</span>
               </div>
               <div class="aa-properties-about">
                 <h3><a href="property_details.html?id=${nr.id}">${nf.Name || 'Untitled Property'}</a></h3>

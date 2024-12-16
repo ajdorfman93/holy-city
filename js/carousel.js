@@ -38,8 +38,8 @@ $(document).ready(function () {
         urls.forEach((url, index) => {
             const activeClass = index === 0 ? 'active' : '';
             mainCarousel.append(`
-                <div class="item ${activeClass}">
-                    <img src="${url}" alt="Main Image">
+                <div class="main-image item ${activeClass}">
+                    <img src="${url}" alt="main-image">
                 </div>
             `);
         });

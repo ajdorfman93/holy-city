@@ -1134,6 +1134,10 @@ figure {
 img {
   vertical-align: middle;
 }
+
+.carousel-inner .main-image .item .active img{
+  width: 1111%;
+}
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -1142,7 +1146,7 @@ img {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 10; /* Ensures the image maintains a 4:3 aspect ratio */
-  object-fit: cover; /* Makes sure the image fills the frame */
+  object-fit: contain; /* Makes sure the image fills the frame */
 }
 .img-rounded {
   border-radius: 6px;
