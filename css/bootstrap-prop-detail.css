@@ -296,12 +296,7 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-chevron-left:before {
-  content: "\e079";
-}
-.glyphicon-chevron-right:before {
-  content: "\e080";
-}
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -5479,6 +5474,19 @@ button.close {
   opacity: .9;
 }
 .carousel-control .icon-prev,
+.carousel-control .icon-next:,
+.carousel-control .glyphicon-chevron-left::after,
+.carousel-control::after .glyphicon-chevron-right::after {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+  text-shadow:2px 2px 4px #000000;
+}
+.ca
+
+.carousel-control .icon-prev,
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
@@ -5487,6 +5495,7 @@ button.close {
   z-index: 5;
   display: inline-block;
   margin-top: -10px;
+  text-shadow:2px 2px 4px #000000;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {

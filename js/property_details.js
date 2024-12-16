@@ -45,7 +45,7 @@ if (f.Neighborhood_Names) {
           // Wrap each image in an anchor tag for Fancybox gallery
           imagesContainer.append(`
             <a href="${url}" data-fancybox="gallery">
-              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px;    object-fit: cover;" />
+              <img src="${url}" alt="${f.Name || 'Property'}" style="max-height:400px;    object-fit: contain;" />
             </a>
           `);
         }

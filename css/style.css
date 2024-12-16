@@ -1707,6 +1707,7 @@ img {
 .aa-properties-details .aa-properties-details-img img {
   height: 500px;
   width: 100%;
+  object-fit: contain;
 }
 .aa-properties-details .aa-properties-details-img .slick-prev, .aa-properties-details .aa-properties-details-img .slick-next {
   height: 50px;
@@ -2826,6 +2827,7 @@ img {
 
   .aa-properties-details .aa-properties-details-img img {
     height: 450px;
+    object-fit: contain;
   }
 
   #aa-gallery .aa-gallery-area .aa-gallery-content .aa-gallery-body .aa-single-gallery {
@@ -3031,6 +3033,7 @@ img {
 
   .aa-properties-details .aa-properties-details-img img {
     height: 350px;
+    object-fit: contain;
   }
 
   .aa-properties-details .aa-properties-info h2 {
@@ -3240,6 +3243,7 @@ img {
 
   .aa-properties-details .aa-properties-details-img img {
     height: 300px;
+    object-fit: contain;
   }
 
   .aa-properties-details .aa-properties-info iframe {
@@ -3442,6 +3446,7 @@ img {
 
   .aa-properties-details .aa-properties-details-img img {
     height: 250px;
+    object-fit: contain;
   }
 
   .aa-properties-details .aa-properties-info h2 {
