@@ -273,7 +273,7 @@ img {
   margin-right: -30px;
 }
 #aa-menu-area .navbar-fixed-top {
-  background-color: #f8f8f8;
+  background-color: #555;
   padding: 15px 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -286,7 +286,7 @@ img {
   color: #555;
 }
 #aa-menu-area .navbar-fixed-top .navbar-nav li a {
-  color: #555;
+  color: #fff;
 }
 
 /*scrol to top*/
@@ -979,7 +979,7 @@ img {
   background-image: url("../img/promo-banner.jpg");
   background-attachment: fixed;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   display: inline;
   float: left;
   width: 100%;
