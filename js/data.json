@@ -1,0 +1,202 @@
+{
+    "records": [
+      {
+        "id": 2,
+        "fields": {
+          "Date": 1733702400,
+          "Street1": "121 King David Street",
+          "Neighborhood": 2,
+          "Number_of_Bedrooms": 3,
+          "Property_Size": 400,
+          "Name": "Baka Beauty 1",
+          "Latitude": 30.8124247,
+          "Longitude": 0,
+          "GeocodedAddress": null,
+          "Geocode": true,
+          "Img_Urls": "https://iili.io/2MOUU91.jpg",
+          "Property_Status": "short term",
+          "Price": 26959078,
+          "Popular_Properties": false,
+          "VideoUrl": "https://ik.imagekit.io/jedi66/sample-video.mp4?updatedAt=1733798863292",
+          "Features": [
+            "L",
+            "Great View",
+            "Accessible",
+            "A/C",
+            "Pool",
+            "Garden",
+            "Concierge",
+            "Rooftop",
+            "Rooftop",
+            "Sauna"
+          ],
+          "About": "200 Sqm on one level plus a magnificent 160 Sqm Terrace with a private swimming pool. Large 3 bedrooms and a gorgeous living room facing some amazing views of Jerusalem. 13th floor with Shabbat elevator, 2 private parking spots and a storage room. The apartment is bright, spacious and designed to the highest standards.",
+          "Image_Gallery": "https://iili.io/2MOUU91.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUvcB.jpg \nhttps://iili.io/2MOUrwg.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUPoJ.jpg \nhttps://iili.io/2MOUiMv.jpg \nhttps://iili.io/2MOUsPR.jpg \nhttps://iili.io/2MOUQFp.jpg \nhttps://iili.io/2MOUtSI.jpg \nhttps://iili.io/2MOUb9t.jpg",
+          "Floor": 1,
+          "Property_Type": "Penthouse",
+          "DateStr": "2024-12-09",
+          "Neighborhood_Names": "Baka",
+          "StrBedrooms": "3",
+          "StrPropertySize": "400",
+          "City": "Jerusalem",
+          "Address": [
+            "L",
+            "121 King David Street",
+            "Jerusalem",
+            "Israel"
+          ],
+          "State": "Israel",
+          "Bedrooms": "3",
+          "StrFeatures": "('Great View', 'Accessible', 'A/C', 'Pool', 'Garden', 'Concierge', 'Rooftop', 'Rooftop', 'Sauna')"
+        },
+        "errors": {
+          "GeocodedAddress": "KeyError"
+        }
+      },
+      {
+        "id": 4,
+        "fields": {
+          "Date": 1733788800,
+          "Street1": "53 Emek Refaim Street",
+          "Neighborhood": 28,
+          "Number_of_Bedrooms": 6,
+          "Property_Size": 500,
+          "Name": "Nachlaot Nook 2",
+          "Latitude": 0,
+          "Longitude": 0,
+          "GeocodedAddress": "",
+          "Geocode": false,
+          "Img_Urls": "https://iili.io/2MOU4ta.jpg",
+          "Property_Status": "Sale",
+          "Price": 1212568,
+          "Popular_Properties": true,
+          "VideoUrl": "https://ik.imagekit.io/jedi66/sample-video.mp4?updatedAt=1733798863292",
+          "Features": [
+            "L",
+            "Great View",
+            "Accessible",
+            "A/C",
+            "Pool",
+            "Garden",
+            "Concierge",
+            "Rooftop",
+            "Rooftop",
+            "Sauna"
+          ],
+          "About": "200 Sqm on one level plus a magnificent 160 Sqm Terrace with a private swimming pool. Large 3 bedrooms and a gorgeous living room facing some amazing views of Jerusalem. 13th floor with Shabbat elevator, 2 private parking spots and a storage room. The apartment is bright, spacious and designed to the highest standards.",
+          "Image_Gallery": "https://iili.io/2MOUU91.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUvcB.jpg \nhttps://iili.io/2MOUrwg.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUPoJ.jpg \nhttps://iili.io/2MOUiMv.jpg \nhttps://iili.io/2MOUsPR.jpg \nhttps://iili.io/2MOUQFp.jpg \nhttps://iili.io/2MOUtSI.jpg \nhttps://iili.io/2MOUb9t.jpg",
+          "Floor": 2,
+          "Property_Type": "Apartment",
+          "DateStr": "2024-12-10",
+          "Neighborhood_Names": "Ramat Sharet",
+          "StrBedrooms": "6",
+          "StrPropertySize": "500",
+          "City": "Jerusalem",
+          "Address": [
+            "L",
+            "53 Emek Refaim Street",
+            "Jerusalem",
+            "Israel"
+          ],
+          "State": "Israel",
+          "Bedrooms": "+5",
+          "StrFeatures": "('Great View', 'Accessible', 'A/C', 'Pool', 'Garden', 'Concierge', 'Rooftop', 'Rooftop', 'Sauna')"
+        }
+      },
+      {
+        "id": 5,
+        "fields": {
+          "Date": 1733875200,
+          "Street1": "36 Rav Kook Street",
+          "Neighborhood": 13,
+          "Number_of_Bedrooms": 4,
+          "Property_Size": 7000,
+          "Name": "Armon Hanatziv Haven 3",
+          "Latitude": 0,
+          "Longitude": 0,
+          "GeocodedAddress": "",
+          "Geocode": false,
+          "Img_Urls": "https://iili.io/2MOUvcB.jpg",
+          "Property_Status": "Rent",
+          "Price": 37187,
+          "Popular_Properties": true,
+          "VideoUrl": "https://ik.imagekit.io/jedi66/sample-video.mp4?updatedAt=1733798863292",
+          "Features": [
+            "L",
+            "Great View",
+            "Accessible",
+            "A/C",
+            "Pool",
+            "Garden",
+            "Concierge",
+            "Rooftop",
+            "Rooftop",
+            "Sauna"
+          ],
+          "About": "200 Sqm on one level plus a magnificent 160 Sqm Terrace with a private swimming pool. Large 3 bedrooms and a gorgeous living room facing some amazing views of Jerusalem. 13th floor with Shabbat elevator, 2 private parking spots and a storage room. The apartment is bright, spacious and designed to the highest standards.",
+          "Image_Gallery": "https://iili.io/2MOUU91.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUvcB.jpg \nhttps://iili.io/2MOUrwg.jpg \nhttps://iili.io/2MOU4ta.jpg \nhttps://iili.io/2MOUPoJ.jpg \nhttps://iili.io/2MOUiMv.jpg \nhttps://iili.io/2MOUsPR.jpg \nhttps://iili.io/2MOUQFp.jpg \nhttps://iili.io/2MOUtSI.jpg \nhttps://iili.io/2MOUb9t.jpg",
+          "Floor": 4,
+          "Property_Type": "Single Family House",
+          "DateStr": "2024-12-11",
+          "Neighborhood_Names": "Kiryat Hayovel",
+          "StrBedrooms": "4",
+          "StrPropertySize": "7000",
+          "City": "Jerusalem",
+          "Address": [
+            "L",
+            "36 Rav Kook Street",
+            "Jerusalem",
+            "Israel"
+          ],
+          "State": "Israel",
+          "Bedrooms": "4",
+          "StrFeatures": "('Great View', 'Accessible', 'A/C', 'Pool', 'Garden', 'Concierge', 'Rooftop', 'Rooftop', 'Sauna')"
+        }
+      },
+      {
+        "id": 6,
+        "fields": {
+          "Date": 1734307200,
+          "Street1": "Haneviim 46",
+          "Neighborhood": 35,
+          "Number_of_Bedrooms": 1,
+          "Property_Size": 60,
+          "Name": "Haneviim garden with pool",
+          "Latitude": 0,
+          "Longitude": 0,
+          "GeocodedAddress": "",
+          "Geocode": false,
+          "Img_Urls": "https://iili.io/2hNVcJt.jpg",
+          "Property_Status": "Rent",
+          "Price": 11000,
+          "Popular_Properties": false,
+          "VideoUrl": "",
+          "Features": [
+            "L",
+            "Accessible",
+            "Pool",
+            "Parking",
+            "Garden"
+          ],
+          "About": "BRAND NEW 1 BEDROOM IN CITY CENTER WITH PRIVATE POOL \n\n\u003Cbr\u003E2 Rooms (1 bedroom) \nFully furnished with very high end furniture \nPrivate garden with heated pool \nPrivate parking and storage unit \n\n\n11,000 a month + bills ",
+          "Image_Gallery": "https://iili.io/2hNV5fp.jpg \nhttps://iili.io/2hNVcJt.jpg \nhttps://iili.io/2hNVYgI.jpg \nhttps://iili.io/2hNV70N.jpg",
+          "Floor": 0,
+          "Property_Type": "Garden",
+          "DateStr": "2024-12-16",
+          "Neighborhood_Names": "City Center ",
+          "StrBedrooms": "1",
+          "StrPropertySize": "60",
+          "City": "Jerusalem",
+          "Address": [
+            "L",
+            "Haneviim 46",
+            "Jerusalem",
+            "Israel"
+          ],
+          "State": "Israel",
+          "Bedrooms": "1",
+          "StrFeatures": "('Accessible', 'Pool', 'Parking', 'Garden')"
+        }
+      }
+    ]
+  }

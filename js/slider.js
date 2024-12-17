@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const dataUrl = 'https://holy-city.getgrist.com/api/docs/boNNWd9gfif2YNdvrfcx97/tables/Properties/records';
+  const dataUrl = 'js/data.json';
   
     $.getJSON(dataUrl, function (data) {
       const records = data.records || [];

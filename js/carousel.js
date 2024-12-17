@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const dataUrl = 'https://holy-city.getgrist.com/api/docs/boNNWd9gfif2YNdvrfcx97/tables/Properties/records';
+    const dataUrl = 'js/data.json';
     const urlParams = new URLSearchParams(window.location.search);
     const propertyId = parseInt(urlParams.get('id'), 10);
 
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         // Parse Image_Gallery field
         let urls = property.fields['Image_Gallery']
-            .split(' ')
+            .split('\n')
             .map(url => url.trim()); // Split and trim the URLs
 
         // Ensure there are a multiple of 4 images
@@ -37,11 +37,11 @@ $(document).ready(function () {
         mainCarousel.empty();
         urls.forEach((url, index) => {
             const activeClass = index === 0 ? 'active' : '';
-            mainCarousel.append(`
-                <div class="main-image item ${activeClass}">
+            mainCarousel.append(
+                `<div class="main-image item ${activeClass}">
                     <img src="${url}" alt="main-image">
-                </div>
-            `);
+                </div>`
+            );
         });
 
         // Populate thumbnail carousel
@@ -49,16 +49,15 @@ $(document).ready(function () {
         thumbCarousel.empty();
         let thumbGroup = '';
         urls.forEach((url, index) => {
-            thumbGroup += `
-                <div data-target="#carousel" data-slide-to="${index}" class="thumb">
+            thumbGroup += 
+                `<div data-target="#carousel" data-slide-to="${index}" class="thumb">
                     <img src="${url}" alt="Thumbnail">
-                </div>
-            `;
+                </div>`;
             if ((index + 1) % 4 === 0 || index === urls.length - 1) {
                 const activeClass = thumbCarousel.children().length === 0 ? 'active' : '';
-                thumbCarousel.append(`
-                    <div class="item ${activeClass}">${thumbGroup}</div>
-                `);
+                thumbCarousel.append(
+                    `<div class="item ${activeClass}">${thumbGroup}</div>`
+                );
                 thumbGroup = ''; // Reset for the next group
             }
         });
