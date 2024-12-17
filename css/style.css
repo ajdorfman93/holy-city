@@ -876,7 +876,8 @@ img {
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflow if text is too long */
   text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
-  font-size: clamp(16px, 2vw, 24px); /* Dynamically adjust font size */
+  font-size: clamp(18px, 2vw, 24px); /* Dynamically adjust font size */
+  padding-bottom: 2px;
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-detial {
   border-top: 1px solid #ddd;
@@ -2842,6 +2843,14 @@ img {
     left: 46%;  
   }
 
+  .aa-properties-item .aa-properties-item-content h3 {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
+    font-size: 18px; /* Dynamically adjust font size */
+    padding-bottom: 2px;
+  }
+
 }
 @media (max-width: 991px) {
   #aa-menu-area .main-navbar .navbar-nav li a {
@@ -3069,12 +3078,18 @@ img {
   #aa-gallery .aa-gallery-area .aa-gallery-content .aa-gallery-top ul li {
     margin: 0px 5px;
   }
+
+  .aa-properties-item .aa-properties-item-content h3 {
+    font-size: clamp(22px, 2vw, 14px); /* Dynamically adjust font size */
+  }
 }
 @media (max-width: 640px) {
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content {
     left: 23%;
   }
-
+  .aa-properties-item .aa-properties-item-content h3 {
+    font-size: 22px
+  }
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-catg {
     font-size: 20px;
   }
@@ -3127,7 +3142,9 @@ img {
     padding: 10px;
     top: 37%;
   }
-
+  .aa-properties-item .aa-properties-item-content h3 {
+    font-size: 22px
+  }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-catg {
     font-size: 15px;
@@ -3330,7 +3347,9 @@ img {
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content {
     left: 20.5%;
   }
-
+  .aa-properties-item .aa-properties-item-content h3 {
+    font-size: clamp(12px, 2vw, 22px)
+  }
   #aa-advance-search .aa-advance-search-area {
     padding: 25px 10px;
   }
@@ -3570,7 +3589,9 @@ img {
     font-size: 16px;
     margin-right: 0px;
   }
-
+  .aa-properties-item .aa-properties-item-content h3 {
+    font-size: clamp(12px, 2vw, 22px)
+  }
   .pulse {
     left: 38%;  
   }
