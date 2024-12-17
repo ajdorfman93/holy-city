@@ -1,5 +1,3 @@
-/*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
-
 (function (factory) {
 
     if ( typeof define === 'function' && define.amd ) {
