@@ -2779,13 +2779,6 @@ img {
 /*==================
  RESPONSIVE DESIGN
 ====================*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  .video-wrapper iframe {
-      -webkit-appearance: none !important;
-      -webkit-transform: scale(1) !important; /* Ensures proper scaling */
-  }
-}
-
 @media (min-width: 992px) {
   #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents .aa-agetns-info .aa-agent-social a {
     margin: 10px 2px;
