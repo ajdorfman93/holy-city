@@ -41,7 +41,7 @@ h2 {
   color: #5c7b97;
 }
 #aa-menu-area .main-navbar .navbar-nav li a:hover, #aa-menu-area .main-navbar .navbar-nav li a:focus {
-  color: #5c7b97;
+  color: #000;
 }
 #aa-menu-area .main-navbar .navbar-nav .active a {
   color: #5c7b97;
@@ -86,7 +86,7 @@ h2 {
 }
 
 .aa-properties-item .for-sale {
-  background-color: #5c7b97;
+  background-color: #c3911a;
 }
 
 #aa-service .aa-service-area .aa-service-content .aa-single-service .aa-service-icon span {
