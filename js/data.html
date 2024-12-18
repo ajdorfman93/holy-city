@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch JSON Data</title>
+</head>
+<body>
+    <h1>Fetch and Display JSON Data</h1>
+    <pre id="output"></pre>
+
+    <script>
+        // The API endpoint
+        const url = 'https://holy-city.getgrist.com/api/docs/boNNWd9gfif2YNdvrfcx97/tables/Properties/records';
+
+        // Options for the fetch request
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        };
+
+        // Function to fetch and display data
+        async function fetchData() {
+            try {
+                const response = await fetch(url, options);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Display the JSON data in the <pre> element
+                document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('output').textContent = `Error: ${error.message}`;
+            }
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchData;
+    </script>
+</body>
+</html>

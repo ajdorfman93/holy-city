@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Holy City | Property Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider CSS -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider CSS -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">    
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="aa-price-range">
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-double-up"></i>
+    </a>
+    <!-- Header -->
+    <header id="aa-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                  <div class="aa-header-left">
+                    <div class="aa-telephone-no">
+                      <span class="fa fa-phone"></span> 052-678-3539
+                    </div>
+                    <div class="aa-email hidden-xs">
+                      <span class="fa fa-envelope-o"></span> info@holycity-realestate.com
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- / Header -->
+    <!-- Menu -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand aa-logo-img" href="index.html">
+              <img src="img/aryeh logo no background with BOX.png" alt="logo">
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="properties.html">PROPERTIES</a>
+              </li>
+              <li>
+                <a href="about.html">ABOUT US</a>
+              </li>
+              <li>
+                <a href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- / Menu -->
+    <!-- Property header -->
+    <section id="aa-property-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-property-header-inner">
+              <h2 id="property-title">Property Details</h2>
+              <h3 id="property-neighborhood">Property Details</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / Property header -->
+    <!-- Property details section -->
+    <section id="aa-properties">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="aa-properties-content">
+              <div class="aa-properties-details">
+                <!-- Image Gallery -->
+                <div class="aa-properties-details-img" id="property-images-container">
+                  <!-- Gallery images inserted by JS -->
+                </div>
+              </div>
+              <h2 id="property-name"></h2>
+              <h3 class="aa-price" id="property-price">$0</h3>
+            </div>
+          </div>
+          <div class="col-md-4 tables">
+            <aside class="aa-properties-sidebar">
+              <h4>Property Features</h4>
+              <div id="property-features" class="list-group">
+                <!-- Features inserted by JS -->
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="aa-properties-info">
+        <p id="property-description"></p>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+                <!-- Main Carousel -->
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                    <a class="slick-prev" style="
+    text-shadow:2px 2px 4px #000000" href="#carousel" role="button" data-slide="prev">
+                    </a>
+                    <a class="slick-next" style="
+    text-shadow:2px 2px 4px #000000" href="#carousel" role="button" data-slide="next">
+                    </a>
+                </div>
+        
+                <!-- Thumbnail Carousel -->
+                <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                    <div class="carousel-inner">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                    <a class="slick-prev" style="
+    text-shadow:2px 2px 4px #000000" href="#thumbcarousel" role="button" data-slide="prev">
+                  </a>
+                  <a class="slick-next" style="
+    text-shadow:2px 2px 4px #000000" href="#thumbcarousel" role="button" data-slide="next">
+                  </a>
+                </div>
+        
+              <!-- /clearfix -->
+            </div>
+            <!-- /col-sm-6 -->
+            <div class="col-lg-4">
+              <h2>About the property</h2>
+              <ul id="property-about">
+                <!-- About inserted by JS -->
+              </ul>
+              <div id="property-features-list" class="list-group" style="margin-top: 15px;"></div> <!-- For features -->
+            </div>
+            <!-- /col-sm-6 -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+    <div class="container">
+          <div class="row">
+          <div class="col-md-12">
+            <div id="property-video-container">
+              
+            </div> 
+                 </div>
+
+
+      </div>
+      </div>
+      <aside class="aa-properties-sidebar">
+        <div class="aa-properties-single-sidebar">
+          <h3>Popular Properties</h3>
+          <div id="popular-properties-sidebar">
+            <!-- Popular properties inserted by JS -->
+          </div>
+        </div>
+      </aside>
+      <!-- / Property details section -->
+      <!-- Footer -->
+      <footer id="aa-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="aa-footer-area">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aa-footer-left">
+                      <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="aa-footer-right">
+                      <a href="index.html">Home</a>
+                      <a href="properties.html">Properties</a>
+                      <a href="about.html">About Us</a>
+                      <a href="contact.html">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- / Footer -->
+      <!-- Scripts -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/slick.js"></script>
+      <script type="text/javascript" src="js/nouislider.js"></script>
+      <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+      <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/property_details.js"></script>
+      <script src="js/carousel.js"></script>
+  </body>
+</html>
