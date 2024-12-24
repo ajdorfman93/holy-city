@@ -130,11 +130,11 @@ jQuery(function($){
         skipSlider.noUiSlider.updateOptions({ range: newRange });
         // Reset the slider positions when status changes
         if (selectedValue === "2") {
-          skipSlider.noUiSlider.set([0, 5000]);
-          priceMax = 5000;
+          skipSlider.noUiSlider.set([0, 50000]);
+          priceMax = 50000;
         } else {
-          skipSlider.noUiSlider.set([0, 5000000]);
-          priceMax = 5000000;
+          skipSlider.noUiSlider.set([0, 50000000]);
+          priceMax = 50000000;
         }
         if (typeof applyFilters === 'function') {
           applyFilters();
