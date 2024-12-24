@@ -117,7 +117,6 @@
     display: none;
 }
 
-
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -141,7 +140,9 @@
     border: none;
     outline: none; 
     z-index: 9;
-	border-radius: 10px
+	border-radius: 10px;
+
+    transition: all 0.5s;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -149,11 +150,16 @@
 .slick-next:focus:before
 {
     opacity: 1;
+    color: white;
+
+    transition: all 0.5s;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
     opacity: .6;
+
+    transition: all 0.5s;
      /*opacity: 1;*/
 }
 
@@ -165,11 +171,14 @@
     line-height: 1;
 
     opacity: 1;
-    color: white;
+    color: #627f9b;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    transition: all 0.5s;
 }
+
 
 .slick-prev
 {
