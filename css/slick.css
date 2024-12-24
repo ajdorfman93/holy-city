@@ -145,15 +145,14 @@
     transition: all 0.5s;
 }
 .slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
+.slick-next:hover:before
 {
     opacity: 1;
     color: white;
 
     transition: all 0.5s;
 }
+
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
@@ -175,8 +174,6 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    transition: all 0.5s;
 }
 
 
