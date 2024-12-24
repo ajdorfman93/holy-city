@@ -1,6 +1,6 @@
 // Global variables to hold price range
 var priceMin = 0;
-var priceMax = 5000000; // default end range, will update on slider changes
+var priceMax = 50000000; // default end range, will update on slider changes
 
 jQuery(function($){
 
@@ -103,7 +103,7 @@ jQuery(function($){
         range: originalRange,
         snap: true,
         connect: true,
-        start: [0, 5000000]
+        start: [0, 50000000]
       };
       noUiSlider.create(skipSlider, sliderConfig);
 
@@ -125,17 +125,18 @@ jQuery(function($){
         }
       });
 
+      
       document.getElementById('property-status').addEventListener('change', function() {
         var selectedValue = this.value;
         var newRange = selectedValue === "2" ? rentRange : originalRange;
         skipSlider.noUiSlider.updateOptions({ range: newRange });
         // Reset the slider positions when status changes
         if (selectedValue === "2") {
-          skipSlider.noUiSlider.set([0, 5000]);
-          priceMax = 5000;
+          skipSlider.noUiSlider.set([0, 50000]);
+          priceMax = 50000;
         } else {
-          skipSlider.noUiSlider.set([0, 5000000]);
-          priceMax = 5000000;
+          skipSlider.noUiSlider.set([0, 50000000]);
+          priceMax = 50000000;
         }
         if (typeof applyFilters === 'function') {
           applyFilters();
@@ -144,10 +145,8 @@ jQuery(function($){
     }
   });
 
-  jQuery('#mixit-container').mixItUp();
-
-  jQuery(document).ready(function() {
-    jQuery(".fancybox").fancybox();
+  $(window).on("load", function() {
+    applyFilters();
   });
 
   jQuery(window).scroll(function(){
