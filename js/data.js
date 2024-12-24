@@ -181,7 +181,7 @@ $(document).ready(function() {
               <h4 class="media-heading">
                 <a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a>
               </h4>
-              <p>${f.Street1 || ''}, ${f.Neighborhood || ''}</p>
+              <p>${f.Street1 || ''}</p>
               <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
           </div>`;
