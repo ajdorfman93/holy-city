@@ -601,7 +601,7 @@ a.text-warning:focus {
   color: #66512c;
 }
 .text-danger {
-  color: #a9212e3a2;
+  color: #a9212e
 }
 a.text-danger:hover,
 a.text-danger:focus {
@@ -2111,10 +2111,10 @@ select[multiple].input-lg {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-  color: #a9212e3a2;
+  color: #a9212e;
 }
 .has-error .form-control {
-  border-color: #a9212e3a2;
+  border-color: #a9212e;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
@@ -2124,12 +2124,12 @@ select[multiple].input-lg {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
 }
 .has-error .input-group-addon {
-  color: #a9212e3a2;
+  color: #a9212e;
   background-color: #f2dede;
-  border-color: #a9212e3a2;
+  border-color: #a9212e;
 }
 .has-error .form-control-feedback {
-  color: #a9212e3a2;
+  color: #a9212e;
 }
 .has-feedback label ~ .form-control-feedback {
   top: 25px;
@@ -4437,7 +4437,7 @@ a.thumbnail.active {
   color: #66512c;
 }
 .alert-danger {
-  color: #a9212e3a2;
+  color: #a9212e;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -4888,7 +4888,7 @@ a.thumbnail.active {
   border-color: #ebccd1;
 }
 .panel-danger > .panel-heading {
-  color: #a9212e3a2;
+  color: #a9212e;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -4897,7 +4897,7 @@ a.thumbnail.active {
 }
 .panel-danger > .panel-heading .badge {
   color: #f2dede;
-  background-color: #a9212e3a2;
+  background-color: #a9212e;
 }
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ebccd1;

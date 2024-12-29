@@ -1,5 +1,5 @@
 body {
-  background-color: #fafaf0fafaf0;
+  background-color: #fafaf0;
   font-family: "Barlow";
   color: #333333;
   font-size: 15px;
@@ -522,6 +522,7 @@ img {
   font-weight: bold;
   padding-bottom: 5px;
   text-transform: uppercase;
+  max-width: 300px;
 }
 .carousel {
   margin-top: 20px;
@@ -2865,6 +2866,7 @@ img {
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
     font-size: 18px;
+    max-width: 200px;
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-price {
@@ -2922,7 +2924,8 @@ img {
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
     font-size: 10px;
-      margin: 0 0 2px;
+      margin: 0px;
+      max-width: 135px;
   }
 
   #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-location {
