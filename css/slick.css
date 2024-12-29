@@ -129,6 +129,7 @@
 
     display: block;
 
+    text-decoration: none;
     width: 20px;
     height: 20px;
     margin-top: -10px;
@@ -149,7 +150,9 @@
 {
     opacity: 1;
     color: white;
+    text-decoration: none;
 
+    text-shadow:2px 2px 4px #000;
     transition: all 0.5s;
 }
 
@@ -158,6 +161,7 @@
 {
     opacity: .6;
 
+    text-decoration: none;
     transition: all 0.5s;
      /*opacity: 1;*/
 }
@@ -169,9 +173,11 @@
     font-size: 30px;
     line-height: 1;
 
+    text-shadow:2px 2px 4px #fff;
     opacity: 1;
-    color: #627f9b;
+    color: #2b2b2b;
 
+    text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -180,6 +186,7 @@
 .slick-prev
 {
     left: 10px;
+    text-decoration: none;
 }
 [dir='rtl'] .slick-prev
 {
