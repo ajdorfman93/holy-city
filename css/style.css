@@ -2477,7 +2477,7 @@ img {
 ====================*/
 
 #aa-footer {
-  background-color: #212e3a;
+  background-color: #2d2b2b;
   display: inline;
   float: left;
   padding: 10px 0;
@@ -2725,14 +2725,14 @@ img {
   }
   .navbar-collapse.in {
     overflow-x: hidden;
-    background-color: #8faac2 !important;
+    background-color: #9c9c9c !important;
     color: #000;
     transition: none;
   }
 
   .navbar-collapse.collapsing {
     overflow-x: hidden;
-    background-color: #8faac2 !important;
+    background-color: #9c9c9c !important;
     color: #000;
   }
 
