@@ -18,13 +18,13 @@ $(document).ready(function () {
     // Convert the Set to an Array and sort alphabetically
     const sortedNeighborhoods = Array.from(neighborhoods).sort();
 
-    // Create the dropdown HTML
+    // Create the dropdown HTML (use the neighborhood name as value)
     const dropdownHTML = `
       <div class="aa-single-advance-search">
-        <select>
+        <select id="neighborhood-select">
           <option value="0" selected>Neighborhood</option>
-          ${sortedNeighborhoods.map((neighborhood, index) => `
-            <option value="${index + 1}">${neighborhood}</option>
+          ${sortedNeighborhoods.map((neighborhood) => `
+            <option value="${neighborhood}">${neighborhood}</option>
           `).join('')}
         </select>
       </div>
