@@ -1084,6 +1084,11 @@ img {
   position: relative;
   z-index: 10;
 }
+
+.aa-testimonial-img img {
+  width: 150px;
+}
+
 #aa-client-testimonial .aa-client-testimonial-area .aa-testimonial-content .aa-testimonial-slider li .aa-testimonial-single .aa-testimonial-img img {
   background-color: #fff;
   display: inline-block;

@@ -1,15 +1,34 @@
 {
-  "records": [
-    {
-      "id": 1,
-      "fields": {
-        "Home_Page_About_Us_Image": "https://iili.io/2MOUQFp.jpg",
-        "About_Us_Image": "https://iili.io/2MOUpNn.jpg",
-        "Properties_Banner_Image": "https://iili.io/2kScBun.jpg",
-        "About_Us_Banner_Image": "https://iili.io/2kScBun.jpg",
-        "Contact_Banner_Image": "https://iili.io/2kScBun.jpg",
-        "About_Us_Page_Article": "Welcome to The Holy City Jerusalem Real Estate, your trusted partner in exclusive properties and property management services across Jerusalem’s most esteemed neighborhoods. Whether you’re looking to buy, sell, or rent in the Holy City, our expert team is here to guide you every step of the way.\n\n\u003Cbr\u003E\u003Cbr\u003EIn addition to our real estate services, we offer comprehensive property management to ensure your investment is well-maintained and profitable. From tenant placement and lease management to property maintenance and financial oversight, we handle all aspects of property management with professionalism and attention to detail.\n\n\u003Cbr\u003E\u003Cbr\u003EWith in-depth local knowledge, personalized service, and a commitment to excellence, we’re dedicated to helping you achieve your real estate and investment goals in one of the world’s most historic and dynamic cities. Let us make your real estate experience in Jerusalem seamless, rewarding, and stress-free."
+    "records": [
+      {
+        "id": 1,
+        "fields": {
+          "Included": false,
+          "Info": "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntu",
+          "Title": "Guy",
+          "Name": "John",
+          "Img_Url": "https://iili.io/dDTPdAJ.jpg"
+        }
+      },
+      {
+        "id": 2,
+        "fields": {
+          "Included": true,
+          "Info": " ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus",
+          "Title": "Lady",
+          "Name": "Phil",
+          "Img_Url": "https://iili.io/2ABBnTX.jpg"
+        }
+      },
+      {
+        "id": 3,
+        "fields": {
+          "Included": true,
+          "Info": " voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?",
+          "Title": "Man For Real",
+          "Name": "Leo Tardo",
+          "Img_Url": "https://iili.io/dpGq4yJ.png"
+        }
       }
-    }
-  ]
-}
+    ]
+  }

@@ -35,12 +35,6 @@
       ]
     });
 
-    jQuery('.aa-testimonial-slider').slick({
-      dots: false,
-      infinite: true,
-      speed: 500,
-      cssEase: 'linear'
-    });
 
     jQuery('.aa-client-brand-slider').slick({
       dots: false,
