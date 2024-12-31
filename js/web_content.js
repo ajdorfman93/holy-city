@@ -15,7 +15,8 @@ $(document).ready(function() {
             "About_Us_Banner_Image":     "about-us-banner-image",
             "Contact_Banner_Image":      "contact-banner-image",
             "About_Us_Page_Article":     "about-us-page-article",
-            "About_Us_Bottom_Image":     "about-us-bottom-image"
+            "About_Us_Bottom_Image":     "about-us-bottom-image",
+            "What_Clients_Say":          "what-clients-say"
           };
   
           // 4. For each key in the mapping, populate the corresponding <div>

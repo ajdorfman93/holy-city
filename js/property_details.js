@@ -154,8 +154,6 @@ if (f.FeaturesStr) {
   });
 }
 
-
-
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);
     const popularContainer = $('#popular-properties-sidebar');
