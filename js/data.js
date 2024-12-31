@@ -58,22 +58,32 @@ $(document).ready(function() {
   window.applyFilters = applyFilters;
 
   function applyFilters() {
-    const selectedNeighborhood = $('#neighborhood-select').val();
-    const selectedStatus = $('#property-status-select').val();
-    const selectedRooms = $('#rooms-select').val() || '0';
+    const selectedNeighborhood = $('.aa-single-advance-search select').eq(0).val();
+    const selectedStatus = $('#property-status').val();
+    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
 
     let filtered = allRecords.slice();
 
-    // Neighborhood
+    // CHANGED: If "0", it means no neighborhood filter. Otherwise, filter by name.
     if (selectedNeighborhood !== "0") {
-      const neighborhoodNumber = parseInt(selectedNeighborhood, 10);
-      filtered = filtered.filter(rec => rec.fields.Neighborhood === neighborhoodNumber);
+      filtered = filtered.filter(rec => {
+        if (!rec.fields.Neighborhood_Names) return false;
+        // Convert Neighborhood_Names to an array of trimmed names
+        const nNames = rec.fields.Neighborhood_Names
+          .split(',')
+          .map(str => str.trim());
+        // Return true if it includes the selected neighborhood
+        return nNames.includes(selectedNeighborhood);
+      });
     }
 
-    // Status (compare strings, e.g. "Sale", "Rent")
-    if (selectedStatus !== '0') {
-      filtered = filtered.filter(rec =>
-        (rec.fields.Property_StatusStr || '').toLowerCase() === selectedStatus.toLowerCase()
+    // Status
+    if (selectedStatus !== "0") {
+      let statusFilter = "";
+      if (selectedStatus === "1") statusFilter = "Sale";
+      else if (selectedStatus === "2") statusFilter = "Rent";
+      filtered = filtered.filter(rec => 
+        (rec.fields.Property_Status || "").toLowerCase() === statusFilter.toLowerCase()
       );
     }
     // Rooms
