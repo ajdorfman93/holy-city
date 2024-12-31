@@ -26,6 +26,7 @@ $(document).ready(function () {
         // Append a slide to the slider container
         // You can use <div> or <li> for each slide; Slick handles both fine
         $slider.append(`
+            <li>
           <div class="aa-testimonial-single">
             <div class="aa-testimonial-img">
               <img src="${Img_Url}" alt="testimonial img">
@@ -38,6 +39,7 @@ $(document).ready(function () {
               <span>${Title}</span>
             </div>
           </div>
+          </li>
         `);
       });
   

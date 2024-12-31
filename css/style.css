@@ -706,6 +706,9 @@ img {
 #aa-about-us .aa-about-us-area .aa-about-us-left img {
   width: 100%;
 }
+#aa-about-us .aa-about-us-area .home-page-about-us-image img {
+  width: 100%;
+}
 #aa-about-us .aa-about-us-area .aa-about-us-right {
   display: inline;
   float: left;
@@ -1002,7 +1005,6 @@ img {
 
 #aa-client-testimonial {
   background-attachment: fixed;
-  background-image: url("../img/testimonial-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1085,9 +1087,6 @@ img {
   z-index: 10;
 }
 
-.aa-testimonial-img img {
-  width: 150px;
-}
 
 #aa-client-testimonial .aa-client-testimonial-area .aa-testimonial-content .aa-testimonial-slider li .aa-testimonial-single .aa-testimonial-img img {
   background-color: #fff;
@@ -1096,6 +1095,7 @@ img {
   height: 100px;
   margin-top: 24px;
   border-radius: 50%;
+  object-fit: cover;
 }
 #aa-client-testimonial .aa-client-testimonial-area .aa-testimonial-content .aa-testimonial-slider li .aa-testimonial-single .aa-testimonial-info {
   display: inline;
@@ -1188,7 +1188,6 @@ img {
 ====================*/
 
 #aa-property-header {
-  background-image: url("../img/jerusalem-israel-june-28-2014-panoramic-view.jpeg");
   background-attachment: fixed;
   background-position: left;
   background-size: cover;
@@ -1787,7 +1786,6 @@ img {
 ====================*/
 
 #aa-contact-header {
-  background-image: url("../img/jerusalem-israel-june-28-2014-panoramic-view.jpeg");
   background-attachment: fixed;
   background-position: left;
   background-size: cover;
