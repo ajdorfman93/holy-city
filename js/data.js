@@ -58,8 +58,8 @@ $(document).ready(function() {
   window.applyFilters = applyFilters;
 
   function applyFilters() {
-    const selectedNeighborhood = $('.aa-single-advance-search select').eq(0).val();
-    const selectedStatus = $('#property-status').val();
+    const selectedNeighborhood = $('#neighborhood-select').val();
+    const selectedStatus = $('#property-status-select').val();
     const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
 
     let filtered = allRecords.slice();
