@@ -121,9 +121,9 @@ propertyDetails.forEach(detail => {
 const featuresContainer = $('#property-features-list'); // Target container for features
 featuresContainer.empty(); // Clear existing content
 
-if (f.StrFeatures) {
+if (f.FeaturesStr) {
     // Parse the tuple-like string into an array
-    const featuresArray = f.StrFeatures
+    const featuresArray = f.FeaturesStr
         .replace(/^\(|\)$/g, '') // Remove parentheses at the start and end
         .split(',') // Split by commas
         .map(feature => feature.trim().replace(/^'(.*)'$/, '$1')); // Remove extra quotes and whitespace
@@ -153,8 +153,6 @@ if (f.StrFeatures) {
       `);
   });
 }
-
-
 
     // Popular Properties
     const popularRecords = records.filter(r => r.fields.Popular_Properties === true);
