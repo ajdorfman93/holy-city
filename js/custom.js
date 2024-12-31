@@ -1,4 +1,4 @@
-
+//custom.js
   // Global variables to hold price range
   var priceMin = 0;
   var priceMax = 50000000; // default end range, will update on slider changes

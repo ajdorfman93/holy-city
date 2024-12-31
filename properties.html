@@ -6,30 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Holy City | Properties</title>
     
-  <!-- jQuery library -->
-  <script src="js/jquery.min.js"></script>   
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.js"></script>   
-  <!-- slick slider -->
-  <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Data handling js -->
-  <script src="js/data.js"></script> 
-  <!-- Web Content js -->
-  <script src="js/web_content_banners.js"></script> 
-  <!-- Neighborhoods Dropdown -->
-  <script type="text/javascript" src="js/NeighborhoodsDropdown.js"></script>
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>   
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.js"></script>   
+    <!-- slick slider -->
+    <script type="text/javascript" src="js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="js/nouislider.js"></script>
+    <!-- mixit slider -->
+    <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+    <!-- fancyBox -->        
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <!-- Custom js (defines priceMin, priceMax, etc.) -->
+    <script src="js/custom.js"></script>
+    <!-- Data handling js (the one we just wrote) -->
+    <script src="js/data.js"></script> 
+    <!-- Web Content Banners -->
+    <script src="js/web_content_banners.js"></script> 
+    <!-- Neighborhoods Dropdown JS (populates #neighborhood-select) -->
+    <script type="text/javascript" src="js/NeighborhoodsDropdown.js"></script>
 
-    <!-- thumb -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="img/thumb.ico" type="image/x-icon">
-
     <!-- Font awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -44,13 +43,9 @@
     <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
     <!-- Main style sheet -->
     <link href="css/style.css" rel="stylesheet">    
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">    
     <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-
-
 
   </head>
   <body class="aa-price-range">   
@@ -99,7 +94,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/aryeh logo no background with BOX.png" alt="logo"></a>                    
+          <a class="navbar-brand aa-logo-img" href="index.html">
+            <img src="img/aryeh logo no background with BOX.png" alt="logo">
+          </a>                    
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
@@ -128,28 +125,37 @@
   </section> 
   <!-- End Property header -->
 
+  <!-- Advance Search -->
   <section id="aa-advance-search">
     <div class="container">
       <div class="aa-advance-search-area">
         <div class="form">
           <div class="aa-advance-search-top">
             <div class="row">
+              <!-- Neighborhood dropdown -->
               <div class="col-md-5">
                 <div id="neighborhood-dropdown-container">
-                <select id="neighborhood-select">
-                  <!-- dynamically populated -->
-                </select>
-              </div>  </div>
+                  <select id="neighborhood-select">
+                    <!-- 0 => All Neighborhoods, populated by NeighborhoodsDropdown.js -->
+                    <option value="0">All Neighborhoods</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Status dropdown -->
               <div class="col-md-4">
-              <div id="property-status-dropdown-container">
-
+                <div id="property-status-dropdown-container">
                   <select id="property-status">
-                  </select></div>
-            </div>
-
+                    <!-- 0 => Any, 1 => Sale, 2 => Rent -->
+                    <option value="0">Any Status</option>
+                    <option value="1">Sale</option>
+                    <option value="2">Rent</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Rooms dropdown -->
               <div class="col-md-3">
-                 <div class="aa-single-advance-search">
-                  <select>
+                <div class="aa-single-advance-search">
+                  <select id="rooms-select">
                     <option value="0" selected>Rooms</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -159,7 +165,6 @@
                   </select>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="aa-advance-search-bottom">
@@ -172,21 +177,24 @@
                   <span>TO</span>
                   <span id="skip-value-upper" class="example-val">100.00</span>
                   <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
+                  </div>    
+                  <!-- If you want a "Search" button: -->
+                  <button class="aa-search-btn" type="button">Search</button>
                 </div>
               </div>
             </div>  
           </div>
-        </div>
+        </div> <!-- .form -->
       </div>
     </div>
   </section>
-  <!-- / Advance Search -->
+  <!-- /Advance Search -->
 
   <!-- Start Properties -->
   <section id="aa-properties">
     <div class="container">
       <div class="row">
+        <!-- Main content -->
         <div class="col-md-8">
           <div class="aa-properties-content">
             <!-- start properties content head -->
@@ -194,8 +202,8 @@
               <div class="aa-properties-content-head-left">
                 <form action="" class="aa-sort-form">
                   <label for="">Sort by</label>
-                  <select name="">
-                    <option value="1" selected="Default">Default</option>
+                  <select>
+                    <option value="1" selected>Default</option>
                     <option value="2">Name</option>
                     <option value="3">Price</option>
                     <option value="4">Date</option>
@@ -203,8 +211,8 @@
                 </form>
                 <form action="" class="aa-show-form">
                   <label for="">Show</label>
-                  <select name="">
-                    <option value="1" selected="12">6</option>
+                  <select>
+                    <option value="1" selected>6</option>
                     <option value="2">12</option>
                     <option value="3">24</option>
                   </select>
@@ -215,36 +223,36 @@
                 <a id="aa-list-properties" href="#"><span class="fa fa-list"></span></a>
               </div>            
             </div>
-            <!-- Start properties content body -->
+            <!-- properties content body -->
             <div class="aa-properties-content-body">
               <ul class="aa-properties-nav">
-                <!-- Property items will be populated here by data.js -->
+                <!-- Dynamically populated by data.js -->
               </ul>
             </div>
-            <!-- Start properties content bottom -->
+            <!-- properties content bottom -->
             <div class="aa-properties-content-bottom">
               <nav>
                 <ul class="pagination">
-                  <!-- Pagination will be populated here by data.js -->
+                  <!-- Populated by data.js -->
                 </ul>
               </nav>
             </div>
           </div>
         </div>
-        <!-- Start properties sidebar -->
+        <!-- Sidebar -->
         <div class="col-md-4">
           <aside class="aa-properties-sidebar">
-            <!-- Start Single properties sidebar -->
+            <!-- Popular properties sidebar -->
             <div class="aa-properties-single-sidebar">
               <h3>Popular Properties</h3>
-              <!-- Popular Properties will be populated here by data.js -->
+              <!-- Populated by data.js -->
             </div>
           </aside>
         </div>
       </div>
     </div>
   </section>
-  <!-- / Properties -->
+  <!-- /Properties -->
 
   <!-- Footer -->
   <footer id="aa-footer">
@@ -255,10 +263,11 @@
             <div class="row">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="aa-footer-left">
-                 <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
+                  <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- blank -->
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="aa-footer-right">
@@ -274,7 +283,7 @@
       </div>
     </div>
   </footer>
-  <!-- / Footer -->
+  <!-- /Footer -->
 
   </body>
 </html>
