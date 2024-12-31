@@ -9,7 +9,10 @@ $(document).ready(function() {
 
   // Fetch data
   $.getJSON(dataUrl, function(data) {
-    allRecords = data.records || [];
+    const records = data.records || [];
+  
+    // Populate Top Slider
+    allRecords = records.filter(rec => rec.fields.Display === true);
     applyFilters(); 
     renderPopularProperties(allRecords);
   });
@@ -55,9 +58,9 @@ $(document).ready(function() {
   window.applyFilters = applyFilters;
 
   function applyFilters() {
-    const selectedNeighborhood = $('.aa-single-advance-search select').eq(0).val();
-    const selectedStatus = $('#property-status').val();
-    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
+    const selectedNeighborhood = $('#neighborhood-select').val();
+    const selectedStatus = $('#property-status-select').val();
+    const selectedRooms = $('#rooms-select').val() || '0';
 
     let filtered = allRecords.slice();
 
@@ -67,14 +70,12 @@ $(document).ready(function() {
       filtered = filtered.filter(rec => rec.fields.Neighborhood === neighborhoodNumber);
     }
 
-    // Status
-    if (selectedStatus !== "0") {
-      let statusFilter = "";
-      if (selectedStatus === "1") statusFilter = "Sale";
-      else if (selectedStatus === "2") statusFilter = "Rent";
-      filtered = filtered.filter(rec => (rec.fields.Property_Status || "").toLowerCase() === statusFilter.toLowerCase());
+    // Status (compare strings, e.g. "Sale", "Rent")
+    if (selectedStatus !== '0') {
+      filtered = filtered.filter(rec =>
+        (rec.fields.Property_StatusStr || '').toLowerCase() === selectedStatus.toLowerCase()
+      );
     }
-
     // Rooms
     if (selectedRooms !== "0") {
       if (selectedRooms === "5") {
@@ -128,40 +129,43 @@ $(document).ready(function() {
     }
     return records;
   }
-
   function renderProperties(records) {
     const $propertiesList = $('.aa-properties-nav');
     $propertiesList.empty();
-
+  
     records.forEach(function(record) {
-      const f = record.fields;
-
-      let tagClass = '';
-      if (f.Property_Status && f.Property_Status.toLowerCase() === 'sale') {
-        tagClass = 'for-sale';
-      } else if (f.Property_Status && f.Property_Status.toLowerCase() === 'rent') {
-        tagClass = 'for-rent';
-      } else if (f.Property_Status && f.Property_Status.toLowerCase().includes('sold')) {
-        tagClass = 'sold-out';
-      }
-
+      const f = record.fields || {};
+      const statusText = f.Property_StatusStr || ''; // Display exactly what's in JSON
+  
       const propertyHTML = `
-      <li>
-        <article class="aa-properties-item">
-          <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
-            <img src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" alt="${f.Name || 'Property'}">
-          </a>
-          <div class="aa-tag ${tagClass}">${f.Property_Status || ''}</div>
-          <div class="aa-properties-item-content">
-            <h3><a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a></h3>
-            <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
-            <span class="aa-price">₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
-          </div>
-        </article>
-      </li>`;
+        <li>
+          <article class="aa-properties-item">
+            <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
+              <img 
+                src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+                alt="${f.Name || 'Property'}"
+              >
+            </a>
+            <!-- Just the single 'aa-tag' class; the text is from Property_StatusStr -->
+            <div class="aa-tag">${statusText}</div>
+            <div class="aa-properties-item-content">
+              <h3>
+                <a href="property_details.html?id=${record.id}">
+                  ${f.Name || 'Untitled Property'}
+                </a>
+              </h3>
+              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
+              <span class="aa-price">
+                ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
+              </span>
+            </div>
+          </article>
+        </li>
+      `;
       $propertiesList.append(propertyHTML);
     });
   }
+  
 
   function renderPopularProperties(records) {
     const $popularPropertiesSidebar = $('.aa-properties-single-sidebar');

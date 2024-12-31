@@ -122,12 +122,12 @@ const featuresContainer = $('#property-features-list'); // Target container for 
 featuresContainer.empty(); // Clear existing content
 
 if (f.FeaturesStr) {
-    // Parse the tuple-like string into an array
-    const featuresArray = f.FeaturesStr
-        .replace(/^\(|\)$/g, '') // Remove parentheses at the start and end
-        .split(',') // Split by commas
-        .map(feature => feature.trim().replace(/^'(.*)'$/, '$1')); // Remove extra quotes and whitespace
-
+  // Filter out "L" and trim other features
+  const featuresArray = f.FeaturesStr
+      .filter(feature => feature !== "L") // Remove "L"
+      .map(feature => feature.trim()); // Ensure other features are trimmed
+  console.log(featuresArray);
+  
     // Render each feature
     featuresArray.forEach(feature => {
         let wheelchairIcon = ''; // Default: No wheelchair icon

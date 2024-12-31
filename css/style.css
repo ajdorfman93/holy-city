@@ -802,6 +802,7 @@ img {
   object-fit: contain;
 }
 .aa-properties-item .aa-tag {
+  background-color: #c3911a;
   color: #fff;
   padding: 6px 10px;
   position: absolute;
