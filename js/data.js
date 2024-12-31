@@ -9,13 +9,8 @@ $(document).ready(function() {
 
   // Fetch data
   $.getJSON(dataUrl, function(data) {
-    // Only keep records where "Display": true
-    allRecords = (data.records || []).filter(record => record.Display === true);
-
-    // Apply filters to the main property list
-    applyFilters();
-
-    // Render popular properties (only those with "Display": true still remain in allRecords)
+    allRecords = data.records || [];
+    applyFilters(); 
     renderPopularProperties(allRecords);
   });
 
@@ -56,15 +51,14 @@ $(document).ready(function() {
     }
   });
 
-  // Make applyFilters globally accessible (optional)
+  // Make applyFilters globally accessible
   window.applyFilters = applyFilters;
 
   function applyFilters() {
-    const selectedNeighborhood = $('#neighborhood-select').val();
-    const selectedStatus = $('#property-status-select').val();
-    const selectedRooms = $('#rooms-select').val() || '0';
+    const selectedNeighborhood = $('.aa-single-advance-search select').eq(0).val();
+    const selectedStatus = $('#property-status').val();
+    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
 
-    // Start with all filtered-by-Display records
     let filtered = allRecords.slice();
 
     // Neighborhood
@@ -73,20 +67,19 @@ $(document).ready(function() {
       filtered = filtered.filter(rec => rec.fields.Neighborhood === neighborhoodNumber);
     }
 
-    // Status (e.g., "Sale", "Rent")
-    if (selectedStatus !== '0') {
-      filtered = filtered.filter(rec =>
-        (rec.fields.Property_StatusStr || '').toLowerCase() === selectedStatus.toLowerCase()
-      );
+    // Status
+    if (selectedStatus !== "0") {
+      let statusFilter = "";
+      if (selectedStatus === "1") statusFilter = "Sale";
+      else if (selectedStatus === "2") statusFilter = "Rent";
+      filtered = filtered.filter(rec => (rec.fields.Property_Status || "").toLowerCase() === statusFilter.toLowerCase());
     }
 
     // Rooms
     if (selectedRooms !== "0") {
       if (selectedRooms === "5") {
-        // 5+ rooms
         filtered = filtered.filter(rec => parseInt(rec.fields.Bedrooms, 10) >= 5);
       } else {
-        // Exact number of rooms
         filtered = filtered.filter(rec => rec.fields.Bedrooms === selectedRooms);
       }
     }
@@ -109,34 +102,28 @@ $(document).ready(function() {
     const endIndex = startIndex + currentShow;
     const limited = filtered.slice(startIndex, endIndex);
 
-    // Render the currently visible properties
     renderProperties(limited);
-
-    // Render pagination links
     renderPagination(totalPages, currentPage);
   }
 
   function applySorting(records, sortType) {
     if (sortType === 'name') {
-      // Sort alphabetically by name
       records.sort((a, b) => {
         const nameA = (a.fields.Name || '').toLowerCase();
         const nameB = (b.fields.Name || '').toLowerCase();
         return nameA.localeCompare(nameB);
       });
     } else if (sortType === 'price') {
-      // Sort numerically by price
       records.sort((a, b) => {
         const priceA = parseFloat(a.fields.Price) || 0;
         const priceB = parseFloat(b.fields.Price) || 0;
         return priceA - priceB;
       });
     } else if (sortType === 'date') {
-      // Sort chronologically by DateStr
       records.sort((a, b) => {
         const dateA = a.fields.DateStr ? new Date(a.fields.DateStr) : new Date(0);
         const dateB = b.fields.DateStr ? new Date(b.fields.DateStr) : new Date(0);
-        return dateA - dateB;
+        return dateA - dateB; 
       });
     }
     return records;
@@ -146,63 +133,63 @@ $(document).ready(function() {
     const $propertiesList = $('.aa-properties-nav');
     $propertiesList.empty();
 
-    records.forEach(function(record) {
-      const f = record.fields || {};
-      const statusText = f.Property_StatusStr || ''; 
-
-      const propertyHTML = `
-        <li>
-          <article class="aa-properties-item">
-            <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
-              <img 
-                src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-                alt="${f.Name || 'Property'}"
-              >
-            </a>
-            <div class="aa-tag">${statusText}</div>
-            <div class="aa-properties-item-content">
-              <h3>
-                <a href="property_details.html?id=${record.id}">
-                  ${f.Name || 'Untitled Property'}
-                </a>
-              </h3>
-              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
-              <span class="aa-price">
-                ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
-              </span>
-            </div>
-          </article>
-        </li>
-      `;
-      $propertiesList.append(propertyHTML);
-    });
-  }
-
+    function renderProperties(records) {
+      const $propertiesList = $('.aa-properties-nav');
+      $propertiesList.empty();
+    
+      records.forEach(function(record) {
+        const f = record.fields || {};
+        const statusText = f.Property_StatusStr || ''; // Display exactly what's in JSON
+    
+        const propertyHTML = `
+          <li>
+            <article class="aa-properties-item">
+              <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
+                <img 
+                  src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+                  alt="${f.Name || 'Property'}"
+                >
+              </a>
+              <!-- Just the single 'aa-tag' class; the text is from Property_StatusStr -->
+              <div class="aa-tag">${statusText}</div>
+              <div class="aa-properties-item-content">
+                <h3>
+                  <a href="property_details.html?id=${record.id}">
+                    ${f.Name || 'Untitled Property'}
+                  </a>
+                </h3>
+                <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
+                <span class="aa-price">
+                  ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
+                </span>
+              </div>
+            </article>
+          </li>
+        `;
+        $propertiesList.append(propertyHTML);
+      });
+    }
+    
   function renderPopularProperties(records) {
     const $popularPropertiesSidebar = $('.aa-properties-single-sidebar');
     $popularPropertiesSidebar.find('.media').remove();
 
-    // Since allRecords is already filtered by Display === true,
-    // only those with Display = true remain.
     records.forEach(function(record) {
-      const f = record.fields || {};
+      const f = record.fields;
       if (f.Popular_Properties === true) {
         const sidebarItemHTML = `
           <div class="media">
             <div class="media-left">
               <a href="property_details.html?id=${record.id}">
-                <img class="media-object" src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-                     alt="${f.Name || 'Property'}">
+                <img class="media-object" src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" alt="${f.Name || 'Property'}">
               </a>
             </div>
             <div class="media-body">
               <h4 class="media-heading">
-                <a href="property_details.html?id=${record.id}">
-                  ${f.Name || 'Untitled Property'}
-                </a>
+                <a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a>
               </h4>
               <p>${f.Street1 || ''}</p>
-              <span>₪${(f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A')}</span>
+              <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
           </div>`;
         $popularPropertiesSidebar.append(sidebarItemHTML);
@@ -216,24 +203,15 @@ $(document).ready(function() {
 
     if (totalPages <= 1) return;
 
-    // Previous button
     const prevDisabled = currentPage === 1 ? 'disabled' : '';
-    $pagination.append(
-      `<li class="${prevDisabled}"><a href="#" data-page="${currentPage - 1}">&laquo;</a></li>`
-    );
+    $pagination.append(`<li class="${prevDisabled}"><a href="#" data-page="${currentPage - 1}">&laquo;</a></li>`);
 
-    // Page links
     for (let i = 1; i <= totalPages; i++) {
       const activeClass = i === currentPage ? 'active' : '';
-      $pagination.append(
-        `<li class="${activeClass}"><a href="#" data-page="${i}">${i}</a></li>`
-      );
+      $pagination.append(`<li class="${activeClass}"><a href="#" data-page="${i}">${i}</a></li>`);
     }
 
-    // Next button
     const nextDisabled = currentPage === totalPages ? 'disabled' : '';
-    $pagination.append(
-      `<li class="${nextDisabled}"><a href="#" data-page="${currentPage + 1}">&raquo;</a></li>`
-    );
+    $pagination.append(`<li class="${nextDisabled}"><a href="#" data-page="${currentPage + 1}">&raquo;</a></li>`);
   }
 });
