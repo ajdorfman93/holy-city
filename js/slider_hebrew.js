@@ -20,7 +20,7 @@ $(document).ready(function () {
               <p class="aa-top-slider-location hebrew" style="font-size: 22px">${f.Neighborhood_Hebrew || ''}<i class="fa fa-map-marker"></i></p>
               <span class="aa-top-slider-off">${f.Discount ? `${f.Discount}% OFF` : ''}</span>
               <p class="aa-top-slider-price">₪${f.Price ? parseInt(f.Price).toLocaleString() : 'N/A'}</p>
-              <a href="property_details.html?id=${property.id}" class="aa-top-slider-btn hebrew"><span class="fa fa-angle-double-right"></span>>קרא עוד</a>
+              <a href="property_details.html?id=${property.id}" class="aa-top-slider-btn" style="font-size: 22px;"><span class="fa fa-angle-double-right"  style="transform: translateY(2px)"></span>קרא עוד</a>
             </div>
           </div>
         `);
