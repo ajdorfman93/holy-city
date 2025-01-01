@@ -27,11 +27,7 @@
     <!-- Custom js -->
     <script src="js/home_custom.js"></script>
 
-    <!-- Data js -->
-    <script src="js/homepage_data.js"></script>
 
-    <!-- Slider JS (new file) -->
-    <script src="js/slider.js"></script>
 
     <!-- Web Content js -->
     <script src="js/web_content.js"></script>
@@ -42,6 +38,8 @@
     <!-- Styles -->
     <!-- Thumb -->
     <link rel="shortcut icon" href="img/thumb.ico" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link href="https://db.onlinewebfonts.com/c/22db60d19480ba0274c9eb6ba877ea9b?family=Aharoni+Bold+V1" rel="stylesheet">
     <!-- Font awesome -->
     <link href="css/font-awesome.css" rel="stylesheet" />
     <!-- Bootstrap -->
@@ -81,6 +79,7 @@
     />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
   </head>
+  <div id="dynamic-script-container"></div>
   <body class="aa-price-range">
     <!-- Hebrew Toggle -->
     <div class="switch">
@@ -115,12 +114,15 @@
                       <span class="fa fa-phone"></span>
                       052-678-3539
                     </div>
+                    <div class="aa-telephone-no" style="margin-right: 10px;">
+                      <span class="fa fa-phone" style="margin-left: 10px;"></span>
+                      052-678-3539
+                    </div>
                     <div class="aa-email">
                       <span class="fa fa-envelope-o"></span> Holycityestates1@gmail.com
                     </div>
                   </div>
                 </div>
-                <!-- Additional right side or other info goes here -->
               </div>
             </div>
           </div>
@@ -221,14 +223,14 @@
                   <div class="aa-about-us-right">
                     <div class="aa-title">
                       <h2 class="english">ABOUT US</h2>
-                        <h2 class="hebrew">אודותינו</h2>
+                        <h2 class="hebrew" style="font-size: 30px;">אודותינו</h2>
                       <span></span>
                     </div>
                     <p class="english"
                         >Looking to buy, sell, or rent an apartment in Jerusalem? Whether you’re searching the market, own a property, or need expert advice, we’re here to help. Contact us today and let’s turn your real estate dreams into reality!</span
                       >
-                      <p class="hebrew"
-                        >מחפשים לקנות, למכור או להשכיר דירה בירושלים?... </p>                  
+                      <p class="hebrew">
+                      מחפשים לקנות, למכור או לשכור דירה בירושלים? בין אם אתם מחפשים נכס, בעלים של נכס או זקוקים לייעוץ מקצועי – אנחנו כאן בשבילכם. צרו איתנו קשר עוד היום, ובואו נהפוך את חלומות הנדל"ן שלכם למציאות! </p>                  
                     <ul>
                       <li class="english"><strong>Experienced Team</strong> Our seasoned agents provide expert local knowledge.</li>
                       <li class="hebrew" style="text-align: right;"><strong>צוות מנוסה</strong> הסוכנים המנוסים שלנו מספקים ידע מקומי מקצועי.</li>
@@ -258,7 +260,7 @@
         <div class="aa-latest-property-area">
           <div class="aa-title fadein">
               <h2 class="english">LATEST PROPERTIES</h2>
-              <h2 class="hebrew">נכסים חדשים</h2>
+              <h2 class="hebrew" style="font-size: 30px;">נכסים חדשים</h2>
               <p class="english">Discover our newest listings...</p>
               <p class="hebrew">גלו את הנכסים העדכניים ביותר שלנו...</p>
           </div>
@@ -280,7 +282,7 @@
             <div class="aa-service-area">
               <div class="aa-title fadein">
                   <h2 class="english">Our Services</h2>
-                  <h2 class="hebrew">השירותים שלנו</h2>
+                  <h2 class="hebrew" style="font-size: 30px;">השירותים שלנו</h2>
                   <p class="english"
                     >At Holy City Jerusalem Real Estate, we offer
                     personalized...</p                  >
@@ -291,7 +293,7 @@
                 <div class="row">
                   <div class="col-md-3-10">
                     <div class="aa-single-service">
-                      <div class="aa-service-icon"><span class="fa fa-check"></span></div>
+                      <div class="aa-service-icon"><span class="fa fa-ils"></span></div>
                       <div class="aa-single-service-content">
                         <h4 class="english">Property Sale</h4>
                         <h4 class="hebrew">מכירת נכס</h4>
@@ -302,7 +304,7 @@
                   </div>
                   <div class="col-md-3-10">
                     <div class="aa-single-service">
-                      <div class="aa-service-icon"><span class="fa fa-check"></span></div>
+                      <div class="aa-service-icon"><span class="fa fa-retweet"></span></div>
                       <div class="aa-single-service-content">
                         <h4 class="english">Property Rent</h4>
                         <h4 class="hebrew">השכרת נכס</h4>
@@ -313,7 +315,7 @@
                   </div>
                   <div class="col-md-3-10">
                     <div class="aa-single-service">
-                      <div class="aa-service-icon"><span class="fa fa-crosshairs"></span></div>
+                      <div class="aa-service-icon"><span class="fa fa-eye"></span></div>
                       <div class="aa-single-service-content">
                         <h4 class="english">Property Management</h4>
                         <h4 class="hebrew">ניהול נכסים</h4>
@@ -324,12 +326,13 @@
                   </div>
                   <div class="col-md-3-10">
                     <div class="aa-single-service">
-                      <div class="aa-service-icon"><span class="fa fa-bar-chart-o"></span></div>
+                      <div class="aa-service-icon"><span class="fa  fa-building-o"></span></div>
                       <div class="aa-single-service-content">
-                        <h4 class="english">Urban Renewal</h4>
+                        <h4 class="english">New Projects</h4>
                         <h4 class="hebrew">התחדשות עירונית</h4>
-                        <p class="english">Helping you navigate and benefit from transformative redevelopment projects across the city.</p>
-                        <p class="hebrew">עוזרים לכם לנווט וליהנות מפרויקטים מהפכניים של התחדשות עירונית ברחבי העיר.</p>
+                        <p class="english">Showcasing innovative developments and exclusive opportunities in Jerusalem’s real estate market.</p>
+                        <p class="hebrew">הצגת פיתוחים חדשניים והזדמנויות בלעדיות בשוק הנדל"ן של ירושלים.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -355,7 +358,6 @@
   <!-- Promo Banner Section -->
   <section id="aa-promo-banner">
     <div class="container">
-      <div class="row">
         <div class="col-md-12">
           <div class="aa-promo-banner-area fadein">
             <h3 class="english">Find Your Best Property</h3>
@@ -363,11 +365,12 @@
             <p class="english">At Holy City Jerusalem Real Estate, we make finding your dream property easy.</p>
             <p class="hebrew">בסוכנות הנדל"ן Holy City Jerusalem, חיפוש נכס חלומי הוא פשוט
               ונוח.</p>
+              <div class="col-md-12">
             <a href="properties.html" class="aa-view-btn english">View Details</a>
-            <a href="properties.html" class="aa-view-btn hebrew">View Details</a>
+            <a href="properties.html" class="aa-view-btn hebrew">צפה בפרטים</a>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   </section>
   <!-- / Promo Banner Section -->
@@ -378,26 +381,25 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aa-footer-area">
-              <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-sm-3 col-xs-12">
                   <div class="aa-footer-left">
                     <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12"></div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="col-sm-9 col-xs-12">
                   <div class="aa-footer-right">
-                    <a href="index.html" class="english">Home</a>
-                    <a href="index.html" class="hebrew">דף הבית</a>
-                    <a href="properties.html" class="english">Properties</a>
-                    <a href="properties.html" class="hebrew">נכסים</a>
-                    <a href="about.html" class="english">About Us</a>
-                    <a href="about.html" class="hebrew">אודות</a>
-                    <a href="contact.html" class="english">Contact</a>
-                    <a href="contact.html" class="hebrew">צור קשר</a>
+                    <a href="index.html"><p class="english">Home</p></a>
+                    <a href="index.html"><p class="hebrew">דף הבית</p></a>
+                    <a href="properties.html"><p class="english">Properties</p></a>
+                    <a href="properties.html"><p class="hebrew">נכסים</p></a>
+                    <a href="new project.html"><p class="english">New Projects</p></a>
+                    <a href="new project.html"><p class="hebrew">פרויקטים חדשים</p></a>
+                    <a href="about.html"><p class="english">About Us</p></a>
+                    <a href="about.html"><p class="hebrew">אודות</p></a>
+                    <a href="contact.html"><p class="english">Contact</p></a>
+                    <a href="contact.html"><p class="hebrew">צור קשר</p></a>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -405,4 +407,5 @@
     </footer>
     <!-- / Footer -->
   </body>
+
 </html>
