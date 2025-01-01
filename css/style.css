@@ -250,6 +250,133 @@ img {
 #aa-menu-area .navbar-fixed-top .navbar-nav li a {
   color: #fff;
 }
+
+.no {
+  display: block
+}
+/* languageToggle.css */
+.english {
+  direction: ltr;
+}
+
+.hebrew {
+  direction: rtl;
+  font-family: 'David', serif; /* Example font for Hebrew */
+}
+
+.hide-text {
+  display: none;
+}
+
+/* Hebrew Toggle Button Styles */
+.switch {
+  position: fixed;
+  top: 1.5px; /* Reduced by 25% */
+  right: 7.5px; /* Reduced by 25% */
+  margin: 0 3.75px; /* Reduced by 25% */
+  z-index: 1000;
+}
+
+.switch > span {
+  position: absolute;
+  top: 25%;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 9px; /* Reduced by 25% */
+  text-transform: uppercase;
+  text-shadow: 0 0.75px 0 rgba(0, 0, 0, .06); /* Reduced by 25% */
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #fff;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #c3911a;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 1.5px; /* Reduced by 25% */
+  color: #fff;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 3px; /* Reduced by 25% */
+  color: #c3911a;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -7499.25px; /* Reduced by 25% */
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 1.5px; /* Reduced by 25% */
+  width: 72.75px; /* Reduced by 25% */
+  height: 26.25px; /* Reduced by 25% */
+  background-color: #fff;
+  -webkit-border-radius: 45px; /* Reduced by 25% */
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  border-radius: 45px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 1.5px; /* Reduced by 25% */
+  left: 1.5px; /* Reduced by 25% */
+  bottom: 1.5px; /* Reduced by 25% */
+  right: 1.5px; /* Reduced by 25% */
+  background-color: #fff;
+  
+  -moz-border-radius: 45px; /* Reduced by 25% */
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  border-radius: 45px;
+}
+input.check-toggle-round-flat + label:after {
+  top: 3px; /* Reduced by 25% */
+  left: 3px; /* Reduced by 25% */
+  bottom: 3px; /* Reduced by 25% */
+  width: 36px; /* Reduced by 25% */
+  background-color: #c3911a;
+  -webkit-border-radius: 39px; /* Reduced by 25% */
+  -moz-border-radius: 39px;
+  -ms-border-radius: 39px;
+  -o-border-radius: 39px;
+  border-radius: 39px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 33px; /* Reduced by 25% */
+}
+
+
 /* Offmarket container to hold the image and the overlay text */
 .offmarket {
   position: relative; 
@@ -3538,7 +3665,7 @@ img {
   #aa-menu-area .main-navbar .navbar-header .aa-logo-img {
     border: none;
     height: auto;
-    width: 120px;
+    width: 160px;
   }
 
   #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right {
