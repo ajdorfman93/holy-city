@@ -33,6 +33,10 @@ a {
   color: #333333;
 }
 
+a .hebrew{
+  font-family: "Roboto", serif;
+}
+
 a:hover,
 a:focus {
   outline: none;
