@@ -59,7 +59,8 @@ $(document).ready(function() {
 
   function applyFilters() {
     const selectedNeighborhood = $('#neighborhood-select').val();
-    const selectedStatus = $('#property-status-select').val();const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
+    const selectedStatus = $('#property-status-select').val();
+    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
 
     let filtered = allRecords.slice();
 
@@ -82,6 +83,7 @@ $(document).ready(function() {
         (rec.fields.Property_StatusStr || '').toLowerCase() === selectedStatus.toLowerCase()
       );
     }
+
     // Rooms
     if (selectedRooms !== "0") {
       if (selectedRooms === "5") {
@@ -130,11 +132,12 @@ $(document).ready(function() {
       records.sort((a, b) => {
         const dateA = a.fields.DateStr ? new Date(a.fields.DateStr) : new Date(0);
         const dateB = b.fields.DateStr ? new Date(b.fields.DateStr) : new Date(0);
-        return dateA - dateB; 
+        return dateA - dateB;
       });
     }
     return records;
   }
+
   function renderProperties(records) {
     const $propertiesList = $('.aa-properties-nav');
     $propertiesList.empty();
@@ -142,23 +145,49 @@ $(document).ready(function() {
     records.forEach(function(record) {
       const f = record.fields || {};
       const statusText = f.Property_StatusStr || ''; // Display exactly what's in JSON
-  
+
+      // Determine the appropriate image section (with or without link) 
+      // and the overlay if "Sold_or_Rented" is true
+      let imageSection, nameSection;
+
+      if (f.Sold_or_Rented) {
+        // Offmarket: no link, darkened image, overlay text
+        imageSection = `
+          <div class="aa-properties-item-img offmarket">
+            <img 
+              src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+              alt="${f.Name || 'Property'}"
+            >
+            <div class="offmarket-text">${f.Offmarket}</div>
+          </div>
+        `;
+        nameSection = `<span class="property-name">${f.Name || 'Untitled Property'}</span>`;
+      } else {
+        // Normal: clickable link to details
+        imageSection = `
+          <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
+            <img 
+              src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+              alt="${f.Name || 'Property'}"
+            >
+          </a>
+        `;
+        nameSection = `
+          <a href="property_details.html?id=${record.id}">
+            ${f.Name || 'Untitled Property'}
+          </a>
+        `;
+      }
+
       const propertyHTML = `
         <li>
           <article class="aa-properties-item">
-            <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
-              <img 
-                src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-                alt="${f.Name || 'Property'}"
-              >
-            </a>
+            ${imageSection}
             <!-- Just the single 'aa-tag' class; the text is from Property_StatusStr -->
             <div class="aa-tag">${statusText}</div>
             <div class="aa-properties-item-content">
               <h3>
-                <a href="property_details.html?id=${record.id}">
-                  ${f.Name || 'Untitled Property'}
-                </a>
+                ${nameSection}
               </h3>
               <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
               <span class="aa-price">
@@ -168,10 +197,10 @@ $(document).ready(function() {
           </article>
         </li>
       `;
+
       $propertiesList.append(propertyHTML);
     });
   }
-  
 
   function renderPopularProperties(records) {
     const $popularPropertiesSidebar = $('.aa-properties-single-sidebar');
@@ -180,21 +209,49 @@ $(document).ready(function() {
     records.forEach(function(record) {
       const f = record.fields;
       if (f.Popular_Properties === true) {
-        const sidebarItemHTML = `
-          <div class="media">
+        // Similar "Sold_or_Rented" check for popular properties
+        let imageSection, nameSection;
+        if (f.Sold_or_Rented) {
+          // Offmarket: no link, darkened image, overlay text
+          imageSection = `
+            <div class="media-left offmarket">
+              <img class="media-object" 
+                   src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+                   alt="${f.Name || 'Property'}">
+              <div class="offmarket-text">${f.Offmarket}</div>
+            </div>
+          `;
+          nameSection = `<span class="property-name">${f.Name || 'Untitled Property'}</span>`;
+        } else {
+          // Normal: clickable link to details
+          imageSection = `
             <div class="media-left">
               <a href="property_details.html?id=${record.id}">
-                <img class="media-object" src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" alt="${f.Name || 'Property'}">
+                <img class="media-object" 
+                     src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
+                     alt="${f.Name || 'Property'}">
               </a>
             </div>
+          `;
+          nameSection = `
+            <a href="property_details.html?id=${record.id}">
+              ${f.Name || 'Untitled Property'}
+            </a>
+          `;
+        }
+
+        const sidebarItemHTML = `
+          <div class="media">
+            ${imageSection}
             <div class="media-body">
               <h4 class="media-heading">
-                <a href="property_details.html?id=${record.id}">${f.Name || 'Untitled Property'}</a>
+                ${nameSection}
               </h4>
               <p>${f.Street1 || ''}</p>
               <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
-          </div>`;
+          </div>
+        `;
         $popularPropertiesSidebar.append(sidebarItemHTML);
       }
     });

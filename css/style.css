@@ -250,6 +250,37 @@ img {
 #aa-menu-area .navbar-fixed-top .navbar-nav li a {
   color: #fff;
 }
+/* Offmarket container to hold the image and the overlay text */
+.offmarket {
+  position: relative; 
+  display: inline-block;  /* or block, depending on your layout */
+  cursor: default;        /* remove pointer on hover */
+}
+
+/* Darken the image */
+.offmarket img {
+  filter: brightness(0.4);
+}
+
+/* The $(Offmarket) overlay text */
+.offmarket-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #c3911a;
+  background-color: none;
+  padding: 0px;
+  border-radius: 4px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* If you want to prevent text selection or pointer change over the text */
+.offmarket-text {
+  user-select: none; 
+  pointer-events: none; 
+}
 
 /*scrol to top*/
 

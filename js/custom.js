@@ -35,7 +35,6 @@
       ]
     });
 
-
     jQuery('.aa-client-brand-slider').slick({
       dots: false,
       arrows: false,
@@ -72,85 +71,94 @@
       }
     );
 
-    /********************************
-     * Price Range Slider (noUiSlider)
-     ********************************/
-    if (jQuery('body').is('.aa-price-range')) {
-      var originalRange = {
-        'min': 0,
-        '10%': 2000000,
-        '20%': 5000000,
-        '30%': 10000000,
-        '40%': 15000000,
-        '50%': 20000000,
-        '60%': 25000000,
-        '70%': 30000000,
-        '80%': 35000000,
-        '90%': 40000000,
-        'max': 50000000
-      };
+/********************************
+ * Price Range Slider (noUiSlider)
+ ********************************/
+if (jQuery('body').is('.aa-price-range')) {
+  var originalRange = {
+    'min': 0,
+    '10%': 2000000,
+    '20%': 5000000,
+    '30%': 10000000,
+    '40%': 15000000,
+    '50%': 20000000,
+    '60%': 25000000,
+    '70%': 30000000,
+    '80%': 35000000,
+    '90%': 40000000,
+    'max': 50000000
+  };
 
-      var rentRange = {
-        'min': 0,
-        '10%': 5000,
-        '20%': 10000,
-        '30%': 15000,
-        '40%': 20000,
-        '50%': 25000,
-        '60%': 30000,
-        '70%': 35000,
-        '80%': 40000,
-        '90%': 45000,
-        'max': 50000
-      };
+  var rentRange = {
+    'min': 0,
+    '10%': 5000,
+    '20%': 10000,
+    '30%': 15000,
+    '40%': 20000,
+    '50%': 25000,
+    '60%': 30000,
+    '70%': 35000,
+    '80%': 40000,
+    '90%': 45000,
+    'max': 50000
+  };
 
-      var skipSlider = document.getElementById('aa-sqrfeet-range');
-      var sliderConfig = {
-        range: originalRange,
-        snap: true,
-        connect: true,
-        start: [0, 50000000] // This is the default
-      };
-      noUiSlider.create(skipSlider, sliderConfig);
+  // Get the slider element
+  var skipSlider = document.getElementById('.aa-price-range');
 
-      var skipValues = [
-        document.getElementById('skip-value-lower'),
-        document.getElementById('skip-value-upper')
-      ];
+  // Default config for "Sale"
+  var sliderConfig = {
+    range: originalRange,
+    snap: true,
+    connect: true,
+    start: [0, 50000000] // default
+  };
+  noUiSlider.create(skipSlider, sliderConfig);
 
-      // Update displayed values as slider moves
-      skipSlider.noUiSlider.on('update', function(values, handle) {
-        skipValues[handle].innerHTML = '₪' + parseInt(values[handle]).toLocaleString();
-      });
+  var skipValues = [
+    document.getElementById('skip-value-lower'),
+    document.getElementById('skip-value-upper')
+  ];
 
-      // On slider change, update global min/max & re-apply filters
-      skipSlider.noUiSlider.on('change', function(values) {
-        priceMin = parseInt(values[0], 10);
-        priceMax = parseInt(values[1], 10);
-        if (typeof applyFilters === 'function') {
-          applyFilters();
-        }
-      });
+  // Update displayed values as the slider moves
+  skipSlider.noUiSlider.on('update', function(values, handle) {
+    skipValues[handle].innerHTML = '₪' + parseInt(values[handle]).toLocaleString();
+  });
 
-      // Change range if property-status changes
-      document.getElementById('property-status').addEventListener('change', function() {
-        var selectedValue = this.value;
-        var newRange = selectedValue === "2" ? rentRange : originalRange;
-        skipSlider.noUiSlider.updateOptions({ range: newRange });
-
-        // Adjust handles accordingly
-        if (selectedValue === "2") {
-          skipSlider.noUiSlider.set([0, 50000]);
-          priceMax = 50000;
-        } else {
-          skipSlider.noUiSlider.set([0, 50000000]);
-          priceMax = 50000000;
-        }
-        if (typeof applyFilters === 'function') {
-          applyFilters();
-        }
-      });
+  // On slider change, update global min/max & re-apply filters
+  skipSlider.noUiSlider.on('change', function(values) {
+    priceMin = parseInt(values[0], 10);
+    priceMax = parseInt(values[1], 10);
+    if (typeof applyFilters === 'function') {
+      applyFilters();
     }
+  });
+
+  window.updatePriceRangeBasedOnSaleType = function(saleTypeValue) {
+    // Just an example. 
+    // You can do if (saleTypeValue === 'Rent') { ... } else { ... }
+    // Or combine with your existing slider logic.
+  
+    console.log("Sale Type is:", saleTypeValue);
+    
+    // For instance:
+    if (saleTypeValue === "Rent") {
+      // Switch to a rent range
+      skipSlider.noUiSlider.updateOptions({ range: rentRange });
+      skipSlider.noUiSlider.set([0, 50000]);
+    } else {
+      // Switch to a sale range
+      skipSlider.noUiSlider.updateOptions({ range: originalRange });
+      skipSlider.noUiSlider.set([0, 50000000]);
+    }
+  
+    // Then apply filters if you like
+    if (typeof applyFilters === 'function') {
+      applyFilters();
+    }
+  };
+  
+}
 
     /********************************
      * mixItUp
