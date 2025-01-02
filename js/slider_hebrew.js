@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const dataUrl = 'js/data.json';
+  const dataUrl = 'data.json';
   
     $.getJSON(dataUrl, function (data) {
       const records = data.records || [];

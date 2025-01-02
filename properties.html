@@ -5,55 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Holy City | Properties</title>
-    
-  <!-- jQuery library -->
-  <script src="js/jquery.min.js"></script>   
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.js"></script>   
-  <!-- slick slider -->
-  <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <!-- Data handling js -->
-  <script src="js/data.js"></script> 
-  <!-- Web Content js -->
-  <script src="js/web_content_banners.js"></script> 
-  <!-- Neighborhoods Dropdown -->
-  <script type="text/javascript" src="js/NeighborhoodsDropdown.js"></script>
-  <!-- Custom js -->
-  <script src="js/custom.js"></script>
 
-    <!-- thumb -->
-    <link rel="shortcut icon" href="img/thumb.ico" type="image/x-icon">
+<!-- Scripts -->
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
 
-    <!-- Font awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">   
-    <!-- slick slider CSS -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <!-- price picker slider CSS -->
-    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
-    <!-- Fancybox slider -->
-    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
-    <!-- Theme color -->
-    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
-    <!-- Main style sheet -->
-    <link href="css/style.css" rel="stylesheet">    
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.js"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">    
-    <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!-- Slick slider -->
+<script src="js/slick.js"></script>
 
+<!-- Price picker slider -->
+<script src="js/nouislider.js"></script>
 
+<!-- Mixit slider -->
+<script src="js/jquery.mixitup.js"></script>
+
+<!-- FancyBox -->
+<script src="js/jquery.fancybox.pack.js"></script>
+
+<!-- Web Content JS -->
+<script src="js/web_content_banners.js"></script>
+
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
+
+<!-- Language Toggle JS -->
+<script src="js/languageToggleProperties.js"></script>
+
+<!-- Styles -->
+<!-- Google Fonts -->
+<link href="https://db.onlinewebfonts.com/c/22db60d19480ba0274c9eb6ba877ea9b?family=Aharoni+Bold+V1" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+
+<!-- Font Awesome -->
+<link href="css/font-awesome.css" rel="stylesheet" />
+
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+<!-- Slick Slider CSS -->
+<link href="css/slick.css" rel="stylesheet" />
+
+<!-- Price Picker Slider CSS -->
+<link href="css/nouislider.css" rel="stylesheet" />
+
+<!-- FancyBox CSS -->
+<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!-- Theme Color -->
+<link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet" />
+
+<!-- Main Style Sheet -->
+<link href="css/style.css" rel="stylesheet" />
 
   </head>
-  <body class="aa-price-range">   
+  <div id="dynamic-script-container-properties"></div>
+  <body class="aa-price-range">
+    <!-- Hebrew Toggle -->
+    <div class="switch">
+      <input
+        id="language-toggle"
+        class="check-toggle check-toggle-round-flat"
+        type="checkbox"
+      />
+      <label for="language-toggle"></label>
+      <span class="off">EN</span>
+      <span class="on">עב</span>
+    </div>
+   
   <!-- Pre Loader -->
   <div id="aa-preloader-area">
     <div class="pulse"></div>
@@ -62,58 +84,99 @@
   <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
 
-  <!-- Start header section -->
-  <header id="aa-header">  
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-                  <div class="aa-telephone-no">
-                    <span class="fa fa-phone"></span>
-                    052-678-3539
+    <!-- Start header section -->
+    <header id="aa-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <div class="aa-header-left">
+                    <div class="aa-telephone-no">
+                      <a href="tel:+052-678-3539" style="color: white;">
+                        <span class="fa fa-phone"></span>
+                      052-678-3539</a>
+                    </div>
+                    <div class="aa-telephone-no" style="margin-right: 10px;">
+                      <a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><span class="fa fa-whatsapp" style="margin-left: 10px;"></span>
+                        +972 55-260-5900</a>
+                    </div>
                   </div>
-                  <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> info@holycity-realestate.com
-                  </div>
-                </div>              
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- End header section -->
+    </header>
+    <!-- End header section -->
 
-  <!-- Start menu section -->
-  <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-      <div class="container">
-        <div class="navbar-header">                                          
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>  
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/aryeh logo no background with BOX.png" alt="logo"></a>                    
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#navbar"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand aa-logo-img" href="index.html"
+              ><img
+                src="img/aryeh logo no background with BOX.png"
+                alt="logo"
+            /></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul
+              id="top-menu"
+              class="nav navbar-nav navbar-right aa-main-nav"            >
+              <li>
+                <!-- HOME / דף הבית -->
+                <a href="index.html">
+                  <span class="english">HOME</span>
+                  <span class="hebrew">דף הבית</span>
+                </a>
+              </li>
+              <li class="active">
+                <!-- PROPERTIES / נכסים -->
+                <a href="properties.html">
+                  <span class="english">PROPERTIES</span>
+                  <span class="hebrew">נכסים</span>
+                </a>
+              </li>
+              <li>
+                <!-- NEW PROJECTS / פרויקטים חדשים -->
+                <a href="new project.html">
+                  <span class="english">NEW PROJECTS</span>
+                  <span class="hebrew">פרויקטים חדשים</span>
+                </a>
+              </li>
+              <li>
+                <!-- ABOUT US / אודות -->
+                <a href="about.html" class="english">ABOUT US</a>
+                <a href="about.html" class="hebrew">אודות</a>
+                </a>
+              </li>
+              <li>
+                <!-- CONTACT / צור קשר -->
+                <a href="contact.html" class="english">CONTACT</a>
+                <a href="contact.html" class="hebrew">צור קשר</a>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
-            <li class="active"><a href="properties.html">PROPERTIES</a></li>
-            <li><a href="new project.html">NEW PROJECTS</a></li>
-            <li><a href="about.html">ABOUT US</a></li>                                          
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>                            
-        </div>     
-      </div>          
-    </nav> 
-  </section>
-  <!-- End menu section -->
+      </nav>
+    </section>
+    <!-- End menu section -->
 
   <!-- Start Property header -->
   <section id="aa-property-header" style="background-image: url(#aa-property-header);">
@@ -121,7 +184,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-property-header-inner">
-            <h2>Properties</h2>
+            <h2 class="english">PROPERTIES</h2>
+              <h2 class="hebrew" style="font-size: 30px;">נכסים</h2>
           </div>
         </div>
       </div>
@@ -148,18 +212,30 @@
             </div>
 
               <div class="col-md-3">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Rooms</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5+</option>
-                  </select>
-                </div>
-              </div>
+        <!-- English Version -->
+        <div class="aa-single-advance-search english">
+          <select>
+            <option value="0" selected>Rooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
 
+        <!-- Hebrew Version -->
+        <div class="aa-single-advance-search hebrew">
+          <select>
+            <option value="0" selected>חדרים</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
+              </div>
             </div>
           </div>
           <div class="aa-advance-search-bottom">
@@ -245,36 +321,36 @@
     </div>
   </section>
   <!-- / Properties -->
-
-  <!-- Footer -->
-  <footer id="aa-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-footer-area">
-            <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="aa-footer-left">
-                 <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
+    <!-- Footer -->
+    <footer id="aa-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-footer-area">
+                <div class="col-sm-3 col-xs-12">
+                  <div class="aa-footer-left">
+                    <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
+                   </div>
                 </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-              </div>
-              <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="aa-footer-right">
-                  <a href="index.html">Home</a>
-                  <a href="properties.html">Properties</a>
-                  <a href="about.html">About Us</a>
-                  <a href="contact.html">Contact</a>
+                <div class="col-sm-9 col-xs-12">
+                  <div class="aa-footer-right">
+                    <a href="index.html"><p class="english">Home</p></a>
+                    <a href="index.html"><p class="hebrew">דף הבית</p></a>
+                    <a href="properties.html"><p class="english">Properties</p></a>
+                    <a href="properties.html"><p class="hebrew">נכסים</p></a>
+                    <a href="new project.html"><p class="english">New Projects</p></a>
+                    <a href="new project.html"><p class="hebrew">פרויקטים חדשים</p></a>
+                    <a href="about.html"><p class="english">About Us</p></a>
+                    <a href="about.html"><p class="hebrew">אודות</p></a>
+                    <a href="contact.html"><p class="english">Contact</p></a>
+                    <a href="contact.html"><p class="hebrew">צור קשר</p></a>
+                  </div>
                 </div>
-              </div>            
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- / Footer -->
-
+    </footer>
+    <!-- / Footer -->
   </body>
 </html>

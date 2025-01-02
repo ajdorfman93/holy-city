@@ -1,6 +1,6 @@
 // homepage_data.js
 $(document).ready(function() {
-  const dataUrl = 'js/data.json';
+  const dataUrl = 'data.json';
 
   console.log("Fetching data from:", dataUrl);
 

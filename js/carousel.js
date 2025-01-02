@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const dataUrl = 'js/data.json';
+    const dataUrl = 'data.json';
     const urlParams = new URLSearchParams(window.location.search);
     const propertyId = parseInt(urlParams.get('id'), 10);
 
