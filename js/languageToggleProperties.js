@@ -1,6 +1,7 @@
 // languageToggleProperties.js
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("language-toggle");
+  const sliderElement = document.getElementById(".aa-price-range2");
   const englishItems = document.querySelectorAll(".english");
   const hebrewItems = document.querySelectorAll(".hebrew");
   const scriptContainer = document.getElementById("dynamic-script-container-properties");
@@ -51,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Decide which scripts to load
     const scriptsToLoad = isEnglish
-      ? ["js/data.js", "js/NeighborhoodsDropdown.js","js/nouislider.js"]
-      : ["js/data_hebrew.js", "js/NeighborhoodsDropdown_hebrew.js", "js/nouislider_hebrew.js"];
+      ? ["js/data.js", "js/NeighborhoodsDropdown.js"]
+      : ["js/data_hebrew.js", "js/NeighborhoodsDropdown_hebrew.js"];
 
     // Load them in sequence. After loading, re-initialize the slider
     loadScriptsSequentially([...scriptsToLoad], () => {

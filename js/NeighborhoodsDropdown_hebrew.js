@@ -18,15 +18,15 @@ $(document).ready(function () {
       const fields = record.fields || {};
 
       // Neighborhoods
-      if (fields.Neighborhood_Names) {
-        fields.Neighborhood_Names.split(',').forEach(name => {
+      if (fields.Neighborhood_Hebrew) {
+        fields.Neighborhood_Hebrew.split(',').forEach(name => {
           neighborhoods.add(name.trim());
         });
       }
 
       // Property Statuses
-      if (fields.Property_StatusStr) {
-        propertyStatuses.add(fields.Property_StatusStr.trim());
+      if (fields.Property_Status_Hebrew) {
+        propertyStatuses.add(fields.Property_Status_Hebrew.trim());
       }
     });
 
@@ -36,9 +36,9 @@ $(document).ready(function () {
 
     // --- Neighborhood Dropdown ---
     const neighborhoodDropdownHTML = `
-      <div class="aa-single-advance-search">
+      <div class="aa-single-advance-search hebrew">
         <select id="neighborhood-select">
-          <option value="0" selected>Neighborhood</option>
+          <option value="0" selected>שכונה</option>
           ${sortedNeighborhoods
             .map(neighborhood => `<option value="${neighborhood}">${neighborhood}</option>`)
             .join('')}
@@ -48,9 +48,9 @@ $(document).ready(function () {
 
     // --- Property Status Dropdown ---
     const propertyStatusDropdownHTML = `
-      <div class="aa-single-advance-search">
+      <div class="aa-single-advance-search hebrew">
         <select id="property-status-select">
-          <option value="0" selected>Property Status</option>
+          <option value="0" selected>סטטוס נכס</option>
           ${sortedPropertyStatuses
             .map(status => `<option value="${status}">${status}</option>`)
             .join('')}
@@ -91,7 +91,7 @@ $(document).ready(function () {
     const matchingSaleTypes = new Set();
     allRecords.forEach(record => {
       const fields = record.fields || {};
-      const propertyStatus = (fields.Property_StatusStr || '').trim();
+      const propertyStatus = (fields.Property_Status_Hebrew || '').trim();
       const saleType = (fields.Sale_Type || '').trim();
 
       if (propertyStatus === selectedStatus && saleType) {

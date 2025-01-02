@@ -1015,6 +1015,7 @@ input.check-toggle-round-flat:checked + label:after {
   padding: 10px;
   width: 100%;
 }
+
 .aa-properties-item .aa-properties-item-content .aa-properties-detial .aa-price {
   float: left;
   font-size: 18px;

@@ -74,7 +74,7 @@
 /********************************
  * Price Range Slider (noUiSlider)
  ********************************/
-if (jQuery('body').is('.aa-price-range')) {
+if (jQuery('body').is('.aa-price-range2')) {
   var originalRange = {
     'min': 0,
     '10%': 2000000,
@@ -104,21 +104,21 @@ if (jQuery('body').is('.aa-price-range')) {
   };
 
   // Get the slider element
-  var skipSlider = document.getElementById('.aa-price-range');
+  var skipSlider = document.getElementById('.aa-price-range2');
 
   // Default config for "Sale"
   var sliderConfig = {
     range: originalRange,
+    direction: 'var2',
     snap: true,
-    direction: 'var1',
     connect: true,
     start: [0, 50000000] // default
   };
   noUiSlider.create(skipSlider, sliderConfig);
 
   var skipValues = [
-    document.getElementById('skip-value-lower'),
-    document.getElementById('skip-value-upper')
+    document.getElementById('skip-value-lower2'),
+    document.getElementById('skip-value-upper2')
   ];
 
   // Update displayed values as the slider moves

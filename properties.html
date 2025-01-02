@@ -16,6 +16,10 @@
 <!-- Slick slider -->
 <script src="js/slick.js"></script>
 
+
+<!-- Language Toggle JS -->
+<script src="js/languageToggleProperties.js"></script>
+
 <!-- Price picker slider -->
 <script src="js/nouislider.js"></script>
 
@@ -30,10 +34,8 @@
 
 <!-- Custom JS -->
 <script src="js/custom.js"></script>
-
-<!-- Language Toggle JS -->
-<script src="js/languageToggleProperties.js"></script>
-
+<!-- Custom JS -->
+<script src="js/custom_hebrew"></script>
 <!-- Styles -->
 <!-- Google Fonts -->
 <link href="https://db.onlinewebfonts.com/c/22db60d19480ba0274c9eb6ba877ea9b?family=Aharoni+Bold+V1" rel="stylesheet" />
@@ -63,7 +65,7 @@
 
   </head>
   <div id="dynamic-script-container-properties"></div>
-  <body class="aa-price-range">
+  <body class="aa-price-range aa-price-range2">
     <!-- Hebrew Toggle -->
     <div class="switch">
       <input
@@ -241,15 +243,26 @@
           <div class="aa-advance-search-bottom">
             <div class="row">
               <div class="col-md-12">
-                <div class="aa-single-filter-search">
-                  <span>PRICE </span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower" class="example-val">0</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" class="example-val">100.00</span>
-                  <div id=".aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
-                </div>
+<!-- English Version -->
+<div class="aa-single-filter-search english">
+  <span>PRICE</span>
+  <span>FROM</span>
+  <span id="skip-value-lower" class="example-val">0</span>
+  <span>TO</span>
+  <span id="skip-value-upper" class="example-val">100.00</span>
+  <div id=".aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background"></div>
+</div>
+
+<!-- Hebrew Version -->
+<div class="aa-single-filter-search hebrew">
+  <span>מחיר</span>
+  <span>מ-</span>
+  <span id="skip-value-lower2" class="example-val">0</span>
+  <span>עד</span>
+  <span id="skip-value-upper2" class="example-val">100.00</span>
+  <div id=".aa-price-range2" class="noUi-target noUi-rtl noUi-horizontal noUi-background"></div>
+</div>
+
               </div>
             </div>  
           </div>
@@ -268,23 +281,47 @@
             <!-- start properties content head -->
             <div class="aa-properties-content-head">              
               <div class="aa-properties-content-head-left">
-                <form action="" class="aa-sort-form">
-                  <label for="">Sort by</label>
-                  <select name="">
-                    <option value="1" selected="Default">Default</option>
-                    <option value="2">Name</option>
-                    <option value="3">Price</option>
-                    <option value="4">Date</option>
-                  </select>
-                </form>
-                <form action="" class="aa-show-form">
-                  <label for="">Show</label>
-                  <select name="">
-                    <option value="1" selected="12">6</option>
-                    <option value="2">12</option>
-                    <option value="3">24</option>
-                  </select>
-                </form>
+<!-- English Version -->
+<form action="" class="aa-sort-form english">
+  <label for="">Sort by</label>
+  <select name="">
+    <option value="1" selected="Default">Default</option>
+    <option value="2">Name</option>
+    <option value="3">Price</option>
+    <option value="4">Date</option>
+  </select>
+</form>
+
+<!-- Hebrew Version -->
+<form action="" class="aa-sort-form hebrew">
+  <label for="">מיין לפי</label>
+  <select name="">
+    <option value="1" selected="Default">ברירת מחדל</option>
+    <option value="2">שם</option>
+    <option value="3">מחיר</option>
+    <option value="4">תאריך</option>
+  </select>
+</form>
+<!-- English Version -->
+<form action="" class="aa-show-form english">
+  <label for="">Show</label>
+  <select name="">
+    <option value="1" selected="12">6</option>
+    <option value="2">12</option>
+    <option value="3">24</option>
+  </select>
+</form>
+
+<!-- Hebrew Version -->
+<form action="" class="aa-show-form hebrew">
+  <label for="">הצג</label>
+  <select name="">
+    <option value="1" selected="12">6</option>
+    <option value="2">12</option>
+    <option value="3">24</option>
+  </select>
+</form>
+
               </div>
               <div class="aa-properties-content-head-right">
                 <a id="aa-grid-properties" href="#"><span class="fa fa-th"></span></a>
@@ -309,13 +346,24 @@
         </div>
         <!-- Start properties sidebar -->
         <div class="col-md-4">
-          <aside class="aa-properties-sidebar">
-            <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-              <h3>Popular Properties</h3>
-              <!-- Popular Properties will be populated here by data.js -->
-            </div>
-          </aside>
+<!-- English Version -->
+<aside class="aa-properties-sidebar english">
+  <!-- Start Single properties sidebar -->
+  <div class="aa-properties-single-sidebar">
+    <h3>Popular Properties</h3>
+    <!-- Popular Properties will be populated here by data.js -->
+  </div>
+</aside>
+
+<!-- Hebrew Version -->
+<aside class="aa-properties-sidebar hebrew">
+  <!-- Start Single properties sidebar -->
+  <div class="aa-properties-single-sidebar">
+    <h3 class="hebrew">נכסים פופולריים</h3>
+    <!-- נכסים פופולריים will be populated here by data.js -->
+  </div>
+</aside>
+
         </div>
       </div>
     </div>
