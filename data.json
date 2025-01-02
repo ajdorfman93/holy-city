@@ -5,6 +5,7 @@
       "fields": {
         "Date": 1734739200,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "10 Moshe Hess Street",
         "Neighborhood": 33,
         "Number_of_Bedrooms": 2,
@@ -29,7 +30,6 @@
         "Property_Type": 22,
         "Street1_Hebrew": "רחוב משה הס 10",
         "About_Hebrew": "דירת גן מקסימה להשכרה בטלביה ברחוב הס\u003Cbr\u003E\n\nדירה מרווחת זו, בעלת 2.5 חדרים, כוללת גינה פרטית גדולה, מושלמת להרפיה ובילויים חיצוניים. הדירה עברה שיפוץ לאחרונה וכוללת מטבח וחדר רחצה מודרניים. עם עיצוב ייחודי ושטח נדיב, זוהי דירה שחובה לראות!\u003Cbr\u003E\n\nשכירות: 8,900 ש\"ח לחודש\u003Cbr\u003E\n\nצרו קשר לתיאום צפייה.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-21",
         "Neighborhood_Names": "Talbiya",
         "StrBedrooms": "2",
@@ -46,8 +46,11 @@
         "Bedrooms": "2",
         "StrFeatures": "Features[[36, 34, 20, 33, 2, 8]]",
         "Property_Type_Hebrew": "דירת גן",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -71,9 +74,7 @@
           "מזגן",
           "מרפסת סוכה"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Garden Apartment"
       },
       "errors": {
         "GeocodedAddress": "KeyError"
@@ -84,6 +85,7 @@
       "fields": {
         "Date": 1733788800,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "46 Haneviim Street",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 1,
@@ -108,7 +110,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב הנביאים 46",
         "About_Hebrew": "דירת חדר חדשה עם חניה במרכז העיר ירושלים\u003Cbr\u003E\n\nדירה מודרנית ומרוהטת לחלוטין זו מציעה עיצוב חכם עם 2 חדרים מרווחים, כולל חדר שינה אחד, במיקום מרכזי ונוח במרכז העיר ירושלים. הדירה כוללת חניה פרטית לנוחות מירבית.\u003Cbr\u003E\n\nשכירות: 7,000 ש\"ח לחודש + הוצאות (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-10",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "1",
@@ -125,8 +126,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[38, 35, 10, 1, 2, 4, 6, 3, 39]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -156,9 +160,7 @@
           "נוף מרהיב",
           "מרפסת"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -166,6 +168,7 @@
       "fields": {
         "Date": 1733875200,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "3 Navon Street",
         "Neighborhood": 36,
         "Number_of_Bedrooms": 1,
@@ -190,7 +193,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב נבון 3",
         "About_Hebrew": "להשכרה – דירת חדר חדשה בשוק מחנה יהודה\u003Cbr\u003E\n\nמחפשים דירה מסוגננת ומרוהטת בלב שכונת מחנה יהודה התוססת? דירת חדר זו ברחוב נבון בבניין חדש מציעה נוחות ועיצוב מודרני במרחק נגיעה מהשוק ומהסביבה.\u003Cbr\u003E\n\nשכירות: 5,800 ש\"ח לחודש (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539 או שלחו הודעה פרטית!",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-11",
         "Neighborhood_Names": "Mahane Yehuda",
         "StrBedrooms": "1",
@@ -207,8 +209,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[3, 38, 1, 2, 9, 13, 15, 16, 16, 28]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -240,9 +245,7 @@
           "גג",
           "סאונה"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -250,6 +253,7 @@
       "fields": {
         "Date": 1734825600,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "46 Haneviim Street",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 1,
@@ -274,7 +278,6 @@
         "Property_Type": 21,
         "Street1_Hebrew": "רחוב הנביאים 46",
         "About_Hebrew": "דירת חדר חדשה לגמרי בלב מרכז העיר\u003Cbr\u003E\n\nדירה זו כוללת ריהוט יוקרתי ומודרני, עם 2 חדרים ובריכת שחייה מחוממת בגינה פרטית. הדירה מציעה גם חניה פרטית ויחידת אחסון נפרדת. הזדמנות לגור במרחב יוקרתי ונעים!\n\nצרו קשר לפרטים נוספים או לתיאום צפייה.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-22",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "1",
@@ -291,8 +294,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[9, 10, 35, 7, 13, 37, 4, 38]]",
         "Property_Type_Hebrew": "גן",
+        "Property_Status_Hebrew": "טווח קצר",
         "Property_StatusStr": "Short Term",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Short Term",
@@ -320,9 +326,7 @@
           "מעלית",
           "בניין חדש"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "טווח קצר",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Garden"
       }
     },
     {
@@ -330,6 +334,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "7 Histadrut Street",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 1,
@@ -354,7 +359,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב ההסתדרות 7",
         "About_Hebrew": "דירת חדר חדשה בלב מרכז העיר ירושלים\u003Cbr\u003E\n\nדירה חדשה לחלוטין ומרוהטת בעיצוב יוקרתי בלב מרכז העיר ירושלים. כוללת 2 חדרים (חדר שינה וסלון), 2 מרפסות (כולל אפשרות למרפסת סוכה) ו-55 מ\"ר של שטח מגורים מודרני ונעים.\u003Cbr\u003E\n\nשכירות: 6,500 ש\"ח לחודש (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים צרו קשר עם אריה בטלפון +972-52-678-3539.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "1",
@@ -371,8 +375,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[38, 35, 4, 39]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -392,9 +399,7 @@
           "מעלית",
           "מרפסת"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -402,6 +407,7 @@
       "fields": {
         "Date": 1733788800,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "3 Mapu",
         "Neighborhood": 33,
         "Number_of_Bedrooms": 2,
@@ -426,7 +432,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב מאפו 3",
         "About_Hebrew": "דירה חדשה ומשופצת בטלביה\u003Cbr\u003E\n\nממוקמת ברחוב מאפו/קינג דיוויד, דירה זו כוללת 2 חדרי שינה, 3 חדרים, 2 חדרי רחצה מלאים, מרפסת סגורה וחניה פרטית. השיפוץ היוקרתי מבטיח חוויית מגורים נוחה ואלגנטית באחת השכונות המבוקשות בירושלים.\u003Cbr\u003E\n\nשכירות: 8,700 ש\"ח לחודש (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים, צרו קשר עם אריה בטלפון +972-52-678-3539.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-10",
         "Neighborhood_Names": "Talbiya",
         "StrBedrooms": "2",
@@ -443,8 +448,11 @@
         "Bedrooms": "2",
         "StrFeatures": "Features[[2, 3, 4, 5, 35, 39]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -468,9 +476,7 @@
           "מרוהטת במלואה",
           "מרפסת"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -478,6 +484,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "3 Raoul Wallenberg / 64 Yafo",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 1,
@@ -502,7 +509,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב ראול ולנברג 3 / יפו 64",
         "About_Hebrew": "דירת חדר יוקרתית חדשה להשכרה בסביון ויו\u003Cbr\u003E\n\nבמיקום מרכזי מעולה, דירת חדר מפוארת זו כוללת ריהוט מלא, 47 מ\"ר של שטח מגורים מעוצב, סלון נעים ומרפסת פרטית בגודל 5 מ\"ר.\u003Cbr\u003E\n\nבניין סביון ויו מציע אבטחה 24/7, 4 מעליות מהירות ושתי מרפסות משותפות בקומות 10 ו-21.\u003Cbr\u003E\n\nשכירות: 6,500 ש\"ח לחודש (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "1",
@@ -519,8 +525,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[3, 38, 4, 6, 2, 15, 39]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -546,9 +555,7 @@
           "קונסיירז'",
           "מרפסת"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -556,6 +563,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "Navon 3 ",
         "Neighborhood": 36,
         "Number_of_Bedrooms": 1,
@@ -580,7 +588,6 @@
         "Property_Type": 8,
         "Street1_Hebrew": "נבון 3",
         "About_Hebrew": "סטודיו יוקרתי חדש להשכרה במרכז העיר ירושלים\u003Cbr\u003E\n\nבואו ליהנות משילוב מושלם של נוחות, סטייל ונוחות בדירת סטודיו חדשה לחלוטין במיקום מעולה במרכז העיר. הדירה כוללת ריהוט מלא ועיצוב יוקרתי, עם כל הציוד הדרוש, פרט לחשמל.\u003Cbr\u003E\n\nשכירות: 4,200 ש\"ח לחודש (כולל הכל פרט לחשמל) (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539.",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "Mahane Yehuda",
         "StrBedrooms": "1",
@@ -597,8 +604,11 @@
         "Bedrooms": "1",
         "StrFeatures": "Features[[38, 4, 6, 35, 2, 7]]",
         "Property_Type_Hebrew": "דירת סטודיו",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -622,9 +632,7 @@
           "מזגן",
           "מחסן"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Studio Apartment"
       }
     },
     {
@@ -632,6 +640,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "-",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 4,
@@ -656,7 +665,6 @@
         "Property_Type": 1,
         "Street1_Hebrew": "",
         "About_Hebrew": "פנטהאוז יוקרתי נדיר למכירה במרכז העיר ירושלים\u003Cbr\u003E\n\nהזדמנות חד-פעמית לרכוש פנטהאוז מעוצב בקפידה במיקום הנחשק ביותר בירושלים. דירה זו כוללת 4 חדרי שינה מרווחים, 3 חדרי רחצה מודרניים ו-160 מ\"ר של שטח מגורים אלגנטי. הדובדבן שבקצפת? מרפסת פתוחה בגודל 140 מ\"ר עם נוף עוצר נשימה של כל העיר.\u003Cbr\u003E\n\nמחיר: 10,800,000 ש\"ח\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום סיור פרטי, צרו קשר עם אריה בטלפון +972-52-678-3539.\n\n",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "4",
@@ -673,8 +681,11 @@
         "Bedrooms": "4",
         "StrFeatures": "Features[[3, 16, 8, 10, 5, 4, 6]]",
         "Property_Type_Hebrew": "פנטהאוז",
+        "Property_Status_Hebrew": "מכירה",
         "Property_StatusStr": "Sale",
         "Sale_Type": "Sale",
+        "Offmarket": "Sold",
+        "Offmarket_Hebrew": "נמכר",
         "Property_Status2": [
           "L",
           "Sale",
@@ -700,9 +711,7 @@
           "מעלית",
           "מעלית שבת"
         ],
-        "Offmarket": "Sold",
-        "Property_Status_Hebrew": "מכירה",
-        "Offmarket_Hebrew": "נמכר"
+        "Property_TypeStr": "Penthouse"
       }
     },
     {
@@ -710,6 +719,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "-",
         "Neighborhood": 37,
         "Number_of_Bedrooms": 3,
@@ -734,7 +744,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "",
         "About_Hebrew": "דירה חדשה למכירה בנחלאות אחים – רחוב שבזי\u003Cbr\u003E\n\nבמיקום פסטורלי ושקט באחת השכונות המבוקשות בירושלים, דירה זו מציעה 91.5 מ\"ר של שטח מגורים מעוצב, 2 חדרי שינה מרווחים (כולל מאסטר וממ\"ד) ומרפסת בגודל 8 מ\"ר.\u003Cbr\u003E\n\nמחיר מבוקש: 4,150,000 ש\"ח\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר היום!",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "Nachlaot Ahim",
         "StrBedrooms": "3",
@@ -751,8 +760,11 @@
         "Bedrooms": "3",
         "StrFeatures": "Features[[38, 39, 4, 37, 20]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "מכירה",
         "Property_StatusStr": "Sale",
         "Sale_Type": "Sale",
+        "Offmarket": "Sold",
+        "Offmarket_Hebrew": "נמכר",
         "Property_Status2": [
           "L",
           "Sale",
@@ -774,9 +786,7 @@
           "ללא מדרגות",
           "תקרות גבוהות"
         ],
-        "Offmarket": "Sold",
-        "Property_Status_Hebrew": "מכירה",
-        "Offmarket_Hebrew": "נמכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -784,6 +794,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "3 Raoul Wallenberg / 64 Yafo",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 2,
@@ -808,7 +819,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב ראול ולנברג 3 / יפו 64",
         "About_Hebrew": "דירה חדשה למכירה בסביון ויו – נופים עוצרי נשימה מחכים לכם!\u003Cbr\u003E\n\nממוקמת בקומה גבוהה בבניין היוקרתי סביון ויו, דירה זו כוללת חדר שינה מרווח, חדר רחצה מעוצב ו-47 מ\"ר של שטח מגורים מודרני ומעוצב.\n\nמחיר מבוקש: 2,870,000 ש\"ח\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום סיור, צרו קשר היום!",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "2",
@@ -825,8 +835,11 @@
         "Bedrooms": "2",
         "StrFeatures": "Features[[38, 3, 4, 6, 39, 15, 18]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "מכירה",
         "Property_StatusStr": "Sale",
         "Sale_Type": "Sale",
+        "Offmarket": "Sold",
+        "Offmarket_Hebrew": "נמכר",
         "Property_Status2": [
           "L",
           "Sale",
@@ -852,9 +865,7 @@
           "קונסיירז'",
           "מחסן לאופניים"
         ],
-        "Offmarket": "Sold",
-        "Property_Status_Hebrew": "מכירה",
-        "Offmarket_Hebrew": "נמכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -862,6 +873,7 @@
       "fields": {
         "Date": 1734480000,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "15 Shmuel Hanagid Street",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 5,
@@ -886,7 +898,6 @@
         "Property_Type": 23,
         "Street1_Hebrew": "רחוב שמואל הנגיד 15",
         "About_Hebrew": "",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-18",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "5",
@@ -903,8 +914,11 @@
         "Bedrooms": "5",
         "StrFeatures": "Features[[3, 10, 16, 8, 40]]",
         "Property_Type_Hebrew": "פנטהאוז דופלקס",
+        "Property_Status_Hebrew": "מכירה",
         "Property_StatusStr": "Sale",
         "Sale_Type": "Sale",
+        "Offmarket": "Sold",
+        "Offmarket_Hebrew": "נמכר",
         "Property_Status2": [
           "L",
           "Sale",
@@ -926,9 +940,7 @@
           "מרפסת סוכה",
           "פרויקט חדש"
         ],
-        "Offmarket": "Sold",
-        "Property_Status_Hebrew": "מכירה",
-        "Offmarket_Hebrew": "נמכר"
+        "Property_TypeStr": "Duplex Penthouse"
       }
     },
     {
@@ -936,6 +948,7 @@
       "fields": {
         "Date": 1735430400,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "Ben Sira Street",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 2,
@@ -960,7 +973,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב בן סירא",
         "About_Hebrew": "דירה מרווחת עם 2 חדרי שינה להשכרה במרכז העיר ירושלים\u003Cbr\u003E\n\nדירה גדולה ומקסימה זו מציעה מעל 100 מ\"ר של שטח מגורים, עם 3.5 חדרים, 2 חדרי שינה מרווחים ו-2 חדרי רחצה מלאים. ממוקמת בקומה הראשונה, הדירה כוללת גם מרפסת סוכה בגודל 25 מ\"ר, מושלמת להרפיה חיצונית. עם עיצוב ייחודי וריהוט מלא, דירה זו אידיאלית למי שמחפש נוחות וסטייל במיקום פריים במרכז העיר.\u003Cbr\u003E\n\nשכירות: 11,500 ש\"ח לחודש (דמי תיווך חלים)\u003Cbr\u003E\n\nלפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-29",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "2",
@@ -977,8 +989,11 @@
         "Bedrooms": "2",
         "StrFeatures": "Features[[5, 8, 35, 20]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -998,9 +1013,7 @@
           "מרוהטת במלואה",
           "תקרות גבוהות"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     },
     {
@@ -1008,6 +1021,7 @@
       "fields": {
         "Date": 1735430400,
         "Display": true,
+        "Sold_or_Rented": false,
         "Street1": "3 Raoul Wallenberg / 64 Yafo",
         "Neighborhood": 35,
         "Number_of_Bedrooms": 2,
@@ -1032,7 +1046,6 @@
         "Property_Type": 2,
         "Street1_Hebrew": "רחוב ראול ולנברג 3 / יפו 64",
         "About_Hebrew": "דירת יוקרה עם 2 חדרי שינה להשכרה בסביון ויו\u003Cbr\u003E\n\n📍 מיקום: במרכז העיר ירושלים, דירה מהממת זו בקומה גבוהה מציעה נוף עוצר נשימה ועיצוב מודרני ואלגנטי. עם 2 חדרי שינה מרווחים, 2 חדרי רחצה, וריהוט מלא, דירה זו מושלמת למי שמחפש נוחות וסטייל בסביבה יוקרתית.\u003Cbr\u003E\n\nבניין סביון ויו כולל אבטחה 24/7, 4 מעליות מהירות ושתי מרפסות סוכה גדולות בקומות 10 ו-21.\u003Cbr\u003E\n\nשכירות: 13,500 ש\"ח לחודש + הוצאות (דמי תיווך חלים)\u003Cbr\u003E\n\n📩 לפרטים נוספים או לתיאום צפייה, צרו קשר עם אריה בטלפון +972-52-678-3539\u003Cbr\u003E\n\n\n",
-        "Sold_or_Rented": false,
         "DateStr": "2024-12-29",
         "Neighborhood_Names": "City Center ",
         "StrBedrooms": "2",
@@ -1049,8 +1062,11 @@
         "Bedrooms": "2",
         "StrFeatures": "Features[[35, 3, 38, 10, 14, 4, 6, 2]]",
         "Property_Type_Hebrew": "דירה",
+        "Property_Status_Hebrew": "השכרה",
         "Property_StatusStr": "Rent",
         "Sale_Type": "Rent",
+        "Offmarket": "Rented",
+        "Offmarket_Hebrew": "מושכר",
         "Property_Status2": [
           "L",
           "Rent",
@@ -1078,9 +1094,7 @@
           "מעלית שבת",
           "מזגן"
         ],
-        "Offmarket": "Rented",
-        "Property_Status_Hebrew": "השכרה",
-        "Offmarket_Hebrew": "מושכר"
+        "Property_TypeStr": "Apartment"
       }
     }
   ]

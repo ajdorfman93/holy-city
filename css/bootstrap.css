@@ -58,6 +58,10 @@ h1 {
   margin: .67em 0;
   font-size: 2em;
 }
+
+.aa-properties-info h2 {
+  margin-bottom: 10px;
+}
 mark {
   color: #000;
   background: #ff0;
@@ -272,6 +276,7 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+
 @font-face {
   font-family: 'Glyphicons Halflings';
 
@@ -5870,8 +5875,26 @@ a.thumbnail.active {
   }
 }
 
+/* 1) Declare the font using @font-face */
+@font-face {
+  font-family: 'Aharoni CLM Book';
+  src: url('/fonts/Aharoni CLM Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 2) Base Hebrew styling */
 .hebrew {
   direction: rtl;
-  font-family: 'Aharoni Bold V1'!important;
+  font-family: 'Aharoni Bold V1'; /* or whatever your bold version is named */
   font-size: 1.25em;
+}
+
+/* 3) Override inside .light to use the "Book" (light) version */
+.hebrew .light {
+  /* This will override the font family from .hebrew */
+  font-family: 'Aharoni CLM Book', sans-serif;
+  /* Optionally adjust weight and size, if needed */
+  font-weight: normal;
+  /* font-size: 1.25em;  <-- you can keep or change if you want the same size */
 }
