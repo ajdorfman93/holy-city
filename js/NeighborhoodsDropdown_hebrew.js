@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     // --- Neighborhood Dropdown ---
     const neighborhoodDropdownHTML = `
-      <div class="aa-single-advance-search hebrew">
+      <div class="aa-single-advance-search2 hebrew">
         <select id="neighborhood-select">
           <option value="0" selected>שכונה</option>
           ${sortedNeighborhoods
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     // --- Property Status Dropdown ---
     const propertyStatusDropdownHTML = `
-      <div class="aa-single-advance-search hebrew">
+      <div class="aa-single-advance-search2 hebrew">
         <select id="property-status-select">
           <option value="0" selected>סטטוס נכס</option>
           ${sortedPropertyStatuses

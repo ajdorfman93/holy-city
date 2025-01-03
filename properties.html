@@ -77,14 +77,14 @@
       <span class="off">EN</span>
       <span class="on">עב</span>
     </div>
-   
-  <!-- Pre Loader -->
-  <div id="aa-preloader-area">
-    <div class="pulse"></div>
-  </div>
-  <!-- SCROLL TOP BUTTON -->
-  <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
+
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
 
     <!-- Start header section -->
     <header id="aa-header">
@@ -139,40 +139,45 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul
               id="top-menu"
-              class="nav navbar-nav navbar-right aa-main-nav"            >
-              <li>
-                <!-- HOME / דף הבית -->
+              class="nav navbar-nav navbar-right aa-main-nav">
+              
+              <!-- HOME / דף הבית -->
+              <li class="active">
+
                 <a href="index.html">
                   <span class="english">HOME</span>
-                  <span class="hebrew">דף הבית</span>
+                  <span class="hebrew" id="light">דף הבית</span>
                 </a>
               </li>
-              <li class="active">
                 <!-- PROPERTIES / נכסים -->
+              <li>
                 <a href="properties.html">
                   <span class="english">PROPERTIES</span>
-                  <span class="hebrew">נכסים</span>
+                  <span class="hebrew" id="light">נכסים</span>
                 </a>
               </li>
-              <li>
                 <!-- NEW PROJECTS / פרויקטים חדשים -->
+              <li>
                 <a href="new project.html">
                   <span class="english">NEW PROJECTS</span>
-                  <span class="hebrew">פרויקטים חדשים</span>
+                  <span class="hebrew" id="light">פרויקטים חדשים</span>
                 </a>
               </li>
+              <!-- ABOUT US / אודות -->
               <li>
-                <!-- ABOUT US / אודות -->
-                <a href="about.html" class="english">ABOUT US</a>
-                <a href="about.html" class="hebrew">אודות</a>
+                <a href="about.html">
+                  <span class="english">ABOUT US</span>
+                  <span class="hebrew" id="light">אודות</span>
                 </a>
               </li>
+              <!-- CONTACT / צור קשר -->
               <li>
-                <!-- CONTACT / צור קשר -->
-                <a href="contact.html" class="english">CONTACT</a>
-                <a href="contact.html" class="hebrew">צור קשר</a>
+                <a href="contact.html">
+                  <span class="english">CONTACT</span>
+                  <span class="hebrew" id="light">צור קשר</span>
                 </a>
-              </li>
+</li>
+
             </ul>
           </div>
         </div>
@@ -187,7 +192,7 @@
         <div class="col-md-12">
           <div class="aa-property-header-inner">
             <h2 class="english">PROPERTIES</h2>
-              <h2 class="hebrew" style="font-size: 30px;">נכסים</h2>
+              <h2 class="hebrew">נכסים</h2>
           </div>
         </div>
       </div>
@@ -227,7 +232,7 @@
         </div>
 
         <!-- Hebrew Version -->
-        <div class="aa-single-advance-search hebrew">
+        <div class="aa-single-advance-search2 hebrew">
           <select>
             <option value="0" selected>חדרים</option>
             <option value="1">1</option>
@@ -255,10 +260,10 @@
 
 <!-- Hebrew Version -->
 <div class="aa-single-filter-search hebrew">
-  <span>מחיר</span>
-  <span>מ-</span>
+  <span style="font-family: 'Aharoni CLM Book';">מחיר</span>
+  <span style="font-family: 'Aharoni CLM Book';">מ-</span>
   <span id="skip-value-lower2" class="example-val">0</span>
-  <span>עד</span>
+  <span style="font-family: 'Aharoni CLM Book';">עד</span>
   <span id="skip-value-upper2" class="example-val">100.00</span>
   <div id=".aa-price-range2" class="noUi-target noUi-rtl noUi-horizontal noUi-background"></div>
 </div>

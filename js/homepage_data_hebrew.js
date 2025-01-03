@@ -66,11 +66,11 @@ $(document).ready(function() {
                 ${statusText}
               </div>
               <div class="aa-properties-item-content hebrew">
-                <div class="aa-properties-info hebrew">
-                  <span> חדרי שינה ${f.Bedrooms || 'N/A'}</span>
+                <div class="aa-properties-info hebrew" style="text-align: right;">
+                  <span>${f.Bedrooms || 'N/A'} חדרי שינה </span>
                 </div>
                 <div class="aa-properties-about hebrew">
-                  <h3>
+                  <h3 class="hebrew">
                     <a href="property_details.html?id=${prop.id}">
                       ${f.Name_Hebrew || 'Untitled Property'}
                     </a>

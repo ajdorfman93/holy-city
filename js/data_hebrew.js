@@ -80,7 +80,7 @@ $(document).ready(function() {
   function applyFilters() {
     const selectedNeighborhood = $('#neighborhood-select').val();
     const selectedStatus = $('#property-status-select').val();
-    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
+    const selectedRooms = $('.aa-single-advance-search2 select').eq(2).val();
 
     let filtered = allRecords.slice();
 
@@ -209,8 +209,8 @@ $(document).ready(function() {
               <h3>
                 ${nameSection}
               </h3>
-              <p class="hebrew">${f.Street1_Hebrew || ''}, ${f.Neighborhood_Hebrew || ''}</p>
-              <span class="aa-price">
+              <p class="hebrew" id="light">${f.Street1_Hebrew || ''}, ${f.Neighborhood_Hebrew || ''}</p>
+              <span class="aa-price" id="light">
                 ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
               </span>
             </div>
@@ -267,8 +267,8 @@ $(document).ready(function() {
               <h4 class="media-heading hebrew">
                 ${nameSection}
               </h4>
-              <p style="font-size: 20px">${f.Street1_Hebrew || ''}</p>
-              <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
+              <p id="light">${f.Street1_Hebrew || ''}</p>
+              <span id="light">₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
           </div>
         `;
