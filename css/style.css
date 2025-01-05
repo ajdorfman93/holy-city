@@ -2925,8 +2925,8 @@ input.check-toggle-round-flat:checked + label:after {
   background-color: #2d2b2b;
   display: inline;
   float: left;
-  height: 450px;
-  padding: 50px 30px;
+  height: 500px;
+  padding: 10px 30px;
   width: 40%;
 }
 #aa-contact .aa-contact-area .aa-contact-top .aa-contact-top-right h2 {

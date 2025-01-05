@@ -139,8 +139,7 @@
               class="nav navbar-nav navbar-right aa-main-nav">
               
               <!-- HOME / דף הבית -->
-              <li class="active">
-
+              <li>
                 <a href="index.html">
                   <span class="english">HOME</span>
                   <span class="hebrew" id="light">דף הבית</span>
@@ -168,7 +167,7 @@
                 </a>
               </li>
               <!-- CONTACT / צור קשר -->
-              <li>
+              <li class="active">
                 <a href="contact.html">
                   <span class="english">CONTACT</span>
                   <span class="hebrew" id="light">צור קשר</span>
@@ -189,8 +188,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="aa-contact-header-inner">
-            <h2>Contact</h2>
+          <div class="aa-contact-header-inner"><!-- English Version -->
+            <h2 class="english">Contact</h2>
+            
+            <!-- Hebrew Version -->
+            <h2 class="hebrew">צור קשר</h2>
+            
           </div>
         </div>
       </div>
@@ -203,59 +206,112 @@
      <div class="row">
        <div class="col-md-12">
           <div class="aa-contact-area">
-            <div class="aa-contact-top">
-              <div class="aa-contact-top-left">
-                <iframe width="100%" height="450" frameborder="0" allowfullscreen="" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"></iframe>
-              </div>
-              <div class="aa-contact-top-right">
-                <h2>Contact Details</h2>
-                <p>Looking to buy, sell, or rent an apartment in Jerusalem? Whether you’re searching the market, own a property, or need expert advice, we’re here to help.
-                  <br><br>Contact us today and let’s turn your real estate dreams into reality!</p>
-                <ul class="contact-info-list">
-                  <li> <i class="fa fa-phone"></i> 052-678-3539</li>
-                  <li> <i class="fa fa-envelope-o"></i> info@holycity-realestate.com</li>
-                  <li> <i class="fa fa-map-marker"></i> King George St 26 Jerusalem, Israel
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="aa-contact-bottom fadein">
-              <div class="aa-title">
-                <h2>Send Your Message</h2>
-                <span></span>
-                <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
-              </div>
-              <div class="aa-contact-form">
-                <form class="contactform"  action="https://formspree.io/f/mrbboaab"
-  method="POST">                  
-                  <p class="comment-form-author">
-                    <label for="author">Name <span class="required">*</span></label>
-                    <input type="text" name="author" value="" size="30" required="required">
-                  </p>
-                  <p class="comment-form-email">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" name="email" value="" aria-required="true" required="required">
-                  </p>
-                  <p class="comment-form-url">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject">  
-                  </p>
-                  <p class="comment-form-comment">
-                    <label for="comment">Message</label>
-                    <textarea name="comment" cols="45" rows="8" aria-required="true" required="required"></textarea>
-                  </p>                
-                  <p class="form-submit">
-                    <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
-                  </p>        
-                </form>
-              </div>
-            </div>
-          </div>
-       </div>
-     </div>
-   </div>
+<!-- English Version -->
+<div class="aa-contact-top english">
+  <div class="aa-contact-top-left">
+    <iframe width="100%" height="500" frameborder="0" allowfullscreen="" style="border:0" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus"></iframe>
+  </div>
+  <div class="aa-contact-top-right">
+    <h2>Contact Details</h2>
+    <p>Looking to buy, sell, or rent an apartment in Jerusalem? Whether you’re searching the market, own a property, or need expert advice, we’re here to help.
+      <br><br>Contact us today and let’s turn your real estate dreams into reality!</p>
+    <ul class="contact-info-list">
+      <li><a href="tel:+052-678-3539" style="color: white;"><i class="fa fa-phone"></i>052-678-3539</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><i class="fa fa-whatsapp"></i>+972 55-260-5900</a></li>
+      <li><a href="mailto:holycityestates1@gmail.com" style="color: white;"><i class="fa fa-envelope-o"></i>holycityestates1@gmail.com</a></li>
+      <li><i class="fa fa-map-marker"></i> King George St 26 Jerusalem, Israel</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hebrew Version -->
+<div class="aa-contact-top hebrew">
+  <div class="aa-contact-top-left">
+    <iframe width="100%" height="500" frameborder="0" allowfullscreen="" style="border:0" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus"></iframe>
+  </div>
+  <div class="aa-contact-top-right">
+    <h2>פרטי קשר</h2>
+    <p id="light">מחפשים לקנות, למכור או להשכיר דירה בירושלים? בין אם אתם מחפשים בשוק, בעלים של נכס, או צריכים ייעוץ מקצועי, אנחנו כאן כדי לעזור.
+      <br><br>צרו קשר עוד היום ונגשים את חלומות הנדל"ן שלכם!</p>
+    <ul class="contact-info-list" id="light">
+      <li><a href="tel:+052-678-3539" style="color: white;"><i class="fa fa-phone"></i>052-678-3539</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><i class="fa fa-whatsapp"></i>+972 55-260-5900</a></li>
+      <li><a href="mailto:holycityestates1@gmail.com" style="color: white;"><i class="fa fa-envelope-o"></i>holycityestates1@gmail.com</a></li>
+      <li><i class="fa fa-map-marker"></i> רחוב קינג ג'ורג' 26, ירושלים, ישראל</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- English Version -->
+<div class="aa-contact-bottom fadein english">
+  <div class="aa-title">
+    <h2>Send Your Message</h2>
+    <span></span>
+    <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
+  </div>
+  <div class="aa-contact-form">
+    <form class="contactform" action="https://formspree.io/f/mrbboaab" method="POST">
+      <p class="comment-form-author">
+        <label for="author">Name <span class="required">*</span></label>
+        <input type="text" name="author" value="" size="30" required="required">
+      </p>
+      <p class="comment-form-email">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" name="email" value="" aria-required="true" required="required">
+      </p>
+      <p class="comment-form-url">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject">
+      </p>
+      <p class="comment-form-comment">
+        <label for="comment">Message</label>
+        <textarea name="comment" cols="45" rows="8" aria-required="true"></textarea>
+      </p>
+      <p class="form-submit">
+        <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- Hebrew Version -->
+<div class="aa-contact-bottom fadein hebrew">
+  <div class="aa-title">
+    <h2>שלח את ההודעה שלך</h2>
+    <span></span>
+    <p>כתובת האימייל שלך לא תפורסם. שדות חובה מסומנים <strong class="required">*</strong></p>
+  </div>
+  <div class="aa-contact-form">
+    <form class="contactform" action="https://formspree.io/f/mrbboaab" method="POST">
+      <p class="comment-form-author">
+        <label for="author">שם <span class="required">*</span></label>
+        <input type="text" name="author" value="" size="30" required="required">
+      </p>
+      <p class="comment-form-email">
+        <label for="email">אימייל <span class="required">*</span></label>
+        <input type="email" name="email" value="" aria-required="true" required="required">
+      </p>
+      <p class="comment-form-url">
+        <label for="subject">נושא</label>
+        <input type="text" name="subject">
+      </p>
+      <p class="comment-form-comment">
+        <label for="comment">הודעה</label>
+        <textarea name="comment" cols="45" rows="8" aria-required="true"></textarea>
+      </p>
+      <p class="form-submit">
+        <input type="submit" name="submit" class="aa-browse-btn" value="שלח הודעה">
+      </p>
+    </form>
+  </div>
+</div>
+
  </section>
-<!-- modify this form HTML and place wherever you want your form -->
+<!-- form -->
 
     <!-- Footer -->
     <footer id="aa-footer">
