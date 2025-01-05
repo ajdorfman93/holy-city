@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Home Property | Contact</title>
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <!-- Custom js -->
+  <script src="js/web_content.js"></script> 
+  <!-- Web Content js -->
+  <script src="js/web_content_banners.js"></script> 
+  <!-- Web Content js -->
+  <script src="js/languageToggle.js"></script> 
+
     <!-- thumb -->
     <link rel="shortcut icon" href="img/thumb.ico" type="image/x-icon">
 
@@ -38,72 +61,126 @@
 
   </head>
   <body>
-  
-  <!-- Pre Loader -->
-  <div id="aa-preloader-area">
-    <div class="pulse"></div>
-  </div>
-  <!-- SCROLL TOP BUTTON -->
+  <div id="dynamic-script-container"></div>
+  <body>
+    <!-- Hebrew Toggle -->
+    <div class="switch">
+      <input
+        id="language-toggle"
+        class="check-toggle check-toggle-round-flat"
+        type="checkbox"
+      />
+      <label for="language-toggle"></label>
+      <span class="off">EN</span>
+      <span class="on">עב</span>
+    </div>
+
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
+    <!-- END SCROLL TOP BUTTON -->
 
-
-  <!-- Start header section -->
-  <header id="aa-header">  
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-                  <div class="aa-telephone-no">
-                    <span class="fa fa-phone"></span>
-                    052-678-3539
+    <!-- Start header section -->
+    <header id="aa-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <div class="aa-header-left">
+                    <div class="aa-telephone-no">
+                      <a href="tel:+052-678-3539" style="color: white;">
+                        <span class="fa fa-phone"></span>
+                      052-678-3539</a>
+                    </div>
+                    <div class="aa-telephone-no" style="margin-right: 10px;">
+                      <a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><span class="fa fa-whatsapp" style="margin-left: 10px;"></span>
+                        +972 55-260-5900</a>
+                    </div>
                   </div>
-                  <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> info@holycity-realestate.com
-                  </div>
-                </div>              
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- End header section -->
-<!-- Start menu section -->
-<section id="aa-menu-area">
-  <nav class="navbar navbar-default main-navbar" role="navigation">  
-    <div class="container">
-      <div class="navbar-header">
-        <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- LOGO -->                                               
-        <!-- Text based logo -->
-        <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/aryeh logo no background with BOX.png" alt="logo"></a>
-        <!-- Image based logo -->
-        <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="properties.html">PROPERTIES</a></li>
-          <li><a href="new project.html">NEW PROJECTS</a></li>
-          <li><a href="about.html">ABOUT US</a></li>                                        
-          <li class="active"><a href="contact.html">CONTACT</a></li>
-        </ul>                          
-      </div><!--/.nav-collapse -->       
-    </div>          
-  </nav> 
-</section>
-<!-- End menu section -->
+    </header>
+    <!-- End header section -->
+
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#navbar"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand aa-logo-img" href="index.html"
+              ><img
+                src="img/aryeh logo no background with BOX.png"
+                alt="logo"
+            /></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul
+              id="top-menu"
+              class="nav navbar-nav navbar-right aa-main-nav">
+              
+              <!-- HOME / דף הבית -->
+              <li class="active">
+
+                <a href="index.html">
+                  <span class="english">HOME</span>
+                  <span class="hebrew" id="light">דף הבית</span>
+                </a>
+              </li>
+                <!-- PROPERTIES / נכסים -->
+              <li>
+                <a href="properties.html">
+                  <span class="english">PROPERTIES</span>
+                  <span class="hebrew" id="light">נכסים</span>
+                </a>
+              </li>
+                <!-- NEW PROJECTS / פרויקטים חדשים -->
+              <li>
+                <a href="new project.html">
+                  <span class="english">NEW PROJECTS</span>
+                  <span class="hebrew" id="light">פרויקטים חדשים</span>
+                </a>
+              </li>
+              <!-- ABOUT US / אודות -->
+              <li>
+                <a href="about.html">
+                  <span class="english">ABOUT US</span>
+                  <span class="hebrew" id="light">אודות</span>
+                </a>
+              </li>
+              <!-- CONTACT / צור קשר -->
+              <li>
+                <a href="contact.html">
+                  <span class="english">CONTACT</span>
+                  <span class="hebrew" id="light">צור קשר</span>
+                </a>
+</li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- End menu section -->
 
 
   <!-- Start Proerty header  -->
@@ -149,7 +226,8 @@
                 <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
               </div>
               <div class="aa-contact-form">
-                <form class="contactform">                  
+                <form class="contactform"  action="https://formspree.io/f/meooplzn"
+  method="POST">                  
                   <p class="comment-form-author">
                     <label for="author">Name <span class="required">*</span></label>
                     <input type="text" name="author" value="" size="30" required="required">
@@ -177,57 +255,42 @@
      </div>
    </div>
  </section>
-
+<!-- modify this form HTML and place wherever you want your form -->
 
     <!-- Footer -->
-  <footer id="aa-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-        <div class="aa-footer-area">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="aa-footer-left">
-               <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
-              </div>
+    <footer id="aa-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-footer-area">
+                <div class="col-sm-3 col-xs-12">
+
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                  <div class="aa-footer-right">
+                    <a href="index.html"><p class="english">Home</p></a>
+                    <a href="index.html"><p class="hebrew">דף הבית</p></a>
+                    <a href="properties.html"><p class="english">Properties</p></a>
+                    <a href="properties.html"><p class="hebrew">נכסים</p></a>
+                    <a href="new project.html"><p class="english">New Projects</p></a>
+                    <a href="new project.html"><p class="hebrew">פרויקטים חדשים</p></a>
+                    <a href="about.html"><p class="english">About Us</p></a>
+                    <a href="about.html"><p class="hebrew">אודות</p></a>
+                    <a href="contact.html"><p class="english">Contact</p></a>
+                    <a href="contact.html"><p class="hebrew">צור קשר</p></a>
+                  </div>
+                </div>
+             <div class="aa-footer-left">
+                    <p>Designed by <a rel="nofollow" href="http://www.Citron.one/" style="text-decoration: underline;">Citron</a>&#8482
+                    </p>
+                   </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-             
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-              <div class="aa-footer-right">
-                <a href="index.html">Home</a>
-                <a href="properties.html">Properties</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-              </div>
-            </div>            
           </div>
         </div>
       </div>
-      </div>
-    </div>
-  </footer>
-  <!-- / Footer -->
+    </footer>
+    <!-- / Footer -->
 
-  <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="js/jquery.min.js"></script>   
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.js"></script>   
-  <!-- slick slider -->
-  <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
-   <!-- mixit slider -->
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="js/custom.js"></script> 
-  <!-- Custom js -->
-  <script src="js/web_content.js"></script> 
-  <!-- Web Content js -->
-  <script src="js/web_content_banners.js"></script> 
+
   </body>
 </html>
