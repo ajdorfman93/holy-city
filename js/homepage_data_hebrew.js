@@ -44,8 +44,8 @@ $(document).ready(function() {
       latestSix.forEach(prop => {
         const f = prop.fields || {};
 
-        // Use Property_StatusStr from JSON for the displayed text
-        const statusText = f.Property_StatusStr || '';
+        // Use Property_Status_Hebrew from JSON for the displayed text
+        const statusText = f.Property_Status_Hebrew || '';
 
         // Single CSS class for the tag
         let imageUrl = 'img/default.jpg';
@@ -62,17 +62,17 @@ $(document).ready(function() {
               <a href="property_details.html?id=${prop.id}" class="aa-properties-item-img">
                 <img src="${imageUrl}" alt="img">
               </a>
-              <div class="aa-tag">
+              <div class="aa-tag hebrew">
                 ${statusText}
               </div>
-              <div class="aa-properties-item-content">
-                <div class="aa-properties-info">
-                  <span>${f.Bedrooms || 'N/A'} Beds</span>
+              <div class="aa-properties-item-content hebrew">
+                <div class="aa-properties-info hebrew" style="text-align: right;">
+                  <span>${f.Bedrooms || 'N/A'} חדרי שינה </span>
                 </div>
-                <div class="aa-properties-about">
-                  <h3>
+                <div class="aa-properties-about hebrew">
+                  <h3 class="hebrew">
                     <a href="property_details.html?id=${prop.id}">
-                      ${f.Name || 'Untitled Property'}
+                      ${f.Name_Hebrew || 'Untitled Property'}
                     </a>
                   </h3>
                   <p>${f.Description || ''}</p>
@@ -81,9 +81,7 @@ $(document).ready(function() {
                   <span class="aa-price">
                     ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
                   </span>
-                  <a href="property_details.html?id=${prop.id}" class="aa-secondary-btn">
-                    View Details
-                  </a>
+                  <a href="property_details.html?id=${prop.id}" class="aa-secondary-btn hebrew">צפה בפרטים</a>
                 </div>
               </div>
             </article>

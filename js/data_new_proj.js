@@ -26,6 +26,7 @@ $(document).ready(function() {
       const records = data.records || [];
       // Filter only those that should Display
       allRecords = records.filter(rec => rec.fields.Display === true);
+      allRecords = records.filter(rec => rec.fields.New_Project === true);
       
       // Apply filters and render as soon as data is ready
       applyFilters();

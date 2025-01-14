@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Home Property | Contact</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <!-- Custom js -->
+  <script src="js/web_content.js"></script> 
+  <!-- Web Content js -->
+  <script src="js/web_content_banners.js"></script> 
+  <!-- Web Content js -->
+  <script src="js/languageToggle.js"></script> 
+
+    <!-- thumb -->
+    <link rel="shortcut icon" href="img/thumb.ico" type="image/x-icon">
 
     <!-- Font awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -38,81 +61,139 @@
 
   </head>
   <body>
-  
-  <!-- Pre Loader -->
-  <div id="aa-preloader-area">
-    <div class="pulse"></div>
-  </div>
-  <!-- SCROLL TOP BUTTON -->
+  <div id="dynamic-script-container"></div>
+  <body>
+    <!-- Hebrew Toggle -->
+    <div class="switch">
+      <input
+        id="language-toggle"
+        class="check-toggle check-toggle-round-flat"
+        type="checkbox"
+      />
+      <label for="language-toggle"></label>
+      <span class="off">EN</span>
+      <span class="on">עב</span>
+    </div>
+
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
+    <!-- END SCROLL TOP BUTTON -->
 
-
-  <!-- Start header section -->
-  <header id="aa-header">  
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-                  <div class="aa-telephone-no">
-                    <span class="fa fa-phone"></span>
-                    052-678-3539
+    <!-- Start header section -->
+    <header id="aa-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                  <div class="aa-header-left">
+                    <div class="aa-telephone-no">
+                      <a href="tel:+052-678-3539" style="color: white;">
+                        <span class="fa fa-phone"></span>
+                      052-678-3539</a>
+                    </div>
+                    <div class="aa-telephone-no" style="margin-right: 10px;">
+                      <a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><span class="fa fa-whatsapp" style="margin-left: 10px;"></span>
+                        +972 55-260-5900</a>
+                    </div>
                   </div>
-                  <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> info@holycity-realestate.com
-                  </div>
-                </div>              
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- End header section -->
-<!-- Start menu section -->
-<section id="aa-menu-area">
-  <nav class="navbar navbar-default main-navbar" role="navigation">  
-    <div class="container">
-      <div class="navbar-header">
-        <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- LOGO -->                                               
-        <!-- Text based logo -->
-        <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/aryeh logo no background with BOX.png" alt="logo"></a>
-        <!-- Image based logo -->
-        <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="properties.html">PROPERTIES</a></li>
-          <li><a href="about.html">ABOUT US</a></li>                                        
-          <li class="active"><a href="contact.html">CONTACT</a></li>
-        </ul>                          
-      </div><!--/.nav-collapse -->       
-    </div>          
-  </nav> 
-</section>
-<!-- End menu section -->
+    </header>
+    <!-- End header section -->
+
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#navbar"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand aa-logo-img" href="index.html"
+              ><img
+                src="img/aryeh logo no background with BOX.png"
+                alt="logo"
+            /></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul
+              id="top-menu"
+              class="nav navbar-nav navbar-right aa-main-nav">
+              
+              <!-- HOME / דף הבית -->
+              <li>
+                <a href="index.html">
+                  <span class="english">HOME</span>
+                  <span class="hebrew" id="light">דף הבית</span>
+                </a>
+              </li>
+                <!-- PROPERTIES / נכסים -->
+              <li>
+                <a href="properties.html">
+                  <span class="english">PROPERTIES</span>
+                  <span class="hebrew" id="light">נכסים</span>
+                </a>
+              </li>
+                <!-- NEW PROJECTS / פרויקטים חדשים -->
+              <li>
+                <a href="new project.html">
+                  <span class="english">NEW PROJECTS</span>
+                  <span class="hebrew" id="light">פרויקטים חדשים</span>
+                </a>
+              </li>
+              <!-- ABOUT US / אודות -->
+              <li>
+                <a href="about.html">
+                  <span class="english">ABOUT US</span>
+                  <span class="hebrew" id="light">אודות</span>
+                </a>
+              </li>
+              <!-- CONTACT / צור קשר -->
+              <li class="active">
+                <a href="contact.html">
+                  <span class="english">CONTACT</span>
+                  <span class="hebrew" id="light">צור קשר</span>
+                </a>
+</li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- End menu section -->
 
 
   <!-- Start Proerty header  -->
 
-  <section id="aa-property-header">
+  <section id="aa-contact-header"style="background-image: url(.properties-banner-image);">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="aa-property-header-inner">
-            <h2>Contact</h2>
+          <div class="aa-contact-header-inner"><!-- English Version -->
+            <h2 class="english">Contact</h2>
+            
+            <!-- Hebrew Version -->
+            <h2 class="hebrew">צור קשר</h2>
+            
           </div>
         </div>
       </div>
@@ -125,105 +206,147 @@
      <div class="row">
        <div class="col-md-12">
           <div class="aa-contact-area">
-            <div class="aa-contact-top">
-              <div class="aa-contact-top-left">
-                <iframe width="100%" height="450" frameborder="0" allowfullscreen="" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"></iframe>
-              </div>
-              <div class="aa-contact-top-right">
-                <h2>Contact Details</h2>
-                <p>Looking to buy, sell, or rent an apartment in Jerusalem? Whether you’re searching the market, own a property, or need expert advice, we’re here to help.
-                  <br><br>Contact us today and let’s turn your real estate dreams into reality!</p>
-                <ul class="contact-info-list">
-                  <li> <i class="fa fa-phone"></i> 052-678-3539</li>
-                  <li> <i class="fa fa-envelope-o"></i> info@holycity-realestate.com</li>
-                  <li> <i class="fa fa-map-marker"></i> King George St 26 Jerusalem, Israel
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="aa-contact-bottom fadein">
-              <div class="aa-title">
-                <h2>Send Your Message</h2>
-                <span></span>
-                <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
-              </div>
-              <div class="aa-contact-form">
-                <form class="contactform">                  
-                  <p class="comment-form-author">
-                    <label for="author">Name <span class="required">*</span></label>
-                    <input type="text" name="author" value="" size="30" required="required">
-                  </p>
-                  <p class="comment-form-email">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" name="email" value="" aria-required="true" required="required">
-                  </p>
-                  <p class="comment-form-url">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject">  
-                  </p>
-                  <p class="comment-form-comment">
-                    <label for="comment">Message</label>
-                    <textarea name="comment" cols="45" rows="8" aria-required="true" required="required"></textarea>
-                  </p>                
-                  <p class="form-submit">
-                    <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
-                  </p>        
-                </form>
-              </div>
-            </div>
-          </div>
-       </div>
-     </div>
-   </div>
- </section>
+<!-- English Version -->
+<div class="aa-contact-top english">
+  <div class="aa-contact-top-left">
+    <iframe width="100%" height="500" frameborder="0" allowfullscreen="" style="border:0" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus"></iframe>
+  </div>
+  <div class="aa-contact-top-right">
+    <h2>Contact Details</h2>
+    <p>Looking to buy, sell, or rent an apartment in Jerusalem? Whether you’re searching the market, own a property, or need expert advice, we’re here to help.
+      <br><br>Contact us today and let’s turn your real estate dreams into reality!</p>
+    <ul class="contact-info-list">
+      <li><a href="tel:+052-678-3539" style="color: white;"><i class="fa fa-phone"></i>052-678-3539</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><i class="fa fa-whatsapp"></i>+972 55-260-5900</a></li>
+      <li><a href="mailto:holycityestates1@gmail.com" style="color: white;"><i class="fa fa-envelope-o"></i>holycityestates1@gmail.com</a></li>
+      <li><i class="fa fa-map-marker"></i> King George St 26 Jerusalem, Israel</li>
+    </ul>
+  </div>
+</div>
 
+<!-- Hebrew Version -->
+<div class="aa-contact-top hebrew">
+  <div class="aa-contact-top-left">
+    <iframe width="100%" height="500" frameborder="0" allowfullscreen="" style="border:0" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4058.5061369381056!2d35.2155947!3d31.779839199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329d5e3446465%3A0xd068a6634d950a4e!2sKing%20George%20St%2026%2C%20Jerusalem%2C%20Israel!5e1!3m2!1sen!2sus!4v1734493866005!5m2!1sen!2sus"></iframe>
+  </div>
+  <div class="aa-contact-top-right">
+    <h2>פרטי קשר</h2>
+    <p id="light">מחפשים לקנות, למכור או להשכיר דירה בירושלים? בין אם אתם מחפשים בשוק, בעלים של נכס, או צריכים ייעוץ מקצועי, אנחנו כאן כדי לעזור.
+      <br><br>צרו קשר עוד היום ונגשים את חלומות הנדל"ן שלכם!</p>
+    <ul class="contact-info-list" id="light">
+      <li><a href="tel:+052-678-3539" style="color: white;"><i class="fa fa-phone"></i>052-678-3539</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=972552605900" style="color: white;"><i class="fa fa-whatsapp"></i>+972 55-260-5900</a></li>
+      <li><a href="mailto:holycityestates1@gmail.com" style="color: white;"><i class="fa fa-envelope-o"></i>holycityestates1@gmail.com</a></li>
+      <li><i class="fa fa-map-marker"></i> רחוב קינג ג'ורג' 26, ירושלים, ישראל</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- English Version -->
+<div class="aa-contact-bottom fadein english">
+  <div class="aa-title">
+    <h2>Send Your Message</h2>
+    <span></span>
+    <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
+  </div>
+  <div class="aa-contact-form">
+    <form class="contactform" action="https://formspree.io/f/mrbboaab" method="POST">
+      <p class="comment-form-author">
+        <label for="author">Name <span class="required">*</span></label>
+        <input type="text" name="author" value="" size="30" required="required">
+      </p>
+      <p class="comment-form-email">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" name="email" value="" aria-required="true" required="required">
+      </p>
+      <p class="comment-form-url">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject">
+      </p>
+      <p class="comment-form-comment">
+        <label for="comment">Message</label>
+        <textarea name="comment" cols="45" rows="8" aria-required="true"></textarea>
+      </p>
+      <p class="form-submit">
+        <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- Hebrew Version -->
+<div class="aa-contact-bottom fadein hebrew">
+  <div class="aa-title">
+    <h2>שלח את ההודעה שלך</h2>
+    <span></span>
+    <p>כתובת האימייל שלך לא תפורסם. שדות חובה מסומנים <strong class="required">*</strong></p>
+  </div>
+  <div class="aa-contact-form">
+    <form class="contactform" action="https://formspree.io/f/mrbboaab" method="POST">
+      <p class="comment-form-author">
+        <label for="author">שם <span class="required">*</span></label>
+        <input type="text" name="author" value="" size="30" required="required">
+      </p>
+      <p class="comment-form-email">
+        <label for="email">אימייל <span class="required">*</span></label>
+        <input type="email" name="email" value="" aria-required="true" required="required">
+      </p>
+      <p class="comment-form-url">
+        <label for="subject">נושא</label>
+        <input type="text" name="subject">
+      </p>
+      <p class="comment-form-comment">
+        <label for="comment">הודעה</label>
+        <textarea name="comment" cols="45" rows="8" aria-required="true"></textarea>
+      </p>
+      <p class="form-submit">
+        <input type="submit" name="submit" class="aa-browse-btn" value="שלח הודעה">
+      </p>
+    </form>
+  </div>
+</div>
+
+ </section>
+<!-- form -->
 
     <!-- Footer -->
-  <footer id="aa-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-        <div class="aa-footer-area">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="aa-footer-left">
-               <p>Designed by <a rel="nofollow" href="http://www.Citron.one/">Citron</a></p>
-              </div>
+    <footer id="aa-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-footer-area">
+                <div class="col-sm-3 col-xs-12">
+
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                  <div class="aa-footer-right">
+                    <a href="index.html"><p class="english">Home</p></a>
+                    <a href="index.html"><p class="hebrew">דף הבית</p></a>
+                    <a href="properties.html"><p class="english">Properties</p></a>
+                    <a href="properties.html"><p class="hebrew">נכסים</p></a>
+                    <a href="new project.html"><p class="english">New Projects</p></a>
+                    <a href="new project.html"><p class="hebrew">פרויקטים חדשים</p></a>
+                    <a href="about.html"><p class="english">About Us</p></a>
+                    <a href="about.html"><p class="hebrew">אודות</p></a>
+                    <a href="contact.html"><p class="english">Contact</p></a>
+                    <a href="contact.html"><p class="hebrew">צור קשר</p></a>
+                  </div>
+                </div>
+             <div class="aa-footer-left">
+                    <p>Designed by <a rel="nofollow" href="http://www.Citron.one/" style="text-decoration: underline;">Citron</a>&#8482
+                    </p>
+                   </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-             
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-              <div class="aa-footer-right">
-                <a href="index.html">Home</a>
-                <a href="properties.html">Properties</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-              </div>
-            </div>            
           </div>
         </div>
       </div>
-      </div>
-    </div>
-  </footer>
-  <!-- / Footer -->
+    </footer>
+    <!-- / Footer -->
 
-  <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="js/jquery.min.js"></script>   
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.js"></script>   
-  <!-- slick slider -->
-  <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
-   <!-- mixit slider -->
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="js/custom.js"></script> 
 
   </body>
 </html>

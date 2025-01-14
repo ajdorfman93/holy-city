@@ -26,6 +26,7 @@ $(document).ready(function() {
       const records = data.records || [];
       // Filter only those that should Display
       allRecords = records.filter(rec => rec.fields.Display === true);
+      allRecords = records.filter(rec => rec.fields.New_Project === true);
       
       // Apply filters and render as soon as data is ready
       applyFilters();
@@ -80,16 +81,16 @@ $(document).ready(function() {
   function applyFilters() {
     const selectedNeighborhood = $('#neighborhood-select').val();
     const selectedStatus = $('#property-status-select').val();
-    const selectedRooms = $('.aa-single-advance-search select').eq(2).val();
+    const selectedRooms = $('.aa-single-advance-search2 select').eq(2).val();
 
     let filtered = allRecords.slice();
 
     // CHANGED: If "0", it means no neighborhood filter. Otherwise, filter by name.
     if (selectedNeighborhood !== "0") {
       filtered = filtered.filter(rec => {
-        if (!rec.fields.Neighborhood_Names) return false;
-        // Convert Neighborhood_Names to an array of trimmed names
-        const nNames = rec.fields.Neighborhood_Names
+        if (!rec.fields.Neighborhood_Hebrew) return false;
+        // Convert Neighborhood_Hebrew to an array of trimmed names
+        const nNames = rec.fields.Neighborhood_Hebrew
           .split(',')
           .map(str => str.trim());
         // Return true if it includes the selected neighborhood
@@ -100,7 +101,7 @@ $(document).ready(function() {
     // Status (compare strings, e.g. "Sale", "Rent")
     if (selectedStatus !== '0') {
       filtered = filtered.filter(rec =>
-        (rec.fields.Property_StatusStr || '').toLowerCase() === selectedStatus.toLowerCase()
+        (rec.fields.Property_Status_Hebrew || '').toLowerCase() === selectedStatus.toLowerCase()
       );
     }
 
@@ -138,8 +139,8 @@ $(document).ready(function() {
   function applySorting(records, sortType) {
     if (sortType === 'name') {
       records.sort((a, b) => {
-        const nameA = (a.fields.Name || '').toLowerCase();
-        const nameB = (b.fields.Name || '').toLowerCase();
+        const nameA = (a.fields.Name_Hebrew || '').toLowerCase();
+        const nameB = (b.fields.Name_Hebrew || '').toLowerCase();
         return nameA.localeCompare(nameB);
       });
     } else if (sortType === 'price') {
@@ -164,7 +165,7 @@ $(document).ready(function() {
   
     records.forEach(function(record) {
       const f = record.fields || {};
-      const statusText = f.Property_StatusStr || ''; // Display exactly what's in JSON
+      const statusText = f.Property_Status_Hebrew || ''; // Display exactly what's in JSON
 
       // Determine the appropriate image section (with or without link) 
       // and the overlay if "Sold_or_Rented" is true
@@ -173,44 +174,44 @@ $(document).ready(function() {
       if (f.Sold_or_Rented) {
         // Offmarket: no link, darkened image, overlay text
         imageSection = `
-          <div class="aa-properties-item-img offmarket">
+          <div class="aa-properties-item-img offmarket hebrew">
             <img 
               src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-              alt="${f.Name || 'Property'}"
+              alt="${f.Name_Hebrew || 'Property'} hebrew"
             >
             <div class="offmarket-text">${f.Offmarket}</div>
           </div>
         `;
-        nameSection = `<span class="property-name">${f.Name || 'Untitled Property'}</span>`;
+        nameSection = `<span class="property-name hebrew">${f.Name_Hebrew || 'Untitled Property'} hebrew</span>`;
       } else {
         // Normal: clickable link to details
         imageSection = `
-          <a class="aa-properties-item-img" href="property_details.html?id=${record.id}">
+          <a class="aa-properties-item-img hebrew" href="property_details.html?id=${record.id}">
             <img 
               src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-              alt="${f.Name || 'Property'}"
+              alt="${f.Name_Hebrew || 'Property'}"
             >
           </a>
         `;
         nameSection = `
-          <a href="property_details.html?id=${record.id}">
-            ${f.Name || 'Untitled Property'}
+          <a href="property_details.html?id=${record.id}" class="hebrew">
+            ${f.Name_Hebrew || 'Untitled Property'}
           </a>
         `;
       }
 
       const propertyHTML = `
         <li>
-          <article class="aa-properties-item">
+          <article class="aa-properties-item hebrew" style="text-align: right;">
             ${imageSection}
-            <!-- Just the single 'aa-tag' class; the text is from Property_StatusStr -->
-            <div class="aa-tag">${statusText}</div>
+            <!-- Just the single 'aa-tag' class; the text is from Property_Status_Hebrew -->
+            <div class="aa-tag hebrew">${statusText}</div>
             <div class="aa-properties-item-content">
               <h3>
                 ${nameSection}
               </h3>
-              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
-              <span class="aa-price">
+              <p class="hebrew" id="light">${f.Street1_Hebrew || ''}, ${f.Neighborhood_Hebrew || ''}</p>
+              <span class="aa-price" id="light">
                 ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
               </span>
             </div>
@@ -234,28 +235,28 @@ $(document).ready(function() {
         if (f.Sold_or_Rented) {
           // Offmarket: no link, darkened image, overlay text
           imageSection = `
-            <div class="media-left offmarket">
+            <div class="media-right offmarket hebrew">
               <img class="media-object" 
                    src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-                   alt="${f.Name || 'Property'}">
+                   alt="${f.Name_Hebrew || 'Property'}">
               <div class="offmarket-text">${f.Offmarket}</div>
             </div>
           `;
-          nameSection = `<span class="property-name">${f.Name || 'Untitled Property'}</span>`;
+          nameSection = `<span class="property-name hebrew">${f.Name_Hebrew || 'Untitled Property'}</span>`;
         } else {
           // Normal: clickable link to details
           imageSection = `
-            <div class="media-left">
+            <div class="media-right">
               <a href="property_details.html?id=${record.id}">
                 <img class="media-object" 
                      src="${f.Img_Urls ? f.Img_Urls.split(',')[0].trim() : 'img/default.jpg'}" 
-                     alt="${f.Name || 'Property'}">
+                     alt="${f.Name_Hebrew || 'Property'}">
               </a>
             </div>
           `;
           nameSection = `
-            <a href="property_details.html?id=${record.id}">
-              ${f.Name || 'Untitled Property'}
+            <a href="property_details.html?id=${record.id} hebrew">
+              ${f.Name_Hebrew || 'Untitled Property'}
             </a>
           `;
         }
@@ -264,11 +265,11 @@ $(document).ready(function() {
           <div class="media">
             ${imageSection}
             <div class="media-body">
-              <h4 class="media-heading">
+              <h4 class="media-heading hebrew">
                 ${nameSection}
               </h4>
-              <p>${f.Street1 || ''}</p>
-              <span>₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
+              <p id="light">${f.Street1_Hebrew || ''}</p>
+              <span id="light">₪${(f.Price ? parseInt(f.Price).toLocaleString() : 'N/A')}</span>
             </div>              
           </div>
         `;

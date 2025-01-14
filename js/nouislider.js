@@ -581,21 +581,22 @@
 
 	function testDirection ( parsed, entry ) {
 
-		// Set direction as a numerical value for easy parsing.
-		// Invert connection for RTL sliders, so that the proper
-		// handles get the connect/background classes.
+		// 'var1' -> ltr
+		// 'var2' -> rtl
+	
 		switch ( entry ) {
-		  case 'ltr':
-			parsed.dir = 0;
+		  case 'var1':
+			parsed.dir = 0; // Equivalent to 'ltr'
 			break;
-		  case 'rtl':
-			parsed.dir = 1;
-			parsed.connect = [0,2,1,3][parsed.connect];
+		  case 'var2':
+			parsed.dir = 1; // Equivalent to 'rtl'
+			parsed.connect = [0, 2, 1, 3][parsed.connect];
 			break;
 		  default:
 			throw new Error("noUiSlider: 'direction' option was not recognized.");
 		}
 	}
+	
 
 	function testBehaviour ( parsed, entry ) {
 
@@ -711,10 +712,11 @@
 
 		var defaults = {
 			'connect': false,
-			'direction': 'ltr',
+			'direction': 'var1', // <-- was 'ltr'
 			'behaviour': 'tap',
 			'orientation': 'horizontal'
 		};
+		
 
 		// Run all options through a testing mechanism to ensure correct
 		// input. It should be noted that options might get modified to
