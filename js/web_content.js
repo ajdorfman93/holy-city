@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // 1. Fetch the JSON (adjust the URL/path if needed)
-    $.getJSON('js/web_content.json')
+    $.getJSON('json/web_content.json')
       .done(function(data) {
         // 2. Assuming only one record with data:
         if (data.records && data.records.length > 0) {

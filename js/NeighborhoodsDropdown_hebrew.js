@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const dataUrl = 'data.json';
+  const dataUrl = 'json/data.json';
   let allRecords = [];
   // We'll keep track of the current sale type as a global variable.
   // If you need it elsewhere, make it window.currentSaleType or similar.

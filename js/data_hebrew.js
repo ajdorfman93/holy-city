@@ -4,7 +4,7 @@ $(document).ready(function() {
   // If GitHub Pages or your local environment has a different structure, adjust
   // this path so it correctly points to the data.json file.
   // ---------------------------------------------------------------------------
-  const dataUrl = 'data.json?v=' + new Date().getTime();
+  const dataUrl = 'json/data.json?v=' + new Date().getTime();
 
   // ---------------------------------------------------------------------------
   // Define global variables to manage the data, sorting, pagination, etc.

@@ -2,9 +2,9 @@ $(document).ready(function() {
   // ---------------------------------------------------------------------------
   // The path to your JSON file. We add a query parameter to "bust" cache issues.
   // If GitHub Pages or your local environment has a different structure, adjust
-  // this path so it correctly points to the data.json file.
+  // this path so it correctly points to the json/data.json file.
   // ---------------------------------------------------------------------------
-  const dataUrl = 'data.json?v=' + new Date().getTime();
+  const dataUrl = 'json/data.json?v=' + new Date().getTime();
 
   // ---------------------------------------------------------------------------
   // Define global variables to manage the data, sorting, pagination, etc.
