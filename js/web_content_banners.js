@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.getJSON('js/web_content.json')
+    $.getJSON('json/web_content.json')
       .done(function(data) {
         // We'll just use the first record
         if (data.records && data.records.length > 0) {

@@ -5,7 +5,7 @@
     const toggle = document.getElementById("language-toggle");
 
     // URL to your testimonials JSON
-    const dataUrl = "js/testimonials.json";
+    const dataUrl = "json/testimonials.json";
     // Will store records that have Included == true
     let includedTestimonials = [];
 
