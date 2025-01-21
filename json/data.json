@@ -37,12 +37,6 @@
           "Neighborhood_Hebrew": "טלביה",
           "StrPropertySize": "85",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "10 Moshe Hess Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[36, 34, 20, 33, 2, 8]]",
@@ -75,7 +69,8 @@
             "מכשירי מטבח",
             "מזגן",
             "מרפסת סוכה"
-          ]
+          ],
+          "Address": "10 Moshe Hess Street Jerusalem Israel"
         },
         "errors": {
           "GeocodedAddress": "KeyError"
@@ -118,12 +113,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "55",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "46 Haneviim Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[38, 35, 10, 1, 2, 4, 6, 3, 39]]",
@@ -162,7 +151,8 @@
             "מעלית שבת",
             "נוף מרהיב",
             "מרפסת"
-          ]
+          ],
+          "Address": "46 Haneviim Street Jerusalem Israel"
         }
       },
       {
@@ -202,12 +192,6 @@
           "Neighborhood_Hebrew": "שוק מחנה יהודה",
           "StrPropertySize": "45",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Navon Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[3, 38, 1, 2, 9, 13, 15, 16, 16, 28]]",
@@ -248,7 +232,8 @@
             "גג",
             "גג",
             "סאונה"
-          ]
+          ],
+          "Address": "3 Navon Street Jerusalem Israel"
         }
       },
       {
@@ -288,12 +273,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "70",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "46 Haneviim Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[9, 10, 35, 7, 13, 37, 4, 38]]",
@@ -330,7 +309,8 @@
             "ללא מדרגות",
             "מעלית",
             "בניין חדש"
-          ]
+          ],
+          "Address": "46 Haneviim Street Jerusalem Israel"
         }
       },
       {
@@ -370,12 +350,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "68",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "7 Histadrut Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[38, 35, 4, 39]]",
@@ -404,7 +378,8 @@
             "מרוהטת במלואה",
             "מעלית",
             "מרפסת"
-          ]
+          ],
+          "Address": "7 Histadrut Street Jerusalem Israel"
         }
       },
       {
@@ -444,12 +419,6 @@
           "Neighborhood_Hebrew": "טלביה",
           "StrPropertySize": "85",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Mapu Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[2, 3, 4, 5, 35, 39]]",
@@ -482,7 +451,8 @@
             "משופצת",
             "מרוהטת במלואה",
             "מרפסת"
-          ]
+          ],
+          "Address": "3 Mapu Street Jerusalem Israel"
         }
       },
       {
@@ -522,12 +492,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "55",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Raoul Wallenberg / 64 Yafo",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[3, 38, 4, 6, 2, 15, 39]]",
@@ -562,7 +526,8 @@
             "מזגן",
             "קונסיירז'",
             "מרפסת"
-          ]
+          ],
+          "Address": "3 Raoul Wallenberg / 64 Yafo Jerusalem Israel"
         }
       },
       {
@@ -602,12 +567,6 @@
           "Neighborhood_Hebrew": "שוק מחנה יהודה",
           "StrPropertySize": "20",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "Navon 3 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[38, 4, 6, 35, 2, 7]]",
@@ -640,7 +599,8 @@
             "מרוהטת במלואה",
             "מזגן",
             "מחסן"
-          ]
+          ],
+          "Address": "Navon 3 Street Jerusalem Israel"
         }
       },
       {
@@ -680,12 +640,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "250",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "-",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "4",
           "StrFeatures": "Features[[3, 16, 8, 10, 5, 4, 6]]",
@@ -720,7 +674,8 @@
             "משופצת",
             "מעלית",
             "מעלית שבת"
-          ]
+          ],
+          "Address": "- Jerusalem Israel"
         }
       },
       {
@@ -760,12 +715,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "52",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Raoul Wallenberg / 64 Yafo",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[38, 3, 4, 6, 39, 15, 18]]",
@@ -800,7 +749,8 @@
             "מרפסת",
             "קונסיירז'",
             "פרי-סייל"
-          ]
+          ],
+          "Address": "3 Raoul Wallenberg / 64 Yafo Jerusalem Israel"
         }
       },
       {
@@ -840,12 +790,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "260",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "15 Shmuel Hanagid Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "5",
           "StrFeatures": "Features[[3, 10, 16, 8, 40]]",
@@ -876,7 +820,8 @@
             "גג",
             "מרפסת סוכה",
             "פרויקט חדש"
-          ]
+          ],
+          "Address": "15 Shmuel Hanagid Street Jerusalem Israel"
         }
       },
       {
@@ -916,12 +861,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "100",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "Ben Sira Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[5, 8, 35, 20]]",
@@ -950,7 +889,8 @@
             "מרפסת סוכה",
             "מרוהטת במלואה",
             "תקרות גבוהות"
-          ]
+          ],
+          "Address": "Ben Sira Street Jerusalem Israel"
         }
       },
       {
@@ -990,12 +930,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "90",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Raoul Wallenberg / 64 Yafo",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[35, 3, 38, 10, 14, 4, 6, 2]]",
@@ -1032,7 +966,8 @@
             "מעלית",
             "מעלית שבת",
             "מזגן"
-          ]
+          ],
+          "Address": "3 Raoul Wallenberg / 64 Yafo Jerusalem Israel"
         }
       },
       {
@@ -1072,12 +1007,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "250",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "-",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "4",
           "StrFeatures": "Features[[3, 16, 8, 10, 5, 4, 6]]",
@@ -1112,7 +1041,8 @@
             "משופצת",
             "מעלית",
             "מעלית שבת"
-          ]
+          ],
+          "Address": "- Jerusalem Israel"
         }
       },
       {
@@ -1152,12 +1082,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "140",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "Hamaalot 2 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "4",
           "StrFeatures": "Features[[12, 35, 2, 22]]",
@@ -1186,7 +1110,8 @@
             "מרוהטת במלואה",
             "מזגן",
             "מכונת כביסה/מייבש"
-          ]
+          ],
+          "Address": "Hamaalot 2 Street Jerusalem Israel"
         }
       },
       {
@@ -1226,12 +1151,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "75",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "King George 35 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[12, 35, 2, 22, 4]]",
@@ -1262,7 +1181,8 @@
             "מזגן",
             "מכונת כביסה/מייבש",
             "מעלית"
-          ]
+          ],
+          "Address": "King George 35 Street Jerusalem Israel"
         }
       },
       {
@@ -1302,12 +1222,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "70",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "King George 33 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[12, 35, 2, 22, 4]]",
@@ -1338,7 +1252,8 @@
             "מזגן",
             "מכונת כביסה/מייבש",
             "מעלית"
-          ]
+          ],
+          "Address": "King George 33 Street Jerusalem Israel"
         }
       },
       {
@@ -1378,12 +1293,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "0",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "King George 26 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[12, 35, 2, 22]]",
@@ -1412,7 +1321,8 @@
             "מרוהטת במלואה",
             "מזגן",
             "מכונת כביסה/מייבש"
-          ]
+          ],
+          "Address": "King George 26 Street Jerusalem Israel"
         }
       },
       {
@@ -1452,12 +1362,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "0",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "King George 26 Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[12, 35, 2, 22]]",
@@ -1486,7 +1390,8 @@
             "מרוהטת במלואה",
             "מזגן",
             "מכונת כביסה/מייבש"
-          ]
+          ],
+          "Address": "King George 26 Street Jerusalem Israel"
         }
       },
       {
@@ -1526,12 +1431,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "250",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "Mordichai Eliash Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "3",
           "StrFeatures": "Features[[16, 9, 3, 10, 27, 4, 35, 10]]",
@@ -1568,7 +1467,8 @@
             "מעלית",
             "מרוהטת במלואה",
             "חניה"
-          ]
+          ],
+          "Address": "Mordichai Eliash Street Jerusalem Israel"
         }
       },
       {
@@ -1608,12 +1508,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "85",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "Lincoln Street",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[39, 3, 6, 10]]",
@@ -1642,7 +1536,8 @@
             "נוף מרהיב",
             "מעלית שבת",
             "חניה"
-          ]
+          ],
+          "Address": "Lincoln Street Jerusalem Israel"
         }
       },
       {
@@ -1682,12 +1577,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "50",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "3 Raoul Wallenberg / 64 Yafo",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "1",
           "StrFeatures": "Features[[10, 39, 4, 35, 15, 14, 3, 11, 38, 6, 8]]",
@@ -1730,7 +1619,8 @@
             "בניין חדש",
             "מעלית שבת",
             "מרפסת סוכה"
-          ]
+          ],
+          "Address": "3 Raoul Wallenberg / 64 Yafo Jerusalem Israel"
         }
       },
       {
@@ -1770,12 +1660,6 @@
           "Neighborhood_Hebrew": "מרכז העיר",
           "StrPropertySize": "110",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "3",
           "StrFeatures": "Features[[18]]",
@@ -1798,7 +1682,8 @@
           "Features_Hebrew": [
             "L",
             "פרי-סייל"
-          ]
+          ],
+          "Address": " Jerusalem Israel"
         }
       },
       {
@@ -1838,12 +1723,6 @@
           "Neighborhood_Hebrew": "טלביה",
           "StrPropertySize": "85",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "2",
           "StrFeatures": "Features[[18]]",
@@ -1866,7 +1745,8 @@
           "Features_Hebrew": [
             "L",
             "פרי-סייל"
-          ]
+          ],
+          "Address": " Jerusalem Israel"
         }
       },
       {
@@ -1906,12 +1786,6 @@
           "Neighborhood_Hebrew": "רחביה",
           "StrPropertySize": "200",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "3",
           "StrFeatures": "Features[[18]]",
@@ -1934,7 +1808,8 @@
           "Features_Hebrew": [
             "L",
             "פרי-סייל"
-          ]
+          ],
+          "Address": " Jerusalem Israel"
         }
       },
       {
@@ -1972,12 +1847,6 @@
           "Neighborhood_Hebrew": "שערי חסד",
           "StrPropertySize": "1300",
           "City": "Jerusalem",
-          "Address": [
-            "L",
-            "",
-            "Jerusalem",
-            "Israel"
-          ],
           "State": "Israel",
           "Bedrooms": "0",
           "StrFeatures": "Features[[]]",
@@ -1998,7 +1867,8 @@
           ],
           "Features_Hebrew": [
             "L"
-          ]
+          ],
+          "Address": " Jerusalem Israel"
         }
       }
     ]

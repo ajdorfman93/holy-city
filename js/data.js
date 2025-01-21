@@ -209,7 +209,7 @@ $(document).ready(function() {
               <h3>
                 ${nameSection}
               </h3>
-              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
+              <p>${f.Street1 || ''} ${f.Neighborhood_Names || ''}</p>
               <span class="aa-price">
                 ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
               </span>
