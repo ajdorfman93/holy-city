@@ -152,7 +152,7 @@ $(document).ready(function() {
       records.sort((a, b) => {
         const dateA = a.fields.DateStr ? new Date(a.fields.DateStr) : new Date(0);
         const dateB = b.fields.DateStr ? new Date(b.fields.DateStr) : new Date(0);
-        return dateA - dateB;
+        return dateB - dateA;
       });
     }
     return records;
