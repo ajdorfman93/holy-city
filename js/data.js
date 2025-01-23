@@ -1,24 +1,14 @@
 $(document).ready(function() {
-  // ---------------------------------------------------------------------------
-  // The path to your JSON file. We add a query parameter to "bust" cache issues.
-  // If GitHub Pages or your local environment has a different structure, adjust
-  // this path so it correctly points to the json/data.json file.
-  // ---------------------------------------------------------------------------
+
   const dataUrl = 'json/data.json?v=' + new Date().getTime();
 
-  // ---------------------------------------------------------------------------
-  // Define global variables to manage the data, sorting, pagination, etc.
-  // ---------------------------------------------------------------------------
   let allRecords = [];
   let currentSort = 'default'; // possible values: 'default', 'name', 'price', 'date'
   let currentShow = 6;         // how many items to show per page
   let currentPage = 1;         // current pagination page
   let totalPages = 1;
 
-  // ---------------------------------------------------------------------------
-  // Wrap the AJAX call in .done() and .fail() so we can detect errors.
-  // Use console.log to confirm success/fail scenarios.
-  // ---------------------------------------------------------------------------
+
   $.getJSON(dataUrl)
     .done(function(data) {
       console.log('✅ JSON fetched successfully.', data);
