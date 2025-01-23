@@ -152,7 +152,7 @@ $(document).ready(function() {
       records.sort((a, b) => {
         const dateA = a.fields.DateStr ? new Date(a.fields.DateStr) : new Date(0);
         const dateB = b.fields.DateStr ? new Date(b.fields.DateStr) : new Date(0);
-        return dateA - dateB;
+        return dateB - dateA;
       });
     }
     return records;
@@ -209,7 +209,7 @@ $(document).ready(function() {
               <h3>
                 ${nameSection}
               </h3>
-              <p>${f.Street1 || ''}, ${f.Neighborhood_Names || ''}</p>
+              <p>${f.Street1 || ''} ${f.Neighborhood_Names || ''}</p>
               <span class="aa-price">
                 ₪${f.Price ? parseInt(f.Price, 10).toLocaleString() : 'N/A'}
               </span>
